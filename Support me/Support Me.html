@@ -3,7 +3,7 @@
 <html>
   <!--Header-->
   <head>
-    <link href="Support me\style sp.css" rel="stylesheet"/>
+    <link href="style sp.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Chains of Freedom Home Page</title>
   </head>
@@ -15,32 +15,32 @@
 
   <!-- Left ornaments -->
   <div class="top-deco-left">
-    <img src="Img\head deco desktop left.png" class="bar-deco desktop"/>
-    <img src="Img\head deco tablet left.png" class="bar-deco tablet"/>
-    <img src="Img\head deco mobile left.png" class="bar-deco mobile"/>
+    <img src="../img/head deco desktop left.png" class="bar-deco desktop"/>
+    <img src="../img/head deco tablet left.png" class="bar-deco tablet"/>
+    <img src="../img/head deco mobile left.png" class="bar-deco mobile"/>
   </div>
 
   <!-- Right ornaments -->
   <div class="top-deco-right">
-    <img src="Img\head deco desktop right.png" class="bar-deco desktop"/>
-    <img src="Img\head deco tablet right.png" class="bar-deco tablet"/>
-    <img src="Img\head deco mobile right.png" class="bar-deco mobile"/>
+    <img src="../img/head deco desktop right.png" class="bar-deco desktop"/>
+    <img src="../img/head deco tablet right.png" class="bar-deco tablet"/>
+    <img src="../img/head deco mobile right.png" class="bar-deco mobile"/>
   </div>
 
   <!-- Title card -->
   <div class="titlecard">
-    <a href="index.html">
-      <img src="Img/Title card.png" width="290px" />
+    <a href="../index.html">
+      <img src="../img/Title card.png" width="290px" />
     </a>
   </div>
 
   <!-- Desktop language buttons -->
   <div class="stack" id="desktop-languages">
     <div class="eng">
-      <img src="Img/Eng on.png" width="70px" />
+      <img src="../img/Eng on.png" width="70px" />
     </div>
     <div class="deu">
-      <img id="deuFlag" src="Img/Deu off.png" width="70px" />
+      <img id="deuFlag" src="../img/Deu off.png" width="70px" />
     </div>
   </div>
 
@@ -55,12 +55,12 @@
   <div class="mobile-top">
     <div class="menu-icon" id="menu-icon">&#9776;</div>
     <div class="languages">
-      <img src="Img/Eng on.png" width="40" />
+      <img src="../img/Eng on.png" width="40" />
       <img
-        src="Img/Deu off.png"
+        src="../img/Deu off.png"
         width="40"
-        onmouseover="this.src='Img/Deu on.png';"
-        onmouseout="this.src='Img/Deu off.png';"
+        onmouseover="this.src='../img/Deu on.png';"
+        onmouseout="this.src='../img/Deu off.png';"
       />
     </div>
   </div>
@@ -70,9 +70,9 @@
     <li class="nav-button" id="selected"><a href="../index.html">Home</a></li>
 <!-- Don't forget to keep updating the latest 
      episode to jump to the right anchor tag -->
-    <li class="nav-button"><a href="..\Episode Pages\test page\Episode Structure#episode2">Latest Episode</a></li>
-    <li class="nav-button"><a href="..\Characters\Characters.html">Characters</a></li>
-    <li class="nav-button"><a href="..\Support me\Support Me.html">Support Me</a></li>
+    <li class="nav-button"><a href="../Episode Pages/A0 E0.html">Latest Episode</a></li>
+    <li class="nav-button"><a href="../Characters/Characters.html">Characters</a></li>
+    <li class="nav-button"><a href="Support Me.html">Support Me</a></li>
     <li style="text-decoration: line-through;" class="disabled" ><a href="#" >Bonus</a></li>   
     <!-- enable bonus again, by readding the nav button class -->
   </ul>
@@ -89,10 +89,10 @@
   // Hover effect for desktop Deu flag
   const deuFlag = document.getElementById("deuFlag");
   deuFlag.addEventListener("mouseover", () => {
-    deuFlag.src = "/Img/Deu on.png";
+    deuFlag.src = "../img/Deu on.png";
   });
   deuFlag.addEventListener("mouseout", () => {
-    deuFlag.src = "/Img/Deu off.png";
+    deuFlag.src = "../img/Deu off.png";
   });
 </script>
 
@@ -108,13 +108,13 @@
   </p>
 
   <div class="support-button patreon-btn">
-    <img class="patreon-icon" src="Support me\Img\patreon.png" alt="Patreon" />
+    <img class="patreon-icon" src="img/patreon.png" alt="Patreon" />
     <h2 class="patreon">Patreon</h2>
   </div>
 
   <div class="support-button tipjar-btn">
     <h2 class="tipjar">Tipjar</h2>
-    <img class="tipjar-icon" src="Support me\Img\tipjar.png" alt="Tipjar" />
+    <img class="tipjar-icon" src="img/tipjar.png" alt="Tipjar" />
   </div>
 </div>
 
@@ -123,14 +123,14 @@
  <div class="special-patreons">
     <p id="thank-you">Earn yourself a place in the background of my comic by becoming a...</p>
     <div class="container2">
-      <div class="s-button"><img src="Episode Pages/Images/small decoration left.png" height="40px" id="smalldeco"/> <h2 href="\Support me\Support Me.html" id="support">Special Patreon</h2> <img src="/Episode Pages/Images/small decoration right.png" height="40px" id="smalldeco"/> </div>
+      <div class="s-button"><img src="../Episode Pages/Images/small decoration left.png" height="40px" id="smalldeco"/> <h2 href="Support Me.html" id="support">Special Patreon</h2> <img src="../Episode Pages/Images/small decoration right.png" height="40px" id="smalldeco"/> </div>
     </div>
     <a id="more-info" href="#">click for more Info</a>
 
     <div class="s-patreon-images">
-      <img class="Patreon-avatar" src="Img\Chibi Cosmea.png" width="10%"/>
-      <img class="Patreon-avatar" src="Img\Chibi Alexandra.png" width="10%"/>
-      <img class="Patreon-avatar" src="Img\Chibi Carol.png" width="30%"/>
+      <img class="Patreon-avatar" src="../img/Chibi Cosmea.png" width="10%"/>
+      <img class="Patreon-avatar" src="../img/Chibi Alexandra.png" width="10%"/>
+      <img class="Patreon-avatar" src="../img/Chibi Carol.png" width="30%"/>
     
     </div>
   
@@ -138,10 +138,8 @@
 
 <!-- Special thanks -->
 <div id="thanks-page">
-<img src="Support me\Img\Special thanks provisoric.png" width=99%/>
+<img src="img/Special thanks provisoric.png" width=99%/>
 </div>
-
-
 
 <!-- footer -->
 <div class="footer">
