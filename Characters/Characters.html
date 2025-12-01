@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html>
+  <!--Header-->
+  <head>
+    <link href="/Characters\style ch.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Chains of Freedom Home Page</title>
+  </head>
+
+<body>
+  
+<div class="top-bar">
+  <!-- Top horizontal line -->
+  <div class="line top-line"></div>
+
+  <!-- Left ornaments -->
+  <div class="top-deco-left">
+    <img src="\Home Page\Img\head deco desktop left.png" class="bar-deco desktop"/>
+    <img src="\Home Page\Img\head deco tablet left.png" class="bar-deco tablet"/>
+    <img src="\Home Page\Img\head deco mobile left.png" class="bar-deco mobile"/>
+  </div>
+
+  <!-- Right ornaments -->
+  <div class="top-deco-right">
+    <img src="\Home Page\Img\head deco desktop right.png" class="bar-deco desktop"/>
+    <img src="\Home Page\Img\head deco tablet right.png" class="bar-deco tablet"/>
+    <img src="\Home Page\Img\head deco mobile right.png" class="bar-deco mobile"/>
+  </div>
+
+  <!-- Title card -->
+  <div class="titlecard">
+    <a href="\Home Page\Homepage Cof.html">
+      <img src="/Home Page/Img/Title card.png" width="290px" />
+    </a>
+  </div>
+
+  <!-- Desktop language buttons -->
+  <div class="stack" id="desktop-languages">
+    <div class="eng">
+      <img src="/Home Page/Img/Eng on.png" width="70px" />
+    </div>
+    <div class="deu">
+      <img id="deuFlag" src="/Home Page/Img/Deu off.png" width="70px" />
+    </div>
+  </div>
+
+  <!-- Bottom horizontal line -->
+  <div class="line bottom-line"></div>
+</div>
+
+<hr style="color:#1d1815" />
+
+<nav class="navbar">
+  <!-- Mobile top bar -->
+  <div class="mobile-top">
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+    <div class="languages">
+      <img src="/Home Page/Img/Eng on.png" width="40" />
+      <img
+        src="/Home Page/Img/Deu off.png"
+        width="40"
+        onmouseover="this.src='/Home Page/Img/Deu on.png';"
+        onmouseout="this.src='/Home Page/Img/Deu off.png';"
+      />
+    </div>
+  </div>
+
+  <!-- Navigation list -->
+ <ul class="nav-bar" id="nav-bar">
+    <li class="nav-button" id="selected"><a href="\Home Page\Homepage Cof.html">Home</a></li>
+<!-- Don't forget to keep updating the latest 
+     episode to jump to the right anchor tag -->
+    <li class="nav-button"><a href="\Episode Pages\test page\Episode Structure#episode2">Latest Episode</a></li>
+    <li class="nav-button"><a href="\Characters\Characters.html">Characters</a></li>
+    <li class="nav-button"><a href="\Support me\Support Me.html">Support Me</a></li>
+    <li style="text-decoration: line-through;" class="disabled" ><a href="#" >Bonus</a></li>   
+    <!-- enable bonus again, by readding the nav button class -->
+  </ul>
+</nav>
+
+<script>
+  // Hamburger toggle
+  const menuIcon = document.getElementById("menu-icon");
+  const navBar = document.getElementById("nav-bar");
+  menuIcon.addEventListener("click", () => {
+    navBar.classList.toggle("show");
+  });
+
+  // Hover effect for desktop Deu flag
+  const deuFlag = document.getElementById("deuFlag");
+  deuFlag.addEventListener("mouseover", () => {
+    deuFlag.src = "/Home Page/Img/Deu on.png";
+  });
+  deuFlag.addEventListener("mouseout", () => {
+    deuFlag.src = "/Home Page/Img/Deu off.png";
+  });
+</script>
+
+<hr style="color:#1d1815">
+
+<!-- Content -->
+
+<div id="main-cast">
+  <h1 id="headline">Main Cast</h1>
+
+  
+<!-- /////////////////////////////// -->
+<!-- This is where the main characters go -->
+<!-- /////////////////////////////// -->
+
+
+  <!-- Amari -->
+  <div class="main-character">
+    <div class="profile">
+      <img class="mc-profile-picture" src="\Characters\Img\Amari.png" />
+
+      <div class="character-info">
+        <div class="info-row">
+          <span class="label">Name:</span>
+          <span class="value">Amari</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Age:</span>
+          <span class="value">19</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Nation:</span>
+          <span class="value">Pyronia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      <h3>Description</h3>
+      <p>
+        A young post girl from Pyronia, who wants to do the Will of her great King.
+      </p>
+    </div>
+  </div>
+
+  <!-- Eliot -->
+
+  <!-- Cosmea -->
+  
+</div>
+
+<!-- supporting characters -->
+<div id="supporting-cast">
+  <h1 id="headline">Supporting Cast</h1>
+  <p id="spoilers" style="color:#E808CA;">(SPOILERS!)</p>
+
+  <div id="Arc1" class="arc-box" onclick="toggleArc(this)">
+  <div class="corner-top">
+    <img id="top-left" src="/Home Page/Img/corner top left.png" width="60px" height="60px"/>
+    <img id="top-right" src="/Home Page/Img/corner top right.png" width="60px" height="60px"/>
+  </div>
+
+  <div class="headline">
+    <img src="\Characters\Img\closed deco left.png" id="arrow-left" width="30px" height="40px"/>
+    <h3 class="Arc-h">
+      Arc 1 <span class="arrow">▶</span>
+    </h3>
+    <img src="\Characters\Img\closed deco right.png" id="arrow-right" width="30px" height="40px"/>
+  </div>
+    <div class="arc-content">
+      <div class="major-characters">
+        <h2 class="major-ch-h">Major characters:</h2>
+
+<!-- /////////////////////////////// -->
+<!-- This is where the characters go -->
+<!-- /////////////////////////////// -->
+        <!-- Margarete -->
+        
+        <!-- Alea -->
+        <div class="character-profile">
+  <img class="profile-picture" src="\Characters\Img\Carol.png" />
+  <div class="chr-info">
+    <div class="side-character-info">
+      <div class="info-block">
+        <h3 class="info-q">Name:</h3>
+        <h3 class="info">Margarete Tyler</h3>
+      </div>
+      <div class="info-block">
+        <h3 class="info-q">Age:</h3>
+        <h3 class="info">24</h3>
+      </div>
+      <div class="info-block">
+        <h3 class="info-q">Nation:</h3>
+        <h3 class="info">Pyronia</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="character-bio">
+    <p>Amari's big sister. She's a cool potato.
+       She likes noodles and to annoy her sister with her weird humor.
+    </p>
+  </div>
+</div>
+
+      </div>
+    <div class="minor-characters"></div>
+    <div class="corner-bottom">
+      <div id="bottom-left"><img src="\Home Page\Img\corner bottom left.png" width="60px" height="60px"/></div>
+      <div id="bottom-right"><img src="\Home Page\Img\corner bottom right.png" width="60px" height="60px"/></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleArc(box) {
+    box.classList.toggle("open");
+  }
+</script>
+
+<!-- footer -->
+<div class="footer">
+<div> <p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p> </div>
+</div>
+</body>
+</html>

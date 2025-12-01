@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+  <!--Header-->
+  <head>
+    <link href="/Home Page/style hp.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Chains of Freedom Home Page</title>
+  </head>
+<body>
+  
+<div class="top-bar">
+  <!-- Top horizontal line -->
+  <div class="line top-line"></div>
+
+  <!-- Left ornaments -->
+  <div class="top-deco-left">
+    <img src="\Home Page\Img\head deco desktop left.png" class="bar-deco desktop"/>
+    <img src="\Home Page\Img\head deco tablet left.png" class="bar-deco tablet"/>
+    <img src="\Home Page\Img\head deco mobile left.png" class="bar-deco mobile"/>
+  </div>
+
+  <!-- Right ornaments -->
+  <div class="top-deco-right">
+    <img src="\Home Page\Img\head deco desktop right.png" class="bar-deco desktop"/>
+    <img src="\Home Page\Img\head deco tablet right.png" class="bar-deco tablet"/>
+    <img src="\Home Page\Img\head deco mobile right.png" class="bar-deco mobile"/>
+  </div>
+
+  <!-- Title card -->
+  <div class="titlecard">
+    <a href="\Home Page\Homepage Cof.html">
+      <img src="/Home Page/Img/Title card.png" width="290px" />
+    </a>
+  </div>
+
+  <!-- Desktop language buttons -->
+  <div class="stack" id="desktop-languages">
+    <div class="eng">
+      <img src="/Home Page/Img/Eng on.png" width="70px" />
+    </div>
+    <div class="deu">
+      <img id="deuFlag" src="/Home Page/Img/Deu off.png" width="70px" />
+    </div>
+  </div>
+
+  <!-- Bottom horizontal line -->
+  <div class="line bottom-line"></div>
+</div>
+
+<hr style="color:#1d1815" />
+
+<nav class="navbar">
+  <!-- Mobile top bar -->
+  <div class="mobile-top">
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+    <div class="languages">
+      <img src="/Home Page/Img/Eng on.png" width="40" />
+      <img
+        src="/Home Page/Img/Deu off.png"
+        width="40"
+        onmouseover="this.src='/Home Page/Img/Deu on.png';"
+        onmouseout="this.src='/Home Page/Img/Deu off.png';"
+      />
+    </div>
+  </div>
+
+  <!-- Navigation list -->
+    
+  <ul class="nav-bar" id="nav-bar">
+    <li class="nav-button" id="selected"><a href="\Home Page\Homepage Cof.html">Home</a></li>
+<!-- Don't forget to keep updating the latest 
+     episode to jump to the right anchor tag -->
+    <li class="nav-button"><a href="\Episode Pages\A0 Ch0.html#episode2">Latest Episode</a></li>
+    <li class="nav-button"><a href="\Characters\Characters.html">Characters</a></li>
+    <li class="nav-button"><a href="\Support me\Support Me.html">Support Me</a></li>
+    <li style="text-decoration: line-through;" class="disabled" ><a href="#" >Bonus</a></li>   
+    <!-- enable bonus again, by readding the nav button class -->
+  </ul>
+</nav>
+
+<script>
+  // Hamburger toggle
+  const menuIcon = document.getElementById("menu-icon");
+  const navBar = document.getElementById("nav-bar");
+  menuIcon.addEventListener("click", () => {
+    navBar.classList.toggle("show");
+  });
+
+  // Hover effect for desktop Deu flag
+  const deuFlag = document.getElementById("deuFlag");
+  deuFlag.addEventListener("mouseover", () => {
+    deuFlag.src = "/Home Page/Img/Deu on.png";
+  });
+  deuFlag.addEventListener("mouseout", () => {
+    deuFlag.src = "/Home Page/Img/Deu off.png";
+  });
+</script>
+    
+  <hr style="color:#1d1815">
+
+<!-- Content -->
+<div class="body">
+  <div class="corner-top">
+    <img id="top-left" src="/Home Page/Img/corner top left.png" width="60px" height="60px"/>
+    <img id="top-right" src="/Home Page/Img/corner top right.png" width="60px" height="60px"/>
+  </div>
+  
+  <h2 id="update-schedule">Updates every second week</h2>
+
+  <div class="chibi-container">
+  <div id="amari" class="chibi">
+    <img src="/Home Page/Img/Chibi Amari.png" alt="Amari" />
+  </div>
+
+  <div class="sumtext">
+    <h3 class="summary">Summary</h3>
+    <p>In this little World of Huva, every Huvan has to wear a so called morality Collar around their neck to contain their most selfish and primal desires. 
+The grumpy and antisocial hunter Carol is one of the so called Morality rippers, who keep taking off their Collars for the Kicks or whatever other reasons. When he finally got caught doing this one too many times, as a final warning, police put an Iron Collar on him, which can't be taken off. Shortly after he learns about the mythical Elixir of Freedom, which can supposedly free one person permanently from the Morality collar and will transform them into a mythical being. Through weird circumstances and dangerous Prayers from Amaris side, Amari and Carol end up travelling all the 5 Nations together on the searching for the Keys to get the Elixir of Freedom. They will run into Rivals, enemies, friends, and mixes of all 3.
+</p>
+    <div class="age-rating">
+      <h4>Age rating: 12</h4>
+    </div>
+    <div id="triggers">Religious-Themes, christian-themes, mild-swearing, depiction-of-emotional-abuse, mild-blood, ...</div>
+    <button id="toggle">Trigger warnings</button>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const triggers = document.getElementById("triggers");
+    const toggle = document.getElementById("toggle");
+
+    if (triggers && toggle) {
+      triggers.style.display = "none"; // start hidden
+
+      toggle.addEventListener("click", () => {
+        if (triggers.style.display === "none") {
+          triggers.style.display = "block";
+        } else {
+          triggers.style.display = "none";
+        }
+      });
+    }
+  });
+</script>
+  </div>
+</div>
+
+  <div id="carol"><img src="\Home Page\Img\Chibi Carol.png" width="40%"/></div>
+  <script type="text/JavaScript">
+    
+  </script>
+<button id="newest-shiat"><a href="\Episode Pages\test page\Episode Structure" class="ugly-link">Jump to latest Ep</a> </button>
+
+  <div class="arc-decoration">
+    <div class="chapter-box" id="Arc-box">
+      <h1 class="Arc"> Issue 1: Beginning</h1>
+   
+        <ul>
+          <li><a href="\Episode Pages\A0 Ch0.html" class="chapter">Prolouge</a></li>
+          <li><a href="#" class="chapter">Chapter 1</a></li>
+          <li><a href="#" class="chapter">Chapter 2</a></li>
+        </ul>
+    </div>  
+
+    <div id="jun" class="chibi">
+      <img src="/Home Page/Img/Chibi Jun.png" alt="Jun" />
+    </div>
+  </div>
+
+  <div class="corner-bottom">
+    <div id="bottom-left"> <img src="\Home Page\Img\corner bottom left.png" width="60px" height="60px"/></div>
+    <div id="bottom-right"> <img src="\Home Page\Img\corner bottom right.png" width="60px" height="60px"/></div>
+  </div>
+</div>
+
+<div class="about-creator">
+  <h3 id="creator">About the creator:</h3>
+  <div class="me">
+    <img id="avatar" src="\Home Page\Img\Tuber model.png" width="130px" height="130px"/>
+    <p id="about-me">
+      I'm just a little creator, a little lost, a little lost racoon. Thank you ladies and gentlemen for your attention, I'm going to sleep now
+    </p>
+  </div>
+</div>
+
+<div class="footer">
+<div> <p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p> </div>
+</div>
+</body>
+</html>
