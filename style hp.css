@@ -32,6 +32,53 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-color-scheme: dark) {
+  
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 4px solid #51423D;
+  padding: 0;
+}
+.top-bar {
+  position: relative;
+  height: 160px;
+  background: #968170 !important;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  }
+.top-bar .line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px; 
+  background-color: #51423D !important;
+  z-index: 2; 
+  }
+.stack img {
+  border: 2px solid #51423D !important;
+  border-radius: 4px;
+  display: block;
+}
+
+.eng img,
+.deu img {
+  border: 2px solid #51423D !important;
+  border-radius: 4px;
+  display: block;
+}
+
+/* --- TEXT --- */
+h6 {
+  color: beige !important;
+  font-family: cursive;
+}
+
+}
+
 hr {
 display: block;
 height: 1px;
@@ -103,6 +150,7 @@ padding: 0;
   background-color: #51423D;
   z-index: 2; /* below title card (3) and flags (4) */
 }
+
 
 .top-bar .top-line {
   top: 0px; 
