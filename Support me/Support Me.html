@@ -1,41 +1,34 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <link href="style sp.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <title>Chains of Freedom – Support Me</title>
-</head>
+  <head>
+    <link href="style sp.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Chains of Freedom - Support Me</title>
+  </head>
 
 <body>
-
-<!-- TOP BAR -->
-<div class="top-bar">
-
+  
+ <div class="top-bar">
   <div class="line top-line"></div>
 
-  <!-- Left ornaments -->
   <div class="top-deco-left">
     <img src="../img/head deco desktop left.png" class="bar-deco desktop"/>
     <img src="../img/head deco tablet left.png" class="bar-deco tablet"/>
     <img src="../img/head deco mobile left.png" class="bar-deco mobile"/>
   </div>
 
-  <!-- Right ornaments -->
   <div class="top-deco-right">
     <img src="../img/head deco desktop right.png" class="bar-deco desktop"/>
     <img src="../img/head deco tablet right.png" class="bar-deco tablet"/>
     <img src="../img/head deco mobile right.png" class="bar-deco mobile"/>
   </div>
 
-  <!-- Titlecard -->
   <div class="titlecard">
     <a href="../index.html">
       <img src="../img/Title card.png" width="290px" />
     </a>
   </div>
 
-  <!-- Desktop languages -->
   <div class="stack" id="desktop-languages">
     <div class="eng">
       <img src="../img/Eng on.png" width="70px" />
@@ -50,92 +43,79 @@
 
 <hr style="color:#1d1815" />
 
-<!-- NAVIGATION -->
 <nav class="navbar">
-
   <div class="mobile-top">
     <div class="menu-icon" id="menu-icon">&#9776;</div>
-
     <div class="languages">
       <img src="../img/Eng on.png" width="40" />
       <img src="../img/Deu off.png" width="40"
-        onmouseover="this.src='../img/Deu on.png'"
-        onmouseout="this.src='../img/Deu off.png'" />
+           onmouseover="this.src='../img/Deu on.png';"
+           onmouseout="this.src='../img/Deu off.png';" />
     </div>
   </div>
 
   <ul class="nav-bar" id="nav-bar">
-    <li class="nav-button"><a href="../index.html">Home</a></li>
-    <li class="nav-button"><a href="../Episode Pages/A0 E0.html">Latest Episode</a></li>
+    <li class="nav-button" id="selected"><a href="../index.html">Home</a></li>
+    <li class="nav-button"><a href="../Episode Pages/A0 Ch0.html">Latest Episode</a></li>
     <li class="nav-button"><a href="../Characters/Characters.html">Characters</a></li>
-    <li class="nav-button" id="selected"><a href="Support Me.html">Support Me</a></li>
-    <li class="disabled" style="text-decoration: line-through;"><a href="#">Bonus</a></li>
+    <li class="nav-button"><a href="Support Me.html">Support Me</a></li>
+    <li style="text-decoration: line-through;" class="disabled"><a href="#">Bonus</a></li>
   </ul>
 </nav>
 
 <script>
   const menuIcon = document.getElementById("menu-icon");
   const navBar = document.getElementById("nav-bar");
-  menuIcon.addEventListener("click", () => {
-    navBar.classList.toggle("show");
-  });
+  menuIcon.addEventListener("click", () => { navBar.classList.toggle("show"); });
 
   const deuFlag = document.getElementById("deuFlag");
-  deuFlag.addEventListener("mouseover", () => deuFlag.src = "../img/Deu on.png");
-  deuFlag.addEventListener("mouseout", () => deuFlag.src = "../img/Deu off.png");
+  deuFlag.addEventListener("mouseover", () => { deuFlag.src = "../img/Deu on.png"; });
+  deuFlag.addEventListener("mouseout",  () => { deuFlag.src = "../img/Deu off.png"; });
 </script>
 
 <hr style="color:#1d1815">
 
-<!-- SUPPORT SECTION -->
 <div class="support-links">
   <h1 class="support-me" id="support-me">Support Me</h1>
-
   <p class="support-me" id="comic-work">
     Making comics takes a lot of work. Give me money please.
   </p>
 
   <div class="support-button patreon-btn">
-    <img class="patreon-icon" src="img/patreon.png" alt="Patreon" />
+    <img class="patreon-icon" src="../img/patreon.png" alt="Patreon" />
     <h2 class="patreon">Patreon</h2>
   </div>
 
   <div class="support-button tipjar-btn">
     <h2 class="tipjar">Tipjar</h2>
-    <img class="tipjar-icon" src="img/tipjar.png" alt="Tipjar" />
+    <img class="tipjar-icon" src="../img/tipjar.png" alt="Tipjar" />
   </div>
 </div>
 
-<!-- SPECIAL PATREONS -->
 <div class="special-patreons">
   <p id="thank-you">Earn yourself a place in the background of my comic by becoming a...</p>
-
   <div class="container2">
     <div class="s-button">
-      <img src="../Episode Pages/Images/small decoration left.png" height="40px" />
+      <img src="../img/Small decoration left.png" height="40px" />
       <h2 id="support">Special Patreon</h2>
-      <img src="../Episode Pages/Images/small decoration right.png" height="40px" />
+      <img src="../img/Small decoration right.png" height="40px" />
     </div>
   </div>
-
   <a id="more-info" href="#">click for more Info</a>
 
   <div class="s-patreon-images">
-    <img class="Patreon-avatar" src="../img/Chibi Cosmea.png" width="10%" />
-    <img class="Patreon-avatar" src="../img/Chibi Alexandra.png" width="10%" />
-    <img class="Patreon-avatar" src="../img/Chibi Carol.png" width="30%" />
+    <img class="Patreon-avatar" src="../img/Profile pics/Amari.png" width="10%"/>
+    <img class="Patreon-avatar" src="../img/Profile pics/Carol.png" width="10%"/>
+    <img class="Patreon-avatar" src="../img/Profile pics/Tuber model.png" width="30%"/>
   </div>
 </div>
 
-<!-- THANKS IMAGE -->
 <div id="thanks-page">
-  <img src="img/Special thanks provisoric.png" width="99%" />
+  <img src="../img/Special thanks provisoric.png" width="99%"/>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
-  <p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p>
+  <div><p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p></div>
 </div>
-
 </body>
 </html>

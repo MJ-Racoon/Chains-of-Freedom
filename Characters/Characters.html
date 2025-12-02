@@ -1,112 +1,88 @@
 <!DOCTYPE html>
 
 <html>
-  <!--Header-->
   <head>
     <link href="style ch.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Chains of Freedom Home Page</title>
+    <title>Chains of Freedom - Characters</title>
   </head>
 
 <body>
   
 <div class="top-bar">
-  <!-- Top horizontal line -->
   <div class="line top-line"></div>
 
-  <!-- Left ornaments -->
   <div class="top-deco-left">
-    <img src="../Img/head deco desktop left.png" class="bar-deco desktop"/>
-    <img src="../Img/head deco tablet left.png" class="bar-deco tablet"/>
-    <img src="../Img/head deco mobile left.png" class="bar-deco mobile"/>
+    <img src="../img/head deco desktop left.png" class="bar-deco desktop"/>
+    <img src="../img/head deco tablet left.png" class="bar-deco tablet"/>
+    <img src="../img/head deco mobile left.png" class="bar-deco mobile"/>
   </div>
 
-  <!-- Right ornaments -->
   <div class="top-deco-right">
-    <img src="../Img/head deco desktop right.png" class="bar-deco desktop"/>
-    <img src="../Img/head deco tablet right.png" class="bar-deco tablet"/>
-    <img src="../Img/head deco mobile right.png" class="bar-deco mobile"/>
+    <img src="../img/head deco desktop right.png" class="bar-deco desktop"/>
+    <img src="../img/head deco tablet right.png" class="bar-deco tablet"/>
+    <img src="../img/head deco mobile right.png" class="bar-deco mobile"/>
   </div>
 
-  <!-- Title card -->
   <div class="titlecard">
     <a href="../index.html">
-      <img src="../Img/Title card.png" width="290px" />
+      <img src="../img/Title card.png" width="290px" />
     </a>
   </div>
 
-  <!-- Desktop language buttons -->
   <div class="stack" id="desktop-languages">
     <div class="eng">
-      <img src="../Img/Eng on.png" width="70px" />
+      <img src="../img/Eng on.png" width="70px" />
     </div>
     <div class="deu">
-      <img id="deuFlag" src="../Img/Deu off.png" width="70px" />
+      <img id="deuFlag" src="../img/Deu off.png" width="70px" />
     </div>
   </div>
 
-  <!-- Bottom horizontal line -->
   <div class="line bottom-line"></div>
 </div>
 
 <hr style="color:#1d1815" />
 
 <nav class="navbar">
-  <!-- Mobile top bar -->
   <div class="mobile-top">
     <div class="menu-icon" id="menu-icon">&#9776;</div>
     <div class="languages">
-      <img src="../Img/Eng on.png" width="40" />
-      <img
-        src="../Img/Deu off.png"
-        width="40"
-        onmouseover="this.src='../Img/Deu on.png';"
-        onmouseout="this.src='../Img/Deu off.png';"
-      />
+      <img src="../img/Eng on.png" width="40" />
+      <img src="../img/Deu off.png" width="40"
+           onmouseover="this.src='../img/Deu on.png';"
+           onmouseout="this.src='../img/Deu off.png';" />
     </div>
   </div>
 
-  <!-- Navigation list -->
- <ul class="nav-bar" id="nav-bar">
+  <ul class="nav-bar" id="nav-bar">
     <li class="nav-button" id="selected"><a href="../index.html">Home</a></li>
-
-    <li class="nav-button"><a href="../Episode Pages/test page/Episode Structure#episode2">Latest Episode</a></li>
+    <li class="nav-button"><a href="../Episode Pages/A0 Ch0.html">Latest Episode</a></li>
     <li class="nav-button"><a href="Characters.html">Characters</a></li>
     <li class="nav-button"><a href="../Support me/Support Me.html">Support Me</a></li>
-
-    <li style="text-decoration: line-through;" class="disabled" ><a href="#">Bonus</a></li>   
+    <li style="text-decoration: line-through;" class="disabled" ><a href="#" >Bonus</a></li>
   </ul>
 </nav>
 
 <script>
-  // Hamburger toggle
   const menuIcon = document.getElementById("menu-icon");
   const navBar = document.getElementById("nav-bar");
-  menuIcon.addEventListener("click", () => {
-    navBar.classList.toggle("show");
-  });
+  menuIcon.addEventListener("click", () => { navBar.classList.toggle("show"); });
 
-  // Hover effect for desktop Deu flag
   const deuFlag = document.getElementById("deuFlag");
-  deuFlag.addEventListener("mouseover", () => {
-    deuFlag.src = "../Img/Deu on.png";
-  });
-  deuFlag.addEventListener("mouseout", () => {
-    deuFlag.src = "../Img/Deu off.png";
-  });
+  deuFlag.addEventListener("mouseover", () => { deuFlag.src = "../img/Deu on.png"; });
+  deuFlag.addEventListener("mouseout",  () => { deuFlag.src = "../img/Deu off.png"; });
 </script>
 
 <hr style="color:#1d1815">
 
 <!-- Content -->
-
 <div id="main-cast">
   <h1 id="headline">Main Cast</h1>
 
-  <!-- Amari -->
   <div class="main-character">
     <div class="profile">
-      <img class="mc-profile-picture" src="Img/Carol.png" />
+      <img class="mc-profile-picture" src="../img/Profile pics/Carol.png" />
 
       <div class="character-info">
         <div class="info-row">
@@ -134,7 +110,7 @@
 
   <div class="main-character">
     <div class="profile">
-      <img class="mc-profile-picture" src="Img/Amari.png" />
+      <img class="mc-profile-picture" src="../img/Profile pics/Amari.png" />
 
       <div class="character-info">
         <div class="info-row">
@@ -169,23 +145,23 @@
 
   <div id="Arc1" class="arc-box" onclick="toggleArc(this)">
   <div class="corner-top">
-    <img id="top-left" src="../Img/corner top left.png" width="60px" height="60px"/>
-    <img id="top-right" src="../Img/corner top right.png" width="60px" height="60px"/>
+    <img id="top-left" src="../img/corner top left.png" width="60px" height="60px"/>
+    <img id="top-right" src="../img/corner top right.png" width="60px" height="60px"/>
   </div>
 
   <div class="headline">
-    <img src="Img/closed deco left.png" id="arrow-left" width="30px" height="40px"/>
+    <img src="../img/closed deco left.png" id="arrow-left" width="30px" height="40px"/>
     <h3 class="Arc-h">
       Arc 1 <span class="arrow">▶</span>
     </h3>
-    <img src="Img/closed deco right.png" id="arrow-right" width="30px" height="40px"/>
+    <img src="../img/closed deco right.png" id="arrow-right" width="30px" height="40px"/>
   </div>
     <div class="arc-content">
       <div class="major-characters">
         <h2 class="major-ch-h">Major characters:</h2>
 
         <div class="character-profile">
-          <img class="profile-picture" src="Img/Carol.png" />
+          <img class="profile-picture" src="../img/Profile pics/Carol.png" />
           <div class="chr-info">
             <div class="side-character-info">
               <div class="info-block">
@@ -215,8 +191,8 @@
     <div class="minor-characters"></div>
 
     <div class="corner-bottom">
-      <div id="bottom-left"><img src="../Img/corner bottom left.png" width="60px" height="60px"/></div>
-      <div id="bottom-right"><img src="../Img/corner bottom right.png" width="60px" height="60px"/></div>
+      <div id="bottom-left"><img src="../img/corner bottom left.png" width="60px" height="60px"/></div>
+      <div id="bottom-right"><img src="../img/corner bottom right.png" width="60px" height="60px"/></div>
     </div>
   </div>
 </div>
@@ -227,7 +203,6 @@
   }
 </script>
 
-<!-- footer -->
 <div class="footer">
 <div> <p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p> </div>
 </div>

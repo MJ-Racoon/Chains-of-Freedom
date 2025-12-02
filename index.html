@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html>
-  <!--Header-->
   <head>
     <link href="style hp.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -9,108 +7,85 @@
   </head>
 <body>
   
-<div class="top-bar">
-  <!-- Top horizontal line -->
+ <div class="top-bar">
   <div class="line top-line"></div>
 
-  <!-- Left ornaments -->
   <div class="top-deco-left">
-    <img src="Img\head deco desktop left.png" class="bar-deco desktop"/>
-    <img src="Img\head deco tablet left.png" class="bar-deco tablet"/>
-    <img src="Img\head deco mobile left.png" class="bar-deco mobile"/>
+    <img src="img/head deco desktop left.png" class="bar-deco desktop"/>
+    <img src="img/head deco tablet left.png" class="bar-deco tablet"/>
+    <img src="img/head deco mobile left.png" class="bar-deco mobile"/>
   </div>
 
-  <!-- Right ornaments -->
   <div class="top-deco-right">
-    <img src="Img\head deco desktop right.png" class="bar-deco desktop"/>
-    <img src="Img\head deco tablet right.png" class="bar-deco tablet"/>
-    <img src="Img\head deco mobile right.png" class="bar-deco mobile"/>
+    <img src="img/head deco desktop right.png" class="bar-deco desktop"/>
+    <img src="img/head deco tablet right.png" class="bar-deco tablet"/>
+    <img src="img/head deco mobile right.png" class="bar-deco mobile"/>
   </div>
 
-  <!-- Title card -->
   <div class="titlecard">
-    <a href="Homepage Cof.html">
-      <img src="Img/Title card.png" width="290px" />
+    <a href="index.html">
+      <img src="img/Title card.png" width="290px" />
     </a>
   </div>
 
-  <!-- Desktop language buttons -->
   <div class="stack" id="desktop-languages">
     <div class="eng">
-      <img src="Img/Eng on.png" width="70px" />
+      <img src="img/Eng on.png" width="70px" />
     </div>
     <div class="deu">
-      <img id="deuFlag" src="Img/Deu off.png" width="70px" />
+      <img id="deuFlag" src="img/Deu off.png" width="70px" />
     </div>
   </div>
 
-  <!-- Bottom horizontal line -->
   <div class="line bottom-line"></div>
 </div>
 
 <hr style="color:#1d1815" />
 
 <nav class="navbar">
-  <!-- Mobile top bar -->
   <div class="mobile-top">
     <div class="menu-icon" id="menu-icon">&#9776;</div>
     <div class="languages">
-      <img src="Img/Eng on.png" width="40" />
-      <img
-        src="Img/Deu off.png"
-        width="40"
-        onmouseover="this.src='/Img/Deu on.png';"
-        onmouseout="this.src='/Img/Deu off.png';"
-      />
+      <img src="img/Eng on.png" width="40" />
+      <img src="img/Deu off.png" width="40"
+           onmouseover="this.src='img/Deu on.png';"
+           onmouseout="this.src='img/Deu off.png';" />
     </div>
   </div>
 
-  <!-- Navigation list -->
-    
   <ul class="nav-bar" id="nav-bar">
     <li class="nav-button" id="selected"><a href="index.html">Home</a></li>
-<!-- Don't forget to keep updating the latest 
-     episode to jump to the right anchor tag -->
-    <li class="nav-button"><a href="Episode Pages\A0 Ch0.html#episode2">Latest Episode</a></li>
-    <li class="nav-button"><a href="Characters\Characters.html">Characters</a></li>
-    <li class="nav-button"><a href="Support me\Support Me.html">Support Me</a></li>
-    <li style="text-decoration: line-through;" class="disabled" ><a href="#" >Bonus</a></li>   
-    <!-- enable bonus again, by readding the nav button class -->
+    <li class="nav-button"><a href="Episode Pages/A0 Ch0.html">Latest Episode</a></li>
+    <li class="nav-button"><a href="Characters/Characters.html">Characters</a></li>
+    <li class="nav-button"><a href="Support me/Support Me.html">Support Me</a></li>
+    <li style="text-decoration: line-through;" class="disabled" ><a href="#" >Bonus</a></li>
   </ul>
 </nav>
 
 <script>
-  // Hamburger toggle
   const menuIcon = document.getElementById("menu-icon");
   const navBar = document.getElementById("nav-bar");
-  menuIcon.addEventListener("click", () => {
-    navBar.classList.toggle("show");
-  });
+  menuIcon.addEventListener("click", () => { navBar.classList.toggle("show"); });
 
-  // Hover effect for desktop Deu flag
   const deuFlag = document.getElementById("deuFlag");
-  deuFlag.addEventListener("mouseover", () => {
-    deuFlag.src = "Img/Deu on.png";
-  });
-  deuFlag.addEventListener("mouseout", () => {
-    deuFlag.src = "Img/Deu off.png";
-  });
+  deuFlag.addEventListener("mouseover", () => { deuFlag.src = "img/Deu on.png"; });
+  deuFlag.addEventListener("mouseout",  () => { deuFlag.src = "img/Deu off.png"; });
 </script>
-    
-  <hr style="color:#1d1815">
+
+<hr style="color:#1d1815">
 
 <!-- Content -->
 <div class="body">
   <div class="corner-top">
-    <img id="top-left" src="Img/corner top left.png" width="60px" height="60px"/>
-    <img id="top-right" src="Img/corner top right.png" width="60px" height="60px"/>
+    <img id="top-left" src="img/corner top left.png" width="60px" height="60px"/>
+    <img id="top-right" src="img/corner top right.png" width="60px" height="60px"/>
   </div>
   
   <h2 id="update-schedule">Updates every second week</h2>
 
   <div class="chibi-container">
   <div id="amari" class="chibi">
-    <img src="Img/Chibi Amari.png" alt="Amari" />
+    <img src="img/Chibi Amari.png" alt="Amari" />
   </div>
 
   <div class="sumtext">
@@ -144,7 +119,7 @@
   </div>
 </div>
 
-  <div id="carol"><img src="Img\Chibi Carol.png" width="40%"/></div>
+  <div id="carol"><img src="img\Chibi Carol.png" width="40%"/></div>
   <script type="text/JavaScript">
     
   </script>
@@ -162,20 +137,20 @@
     </div>  
 
     <div id="jun" class="chibi">
-      <img src="Img/Chibi Jun.png" alt="Jun" />
+      <img src="img/Chibi Jun.png" alt="Jun" />
     </div>
   </div>
 
   <div class="corner-bottom">
-    <div id="bottom-left"> <img src="Img\corner bottom left.png" width="60px" height="60px"/></div>
-    <div id="bottom-right"> <img src="Img\corner bottom right.png" width="60px" height="60px"/></div>
+    <div id="bottom-left"> <img src="img\corner bottom left.png" width="60px" height="60px"/></div>
+    <div id="bottom-right"> <img src="img\corner bottom right.png" width="60px" height="60px"/></div>
   </div>
 </div>
 
 <div class="about-creator">
   <h3 id="creator">About the creator:</h3>
   <div class="me">
-    <img id="avatar" src="Img\Tuber model.png" width="130px" height="130px"/>
+    <img id="avatar" src="../img/Profile pics/Tuber model.png" width="130px" height="130px"/>
     <p id="about-me">
       I'm just a little creator, a little lost, a little lost racoon. Thank you ladies and gentlemen for your attention, I'm going to sleep now
     </p>
