@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-image: url("../Images/texture.png");
+    background-image: url("../img/texture.png");
     background-repeat: repeat;
     background-color:#51423D;
 }
