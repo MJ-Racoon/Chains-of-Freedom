@@ -6,6 +6,10 @@
 /* Pink: #E808CA */
 /*Yellow: #E9D899 */
 
+:root {
+  color-scheme: light;
+}
+
 body {
     background-color:#383B28; 
     background-repeat: repeat-y, repeat;
