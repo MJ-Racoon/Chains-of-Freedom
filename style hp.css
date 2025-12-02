@@ -32,11 +32,12 @@ html {
   scroll-behavior: smooth;
 }
 
+
 hr {
 display: block;
 height: 1px;
 border: 0;
-border-top: 4px solid #51423D !important;
+border-top: 4px solid #51423D;
 padding: 0;
 }
 
@@ -44,7 +45,7 @@ padding: 0;
 .top-bar {
   position: relative;
   height: 160px;
-  background: #968170 !important;
+  background: #968170;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,7 +101,7 @@ padding: 0;
   left: 0;
   right: 0;
   height: 2px; /* slightly thicker, visible */
-  background-color: #51423D !important;
+  background-color: #51423D;
   z-index: 2; /* below title card (3) and flags (4) */
 }
 
@@ -175,14 +176,14 @@ padding: 0;
 }
 
 .stack img {
-  border: 2px solid #51423D !important;
+  border: 2px solid #51423D;
   border-radius: 4px;
   display: block;
 }
 
 .eng img,
 .deu img {
-  border: 2px solid #51423D !important;
+  border: 2px solid #51423D;
   border-radius: 4px;
   display: block;
 }
@@ -283,7 +284,7 @@ h6 {
   .menu-icon {
     display: block;
     font-size: 28px;
-    color: #E808CA!important;
+    color: #E808CA !important;
     cursor: pointer;
   }
 
@@ -331,7 +332,7 @@ h6 {
     right: 0;
     bottom: 0;
     height: 0.5px;
-    background: #DFD4D1 !important;
+    background: #DFD4D1;
     box-shadow: 0 0 8px rgba(233, 216, 153, 0.6);
   }
 
@@ -340,7 +341,7 @@ h6 {
   }
 
   .nav-button a {
-    color: #E808CA!important;
+    color: #E808CA !important;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -374,8 +375,8 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #968170!important;
-  border: 3px solid #1d1815!important;
+  background-color: #968170;
+  border: 3px solid #1d1815;
   margin: 5% 10%;
   padding: 20px 80px;
   text-align: center;
@@ -403,8 +404,8 @@ h6 {
   padding: 20px;
   padding-bottom: 10px;
   margin: 10px auto;
-  border: 3px solid #1d1815!important;
-  background-color: #968170!important;
+  border: 3px solid #1d1815;
+  background-color: #968170;
   max-width: 500px;
   text-align: justify;
   display: flex;
@@ -560,9 +561,9 @@ h6 {
   grid-area: 1 / 1;
   z-index: 1; /* keeps it above background but under chibi if needed */
   margin: 5% auto;
-  border: solid 3px #1d1815!important;
+  border: solid 3px #1d1815;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
-  background-color: #968170!important;
+  background-color: #968170;
   box-sizing: border-box;
 }
 
@@ -580,14 +581,14 @@ h6 {
 }
 
 #triggers {
-  color: #E9D899!important;
+  color: #E9D899;
   margin: 4px;
 }
 
 #toggle {
-  color: #E9D899!important;
+  color: #E9D899;
   padding: 5px 10px;
-  background-color: #51423D!important;
+  background-color: #51423D;
   border: none;
   border-radius: 4px;
 }
@@ -595,27 +596,27 @@ h6 {
 
 #toggle:hover {
   cursor: pointer;
-  background-color: #E808CA!important;
+  background-color: #E808CA !important;
 }
 
 /* Button below summary */
 #newest-shiat {
   padding: 15px 80px;
   margin: 5%;
-  background-color: #51423D!important;
-  color: #E808CA!important;
+  background-color: #51423D;
+  color: #E808CA !important;
   border: none;
   border-radius: 6px;
 }
 
 #newest-shiat:hover {
-  background-color: #E9D899!important;
+  background-color: #E9D899;
   cursor: pointer;
 }
 
 /* Utility */
 .ugly-link {
-  color: #E808CA!important;
+  color: #E808CA !important;
   text-decoration: none;
   font-weight: bold;
 }
@@ -638,7 +639,7 @@ h6 {
     text-align: center;
     text-decoration: underline;
     padding-bottom: 20px;
-    color: #DFD4D1!important;
+    color: #DFD4D1 !important;
     
 }
 
@@ -648,7 +649,7 @@ h6 {
 
 .chapter:hover {
     text-decoration: underline;
-    color:#E9D899!important;
+    color:#E9D899 !important;
     cursor: pointer;
 }
 
@@ -735,7 +736,7 @@ li {color: black(255, 0, 208);
 }
 
 #creator {
-  color:#DFD4D1!important;
+  color:#DFD4D1 !important;
 }
 
 .about-creator {
@@ -761,7 +762,7 @@ li {color: black(255, 0, 208);
 .footer {
     padding: 20px 20px;
     margin: 0px;
-    background-color: #968170!important;
+    background-color: #968170;
 }
 
 #copyright {
@@ -771,9 +772,9 @@ li {color: black(255, 0, 208);
 
 #about-me {
     padding-top: 15px;
-    color:#DFD4D1!important;
+    color:#DFD4D1 !important;
 }
 
 #selected {
-    color:#E9D899!important;
+    color:#E9D899 !important;
 }
