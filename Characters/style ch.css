@@ -372,6 +372,10 @@ h1 {
   text-decoration: underline;
 }
 
+#main-cast {
+  padding-top: 50px;
+}
+
 .main-character {
   width: 700px;
   margin: 60px auto;

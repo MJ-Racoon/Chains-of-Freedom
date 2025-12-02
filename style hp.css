@@ -395,6 +395,14 @@ h6 {
   margin: 0 auto;
 }
 
+.jun {
+  opacity: 0%;
+}
+
+#update-schedule {
+  margin-top: 30px;
+}
+
 /* --- Summary box --- */
 .sumtext {
   position: relative; /* anchor Amari here */
@@ -404,8 +412,8 @@ h6 {
   padding: 20px;
   padding-bottom: 10px;
   margin: 10px auto;
-  border: 3px solid #1d1815;
-  background-color: #968170;
+  border-radius: 2%;
+  background-color: #B19F90;
   max-width: 500px;
   text-align: justify;
   display: flex;
@@ -575,7 +583,7 @@ h6 {
 
 /* Trigger Button + Text */
 .trigger-warnings {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top: 5px;
   display: block;
 }
@@ -583,6 +591,10 @@ h6 {
 #triggers {
   color: #E9D899;
   margin: 4px;
+}
+
+.age-rating {
+  padding: 10px;
 }
 
 #toggle {
@@ -690,6 +702,7 @@ ul {
   width: 136px;
   max-width: 22vw;
   height: auto;
+  opacity: 0%; /* remove that property, after the Yamoto arc! */
 }
 
 /* ====== Mid-size breakpoint (tablet-ish) ====== */
