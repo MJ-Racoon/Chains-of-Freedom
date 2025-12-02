@@ -14,7 +14,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-image: url("./Img/Chain\ background\ trans.png"), url("./Img/Wallpaper.png")
+    background-image: url("./Img/Chains.png"), url("./Img/Wallpaper.png")
 }
 
 * {
