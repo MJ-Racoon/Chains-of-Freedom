@@ -506,7 +506,7 @@ h1 {
 }
 
 .arc-box.open .arc-content {
-  max-height: 1500px;
+  max-height: 4500px;
   opacity: 1;
 }
 
@@ -566,6 +566,7 @@ h1 {
   flex-shrink: 0;
 }
 
+
 .chr-info { 
   grid-area: info; 
   min-width: 0;
@@ -584,6 +585,9 @@ h1 {
   line-height: 1.35;
 }
 
+#character-bio {
+  color:black;
+}
 .side-character-info {
   display: flex;
   flex-direction: row;
