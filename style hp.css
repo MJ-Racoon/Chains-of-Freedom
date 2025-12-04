@@ -105,6 +105,9 @@ padding: 0;
   z-index: 2; /* below title card (3) and flags (4) */
 }
 
+#update-note {
+ text-align: center;
+}
 
 .top-bar .top-line {
   top: 0px; 
