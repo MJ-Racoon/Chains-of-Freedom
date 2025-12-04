@@ -118,7 +118,10 @@ a {
     justify-self: center;
 }
 
-
+.arrow svg {
+  width: 1.3em;
+  height: 1.3em;
+}
 /*Content box*/
 
 .Arc {

@@ -1,0 +1,795 @@
+
+/* Brown: #51423D */
+/* light brown: #8C705D */
+/* Beige: #201A18 */
+/* Green: #383B28 */
+/* Pink: #E808CA */
+/* Yellow: #E9D899 */
+
+:root {
+  color-scheme: light;
+}
+
+body {
+    background-color:#1E240F!important; 
+    background-repeat: repeat-y, repeat;
+    background-size: 100%, 500px 500px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("./Img/Chains.png"), url("./Img/Wallpaper texture dark.png")
+}
+
+* {
+    font-family: "Noto Serif", serif;
+    color: #B19F90;
+    margin: 0px;
+    padding:0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+hr {
+display: block;
+height: 1px;
+border: 0;
+border-top: 4px solid #51423D;
+padding: 0;
+}
+
+/* --- TOP BAR --- */
+.top-bar {
+  position: relative;
+  height: 160px;
+  background: #201A18;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* clip ornaments inside top-bar */
+}
+
+.title-card {
+  padding: 2px;
+}
+
+/* Right ornament container */
+.top-deco-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%; 
+  overflow: hidden; 
+  display: flex;
+  justify-content: flex-end; 
+  z-index: 1;
+}
+
+
+.bar-deco {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.desktop {
+  height: 150px;
+  top: 3px;
+}
+
+.tablet {
+  height: 150px;
+  top: 3px;
+}
+
+.mobile {
+  top: 3px;
+  height: 150px;
+}
+
+/* --- Horizontal lines --- */
+.top-bar .line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px; /* slightly thicker, visible */
+  background-color: #51423D;
+  z-index: 2; /* below title card (3) and flags (4) */
+}
+
+#update-note {
+ text-align: center;
+}
+
+.top-bar .top-line {
+  top: 0px; 
+  margin-top: 4px;
+}
+
+.top-bar .bottom-line {
+  bottom: 0; 
+  margin-bottom: 4px;
+}
+
+/* --- ORNAMENTS --- */
+.top-deco-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: stretch;
+  margin: 0;
+  width: auto;
+  z-index: 1; /* under title + flags */
+}
+
+.top-deco-left { left: 0; }
+.top-deco-right { right: 0; }
+
+.bar-deco {
+  padding: 2px;
+}
+
+/* --- Desktop view (default) --- */
+.bar-deco.desktop { opacity: 1; }
+
+/* --- Tablet view 1100px–800px --- */
+@media (max-width: 1100px) {
+  .bar-deco.desktop { opacity: 0; }
+  .bar-deco.tablet { opacity: 1; }
+  .bar-deco.mobile { opacity: 0; }
+}
+
+/* --- Mobile view ≤500px --- */
+@media (max-width: 500px) {
+  .bar-deco.desktop { opacity: 0; }
+  .bar-deco.tablet { opacity: 0; }
+  .bar-deco.mobile { opacity: 1; }
+}
+
+/* --- Title card --- */
+.titlecard {
+  position: relative;
+  z-index: 3; /* above ornaments and lines */
+}
+
+.titlecard img {
+  display: block;
+  max-width: 300px;
+  height: auto;
+}
+
+/* --- Language buttons --- */
+.stack {
+  position: absolute;
+  top: 3px; 
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 4; 
+}
+
+.stack img {
+  border: 2px solid #51423D;
+  border-radius: 4px;
+  display: block;
+}
+
+.eng img,
+.deu img {
+  border: 2px solid #51423D;
+  border-radius: 4px;
+  display: block;
+}
+
+/* --- TEXT --- */
+h6 {
+  color: beige!important;
+  font-family: cursive;
+}
+
+
+#artist {
+    position: absolute;
+    text-align: left;
+    left: 10px;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  transition: none;
+}
+
+.nav-button {
+  margin: 20px;
+}
+
+.nav-button a {
+  color: #E808CA !important;
+  text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-button a:hover {
+  background-image: linear-gradient(140deg, #E9D899, #ee4485);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+/* Hide hamburger + mobile top bar by default */
+.menu-icon,
+.mobile-top {
+  display: none;
+}
+
+/* ======================== */
+/* DESKTOP LANGUAGES (TOP BAR) */
+/* ======================== */
+#desktop-languages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+#desktop-languages img {
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+/* ======================== */
+/* MOBILE NAVIGATION STYLE */
+/* ======================== */
+@media (max-width: 768px) {
+  /* Hide desktop languages */
+  #desktop-languages {
+    display: none;
+  }
+
+  /* Show mobile top bar */
+  .mobile-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #000;
+  }
+
+  /* Mobile hamburger icon */
+  .menu-icon {
+    display: block;
+    font-size: 28px;
+    color: #E808CA !important;
+    cursor: pointer;
+  }
+
+  /* Mobile language icons */
+  .mobile-top .languages {
+    display: flex;
+  }
+
+  .mobile-top .languages img {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  /* Vertical nav bar */
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #000;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .nav-bar.show {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+
+  .nav-bar .nav-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0;
+    position: relative;
+    margin: 0;
+  }
+
+  /* Divider line + glow */
+  .nav-bar .nav-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.5px;
+    background: #DFD4D1;
+    box-shadow: 0 0 8px rgba(233, 216, 153, 0.6);
+  }
+
+  .nav-bar .nav-button:last-child::after {
+    display: none;
+  }
+
+  .nav-button a {
+    color: #E808CA !important;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+  
+
+.corner-top {
+    display: flex;
+    justify-content: center;
+}
+
+.corner-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+#top-left { 
+    top: 0; left: 0; position: absolute;}
+
+#top-right { top: 0; right: 0; position: absolute; }
+
+#bottom-left { bottom: 0; left: 0; position: absolute;}
+
+#bottom-right { bottom: 0; right: 0; position: absolute;}
+
+/* Content */
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #201A18;
+  border: 3px solid #51423D;
+  margin: 5% 10%;
+  padding: 20px 80px;
+  text-align: center;
+  position: relative; /* so Jun can anchor here */
+  box-sizing: border-box;
+}
+
+/* --- Flex container for summary and Amari --- */
+.chibi-container {
+  position: relative;
+  display: flex;
+  flex-direction: row; /* stays a row, even on mobile */
+  justify-content: center;
+  align-items: flex-start;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.jun {
+  opacity: 0%;
+}
+
+#update-schedule {
+  margin-top: 30px;
+}
+
+/* --- Summary box --- */
+.sumtext {
+  position: relative; /* anchor Amari here */
+  z-index: 2;
+  width: 95%;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  padding: 20px;
+  padding-bottom: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  max-width: 500px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ====== Chibi base (replace previous .chibi and .chibi img rules) ====== */
+.chibi {
+  position: absolute;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* chibi image sizing: clamps to a sensible min, preferred vw, and max */
+.chibi img {
+  width: clamp(45px, 12vw, 140px); /* smaller min, scales with viewport */
+  height: auto;
+  display: block;
+}
+
+/* ====== Container anchoring (ensure sumtext is the anchor) ====== */
+.chibi-container {
+  position: relative;  /* anchors absolute positioned children */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: fit-content;
+  margin: 0 auto;
+  flex-wrap: nowrap;   /* prevent accidental wrapping into a column */
+}
+
+/* Make sure .sumtext remains the positioning context for Amari */
+.chibi-container .sumtext {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ====== Default / Desktop ====== */
+#amari {
+  position: absolute;
+  top: clamp(4px, 0.6vw, 10px);  /* gentle vertical offset */
+  left: 9px;
+  top: 25px;
+  transform: translateX(calc(-38px - 2vw)); /* viewport-based overlap */
+}
+
+/* ====== Mid-size (tablet-ish, up to ~1100px) ====== */
+@media (max-width: 1100px) {
+  .chibi img {
+    width: clamp(40px, 11vw, 130px);
+  }
+
+  #amari {
+    top: clamp(26px, 1.2vw, 50px);
+    left:23px;
+    transform: translateX(calc(-32px - 3vw)); /* slightly more inward overlap */
+  }
+}
+
+/* ====== Small screens (mobile landscape / narrow tablets) ====== */
+@media (max-width: 800px) {
+  .chibi-container {
+    display: flex;
+    flex-direction: row;     /* stay in a row */
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .chibi img {
+    width: clamp(36px, 18vw, 100px);
+    min-width: 34px;
+  }
+
+  #amari {
+    top: clamp(20px, 2vw, 24px);
+    transform: translateX(calc(-24px - 2vw)); 
+  }
+
+
+  .sumtext {
+    width: 95%;
+    padding: 5px;
+    font-size: clamp(0.65rem, 2.2vw, 0.9rem);
+  }
+}
+
+/* ====== Extra small (phones under 500px) ====== */
+@media (max-width: 500px) {
+  #amari {
+    top: clamp(18px, 2vw, 26px);
+    transform: translateX(calc(-20px - 1.5vw)); /* even gentler overlap */
+  }
+
+  .chibi img {
+    width: clamp(30px, 22vw, 80px);
+  }
+
+  .sumtext {
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
+  }
+}
+  
+@media (max-width: 480px) {
+  #amari {
+    top: 13px; /* moved down from 0 */
+    left: -20px;
+    transform: translate(-14%, -2%); /* slight vertical adjustment */
+  }
+
+  .chibi img {
+    width: clamp(28px, 24vw, 70px); /* smaller image for tiny screens */
+  }
+
+  .sumtext {
+    font-size: clamp(0.55rem, 2vw, 0.75rem); /* ensure text stays readable */
+    margin: 5px;;
+  }
+}
+
+/* MOBILE FIXES */
+@media (max-width: 800px) {
+  .body {
+    margin: 3% 3%;           /* less side margin */
+    padding: 20px 20px;      /* less padding so content fits */
+  }
+
+  .sumtext {
+    width: 100%;
+    max-width: 100%;
+    margin: 2px;            /* remove extra horizontal margin */
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+  }
+
+  p {
+    padding: 15px 15px;
+    text-align: left;        /* more natural on mobile */
+  }
+
+  #newest-shiat {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+/* Desktop Summary Box */
+.sumtext {
+  width: 80%;
+  max-width: 700px;
+  grid-area: 1 / 1;
+  z-index: 1; /* keeps it above background but under chibi if needed */
+  margin: 5% auto;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  background-color: #3a302c;
+  box-sizing: border-box;
+}
+
+.summary {
+  position: relative;
+  padding-top: 25px;
+  display: inline-block;
+}
+
+/* Trigger Button + Text */
+.trigger-warnings {
+  margin-bottom: 20px;
+  margin-top: 5px;
+  display: block;
+}
+
+#triggers {
+  color: #E9D899;
+  margin: 4px;
+}
+
+.age-rating {
+  padding: 10px;
+}
+
+#toggle {
+  color: #E9D899;
+  padding: 5px 10px;
+  background-color: #51423D;
+  border: none;
+  border-radius: 4px;
+}
+
+
+#toggle:hover {
+  cursor: pointer;
+  background-color: #E808CA !important;
+}
+
+/* Button below summary */
+#newest-shiat {
+  padding: 15px 80px;
+  margin: 5%;
+  background-color: #51423D;
+  color: #E808CA !important;
+  border: none;
+  border-radius: 6px;
+}
+
+#newest-shiat:hover {
+  background-color: #E9D899;
+  cursor: pointer;
+}
+
+/* Utility */
+.ugly-link {
+  color: #E808CA !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ugly-link:hover {
+  text-decoration: underline;
+}
+
+.arc-decoration {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end; /* keeps Jun level with Arc box bottom */
+  justify-content: center; /* keeps Arc box centered */
+  position: relative; /* allows Jun to be absolutely positioned inside */
+  margin: 0;
+  width: 100%;
+}
+
+.Arc {
+    text-align: center;
+    text-decoration: underline;
+    padding-bottom: 20px;
+    color: #B19F90!important;
+    
+}
+
+.chapter {
+    text-decoration: none;
+}
+
+.chapter:hover {
+    text-decoration: underline;
+    color:#E9D899 !important;
+    cursor: pointer;
+}
+
+.chapter-box {
+   
+    margin: 0px ;
+    padding-bottom: 100px;
+    position: relative;
+    text-align: center
+}
+
+/* --- Base: Jun sticks to bottom-right of ul --- */
+#Arc-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* keeps list centered */
+  justify-content: flex-start;
+}
+
+/* Keep list centered regardless of Jun */
+ul {
+  text-align: center;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#jun {
+  position: absolute;
+  right: -118px;   /* matches .body padding */
+  bottom: 0;
+  margin: 0;
+  z-index: 3;
+}
+
+#jun img {
+  width: 136px;
+  max-width: 22vw;
+  height: auto;
+  opacity: 0%; /* remove that property, after the Yamoto arc! */
+}
+
+/* ====== Mid-size breakpoint (tablet-ish) ====== */
+@media (max-width: 1100px) {
+  #jun {
+    right: -108px;
+    bottom: 10px;
+  }
+
+  #jun img {
+    width: clamp(80px, 11vw, 130px);
+  }
+}
+
+/* ====== Smaller screens ====== */
+@media (max-width: 800px) {
+  #jun {
+    right: -44px;
+    bottom: 20px;
+  }
+
+  #jun img {
+    width: clamp(60px, 18vw, 100px);
+  }
+}
+
+/* ====== Very small screens (mobile, ~480px) ====== */
+@media (max-width: 480px) {
+  #jun {
+    right: -39px;
+    bottom: 40px;
+  }
+
+  #jun img {
+    width: clamp(40px, 25vw, 70px);
+  }
+}
+
+li {color: black(255, 0, 208);
+    list-style-type: none; 
+    font-weight: bold;
+    font-size:large;
+    margin: 7px 2px;
+}
+
+#creator {
+  color:#DFD4D1 !important;
+}
+
+.about-creator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #000000;
+}
+
+#avatar{
+    border-radius: 50%;
+    
+}
+
+.me {
+    display: flex;
+    margin:0px;
+}
+
+.footer {
+    padding: 20px 20px;
+    margin: 0px;
+    background-color: #201A18;
+}
+
+#copyright {
+  font-size: 0.7em;
+  text-align: center;
+}
+
+#about-me {
+    padding-top: 15px;
+    color:#DFD4D1 !important;
+}
+
+#selected {
+    color:#E9D899 !important;
+}

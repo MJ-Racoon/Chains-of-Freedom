@@ -412,7 +412,7 @@ h6 {
   padding: 20px;
   padding-bottom: 10px;
   margin: 10px auto;
-  border-radius: 2%;
+  border-radius: 5px;
   background-color: #B19F90;
   max-width: 500px;
   text-align: justify;
@@ -500,7 +500,7 @@ h6 {
 
   .sumtext {
     width: 95%;
-    padding: 10px;
+    padding: 5px;
     font-size: clamp(0.65rem, 2.2vw, 0.9rem);
   }
 }
@@ -534,6 +534,7 @@ h6 {
 
   .sumtext {
     font-size: clamp(0.55rem, 2vw, 0.75rem); /* ensure text stays readable */
+    margin: 5px;;
   }
 }
 
@@ -547,7 +548,7 @@ h6 {
   .sumtext {
     width: 100%;
     max-width: 100%;
-    margin: 5% 0;            /* remove extra horizontal margin */
+    margin: 2px;            /* remove extra horizontal margin */
     font-size: clamp(0.8rem, 2.5vw, 1rem);
   }
 
@@ -569,9 +570,8 @@ h6 {
   grid-area: 1 / 1;
   z-index: 1; /* keeps it above background but under chibi if needed */
   margin: 5% auto;
-  border: solid 3px #1d1815;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
-  background-color: #968170;
+  background-color: #B19F90;
   box-sizing: border-box;
 }
 
