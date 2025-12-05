@@ -41,6 +41,10 @@ border-top: 4px solid #51423D;
 padding: 0;
 }
 
+.disabled {
+  color:#000 ;
+}
+
 /* --- TOP BAR --- */
 .top-bar {
   position: relative;

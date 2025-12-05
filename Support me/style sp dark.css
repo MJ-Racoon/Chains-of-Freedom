@@ -193,6 +193,9 @@ h6 {
     left: 10px;
 }
 
+.disabled {
+  color:#000 ;
+}
 
 .navbar {
   width: 100%;

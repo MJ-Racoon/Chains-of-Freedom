@@ -32,6 +32,10 @@ html, body {
   box-sizing: border-box;
 }
 
+.disabled {
+  color:#000 ;
+}
+
 /* images should never stretch beyond container */
 img {
   max-width: 100%;
