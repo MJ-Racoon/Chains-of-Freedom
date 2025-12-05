@@ -505,6 +505,7 @@ h6 {
     width: 95%;
     padding: 5px;
     font-size: clamp(0.65rem, 2.2vw, 0.9rem);
+    text-align: justify;
   }
 }
 
@@ -521,6 +522,7 @@ h6 {
 
   .sumtext {
     font-size: clamp(0.6rem, 2vw, 0.8rem);
+    text-align: block;
   }
 }
   
@@ -553,6 +555,7 @@ h6 {
     max-width: 100%;
     margin: 2px;            /* remove extra horizontal margin */
     font-size: clamp(0.8rem, 2.5vw, 1rem);
+     text-align: block;
   }
 
   p {
@@ -575,6 +578,7 @@ h6 {
   margin: 5% auto;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   background-color: #B19F90;
+  text-align: justify;
   box-sizing: border-box;
 }
 
@@ -594,6 +598,7 @@ h6 {
 #triggers {
   color: #E9D899;
   margin: 4px;
+  text-align: center;
 }
 
 .age-rating {

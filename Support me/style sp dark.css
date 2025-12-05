@@ -1,0 +1,572 @@
+
+/* Brown: #51423D */
+/* light brown: #8C705D */
+/* Beige: #968170 */
+/* Green: #1E240F */
+/* Pink: #E808CA */
+/* Yellow: #E9D899 */
+
+:root {
+  color-scheme: light;
+}
+
+body {
+    background-color:#1E240F; 
+    background-repeat: repeat-y, repeat;
+    background-size: 100%, 500px 500px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("../img/Wallpaper texture dark.png")
+}
+
+* {
+    font-family: "Noto Serif", serif;
+    color: #B19F90;;
+    margin: 0px;
+    padding:0px;
+}
+
+hr {
+display: block;
+height: 1px;
+border: 0;
+border-top: 4px solid #51423D;
+padding: 0;
+}
+
+/* --- TOP BAR --- */
+.top-bar {
+  position: relative;
+  height: 160px;
+  background: #201A18;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* clip ornaments inside top-bar */
+}
+
+.title-card {
+  padding: 2px;
+}
+
+/* Right ornament container */
+.top-deco-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%; 
+  overflow: hidden; 
+  display: flex;
+  justify-content: flex-end; 
+  z-index: 1;
+}
+
+
+.bar-deco {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.desktop {
+  height: 150px;
+  top: 3px;
+}
+
+.tablet {
+  height: 150px;
+  top: 3px;
+}
+
+.mobile {
+  top: 3px;
+  height: 150px;
+}
+
+/* --- Horizontal lines --- */
+.top-bar .line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px; /* slightly thicker, visible */
+  background-color: #51423D;
+  z-index: 2; /* below title card (3) and flags (4) */
+}
+
+.top-bar .top-line {
+  top: 0px; 
+  margin-top: 4px;
+}
+
+.top-bar .bottom-line {
+  bottom: 0; 
+  margin-bottom: 4px;
+}
+
+/* --- ORNAMENTS --- */
+.top-deco-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: stretch;
+  margin: 0;
+  width: auto;
+  z-index: 1; /* under title + flags */
+}
+
+.top-deco-left { left: 0; }
+.top-deco-right { right: 0; }
+
+.bar-deco {
+  padding: 2px;
+}
+
+/* --- Desktop view (default) --- */
+.bar-deco.desktop { opacity: 1; }
+
+/* --- Tablet view 1100px–800px --- */
+@media (max-width: 1100px) {
+  .bar-deco.desktop { opacity: 0; }
+  .bar-deco.tablet { opacity: 1; }
+  .bar-deco.mobile { opacity: 0; }
+}
+
+/* --- Mobile view ≤500px --- */
+@media (max-width: 500px) {
+  .bar-deco.desktop { opacity: 0; }
+  .bar-deco.tablet { opacity: 0; }
+  .bar-deco.mobile { opacity: 1; }
+}
+
+/* --- Title card --- */
+.titlecard {
+  position: relative;
+  z-index: 3; /* above ornaments and lines */
+}
+
+.titlecard img {
+  display: block;
+  max-width: 300px;
+  height: auto;
+}
+
+/* --- Language buttons --- */
+.stack {
+  position: absolute;
+  top: 3px; 
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 4; 
+}
+
+.stack img {
+  border: 2px solid #51423D;
+  border-radius: 4px;
+  display: block;
+}
+
+.eng img,
+.deu img {
+  border: 2px solid #51423D;
+  border-radius: 4px;
+  display: block;
+}
+
+h6 {
+    color: beige;
+    font-family: cursive;
+}
+
+#artist {
+    position: absolute;
+    text-align: left;
+    left: 10px;
+}
+
+
+.navbar {
+  width: 100%;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  transition: none;
+}
+
+.nav-button {
+  margin: 20px;
+}
+
+.nav-button a {
+  color: #E808CA;
+  text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-button a:hover {
+  background-image: linear-gradient(140deg, #E9D899, #ee4485);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+/* Hide hamburger + mobile top bar by default */
+.menu-icon,
+.mobile-top {
+  display: none;
+}
+
+/* ======================== */
+/* DESKTOP LANGUAGES (TOP BAR) */
+/* ======================== */
+#desktop-languages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+#desktop-languages img {
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+/* ======================== */
+/* MOBILE NAVIGATION STYLE */
+/* ======================== */
+@media (max-width: 768px) {
+  /* Hide desktop languages */
+  #desktop-languages {
+    display: none;
+  }
+
+  /* Show mobile top bar */
+  .mobile-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #000;
+  }
+
+  /* Mobile hamburger icon */
+  .menu-icon {
+    display: block;
+    font-size: 28px;
+    color: #E808CA;
+    cursor: pointer;
+  }
+
+  /* Mobile language icons */
+  .mobile-top .languages {
+    display: flex;
+  }
+
+  .mobile-top .languages img {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  /* Vertical nav bar */
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #000;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .nav-bar.show {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+
+  .nav-bar .nav-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0;
+    position: relative;
+    margin: 0;
+  }
+
+  /* Divider line + glow */
+  .nav-bar .nav-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.5px;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(233, 216, 153, 0.6);
+  }
+
+  .nav-bar .nav-button:last-child::after {
+    display: none;
+  }
+
+  .nav-button a {
+    color: #E808CA;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+  
+
+/* ======================== */
+/*         Content          */
+/* ======================== */
+
+.support-links {
+  text-align: center;
+  margin: 80px auto;
+  margin-bottom: 30px;
+  max-width: 1000px;
+}
+
+.support-me {
+  color: #968170;
+  text-align: center;
+  font-family: "Noto Serif", serif;
+  margin-bottom: 15px;
+}
+
+#comic-work {
+  margin-bottom: 60px;
+  font-size: 1.4rem;
+}
+
+/* --- SUPPORT BUTTONS --- */
+.support-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  background-color: #1E240F;
+  box-shadow: 0 0 16px 12px #1E240F;
+  border-radius: 28px;
+  padding: 45px 80px; /* Bigger padding */
+  margin: 40px auto;
+  max-width: 720px; /* Wider on desktop */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.support-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 28px 18px #343624;
+}
+
+/* --- TEXT --- */
+.support-button h2 {
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  color: #e9d899;
+  font-size: 5.4rem;
+  margin: 0;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  white-space: nowrap; /* prevent wrapping */
+}
+
+/* --- ICONS --- */
+.support-button img {
+  height: 200px; /* bigger icons */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.support-button:hover img {
+  transform: scale(1.12);
+}
+
+/* --- LAYOUT SPECIFIC --- */
+.patreon-btn {
+  flex-direction: row; /* icon left, text right */
+}
+
+.tipjar-btn {
+  flex-direction: row; /* icon left, text right (matches Patreon) */
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+.support-links {
+  text-align: center;
+  margin: 20px auto;
+  margin-bottom: 30px;
+  max-width: 1000px;
+}
+
+  .support-button {
+    max-width: 580px;
+    padding: 35px 55px;
+    gap: 22px;
+  }
+
+  .support-button h2 {
+    font-size: 3.5rem;
+  }
+
+  .support-button img {
+    height: 150px;
+  }
+  
+  #comic-work {
+ font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .support-button {
+    max-width: 400px;
+    padding: 28px 40px;
+    gap: 16px;
+  }
+
+  .support-button h2 {
+    font-size: 3.7rem;
+  }
+
+  .support-button img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 400px) {
+ 
+  .support-links {
+  text-align: center;
+  margin: 20px auto;
+  margin-bottom: 30px;
+  max-width: 1000px;
+}
+
+  .support-button {
+    max-width: 320px;
+    padding: 22px 30px;
+    gap: 12px;
+  }
+
+  .support-button h2 {
+    font-size: 3.4rem;
+  }
+
+  .support-button img {
+    height: 100px;
+  }
+}
+
+/*-- Special patreons--*/
+
+
+#support {
+    font-family: cursive;
+    color:antiquewhite;
+}
+
+#support:hover {
+    color:#E9D899;
+    cursor: pointer;
+}
+
+.special-patreons {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+}
+#thank-you {
+  color:#fff;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0 0px 0; 
+}
+
+#more-info {
+  margin-bottom: 30px;
+  color:#E808CA;
+}
+
+.s-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 35px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    gap: 10px;
+    margin: 0 auto;               /* centers it horizontally */
+    max-width: fit-content;       /* keeps button compact and centered */
+}
+
+.s-button:hover {
+    background-color: #968170;
+    transform: scale(1.05);       /* subtle “button grow” effect */
+}
+
+#smalldeco {
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.s-patreon-images {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+}
+
+.Patreon-avatar {
+  position: relative;
+}
+
+.footer {
+    padding: 20px 20px;
+    margin: 0px;
+    background-color: #201A18;
+}
+
+#copyright {
+  font-size: 0.7em;
+  text-align: center;
+}

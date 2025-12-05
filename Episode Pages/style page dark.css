@@ -1,0 +1,477 @@
+
+/* Brown: #51423D */
+/* Beige: #968170 */
+/* Dark brown: #435045 */
+/* Green: #383B28 */
+/* Pink: #E808CA */
+/*Yellow: #E9D899 */
+
+:root {
+  color-scheme: light;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-image: url("../Img/texture dark.png");
+    background-repeat: repeat;
+    background-color:#2d2320;
+}
+
+* {
+    font-family: "Noto Serif", serif;
+    color:#B19F90;;
+    margin: 0px;
+    padding:0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Top Bar*/
+
+.head {
+    color:#968170;
+    margin: 7px 0px;
+}
+
+.top-bar {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #383B28;
+    text-align: center;
+}
+
+#Title {
+    text-decoration:underline;
+    text-decoration-color: #968170;
+    color: #1d1815;
+    flex: 1;
+}
+
+#Chapter, #Home {
+    margin: 0 10px;
+}
+
+
+/* Navigation container */
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    background: #000000;
+    color: #E808CA;
+    position: relative; /* add this */
+}
+
+/* Home button centering */
+.container1 .home-bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #E808CA;
+}
+.row2 {
+    color:#E808CA
+}
+
+/* Replaced arrow images with text-based icons */
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: cursive;
+    color: #E808CA;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to right, transparent, transparent);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-btn .arrow {
+    color: inherit;
+    font-size: 1.3em;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* gradient hover effect for arrows and text together */
+.nav-btn:hover {
+    color: #E9D899;
+    background: linear-gradient(90deg, rgba(233,216,153,0.2), rgba(232,8,202,0.2));
+    cursor: pointer;
+}
+.nav-btn:hover .arrow {
+    color: #E9D899;
+}
+
+.home-bottom {
+    color:#E808CA;
+    justify-self: center;
+}
+
+.arrow svg {
+  width: 1.3em;
+  height: 1.3em;
+}
+/*Content box*/
+
+.Arc {
+    text-align: center;
+    text-decoration: underline;
+    padding-bottom: 20px;
+    color: Beige;  
+}
+
+.chapter {
+    text-align: center;
+}
+
+.episode:hover {
+    text-decoration: underline;
+    color:#E9D899;
+    cursor: pointer;
+}
+
+#thank-you {
+    color:#968170;
+}
+
+.corner-top, .corner-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+#top-left { top: 0; left: 0; position: absolute; }
+#top-right { top: 0; right: 0; position: absolute; }
+#bottom-left { bottom: 0; left: 0; position: absolute; }
+#bottom-right { bottom: 0; right: 0; position: absolute; }
+
+.chapter-box {
+    background-color: #2d2320;
+    border: 3px solid #000000;
+    margin: 50px 20px;
+    padding: 10px 80px;
+    position: relative;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.chapter-box h3 {
+    font-size: 1.3em;
+}
+
+ul.chapter1 li a {
+    font-size: 1.1em;
+}
+
+.chapter-box ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.chapter-box li {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.chapter-box a {
+  display: inline-block;
+}
+
+/* ----------------------------
+   Responsive Font Scaling
+---------------------------- */
+
+/* Large tablets / small desktops (≤1000px) */
+@media screen and (max-width: 1000px) {
+  .chapter-box {
+      font-size: 1em;
+  }
+  .chapter-box h3 {
+      font-size: 1.15em;
+  }
+}
+
+/* Tablets (≤800px) */
+@media screen and (max-width: 800px) {
+  .chapter-box {
+      padding: 5px 40px;
+      font-size: 0.95em;
+  }
+  .chapter-box h3 {
+      font-size: 1.05em;
+  }
+}
+
+/* Mobile (≤480px) */
+@media screen and (max-width: 480px) {
+  .chapter-box {
+      margin: 30px 10px;
+      padding: 5px 15px;
+      font-size: 0.85em;
+  }
+  .chapter-box h3 {
+      font-size: 0.95em;
+  }
+
+  .nav-btn .arrow {
+      font-size: 1.5em;
+  }
+}
+
+#Arc-box {
+    margin-bottom: 10px;
+}
+
+li {
+    list-style-type: none; 
+}
+
+ul {
+    text-align: center;
+    padding-right:30px;
+    padding-bottom: 20px;
+}
+
+/* Map */
+#map {
+  display:flex; 
+  margin:0px;
+  justify-content: center;
+
+}
+
+#map-shadow {
+    box-shadow: #1d1815;
+}
+
+/*Comic*/
+
+.comic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px auto;
+  width: 100%;
+}
+
+.comic img {
+  width: 50%;
+  height: auto;
+  transition: width 0.3s ease-in-out;
+  max-width: 100%;
+}
+
+/* Map default */
+#map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  padding: 60px 0px;
+}
+
+#map img {
+  width: 50%;
+  height: auto;
+  transition: width 0.3s ease-in-out;
+  max-width: 100%;
+}
+
+.bottom {
+    padding-bottom: 20px;
+}
+
+/* Support section */
+
+#support {
+    font-family: cursive;
+    color:antiquewhite;
+}
+
+#support:hover {
+    color:#E9D899;
+    cursor: pointer;
+}
+
+.foot-box {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0 40px 0; /* top + bottom margin spacing */
+}
+
+.support {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 35px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    gap: 10px;
+    margin: 0 auto;               /* centers it horizontally */
+    max-width: fit-content;       /* keeps button compact and centered */
+}
+
+.support:hover {
+    background-color: #968170;
+    transform: scale(1.05);       /* subtle “button grow” effect */
+}
+
+#smalldeco {
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+
+/* ----------------------------
+   RESPONSIVE BREAKPOINTS
+---------------------------- */
+
+/* comic */
+/* Large tablets / small desktops (≤1000px) */
+@media screen and (max-width: 1000px) {
+  .comic img {
+      width: 70%;
+  }
+  #map img {
+      width: 65%;
+  }
+}
+
+/* Tablets (≤800px) — map hits edges here */
+@media screen and (max-width: 800px) {
+  .comic img {
+      width: 90%;
+  }
+  #map img {
+      width: calc(100% - 10px); /* nearly edge-to-edge */
+  }
+}
+
+/* Mobile (≤480px) — comic nearly edge-to-edge */
+@media screen and (max-width: 480px) {
+  .comic {
+      margin: 20px 0;
+      padding: 0;
+  }
+  .comic img {
+      width: calc(100% - 8px); /* about 4px margin each side */
+  }
+  #map img {
+      width: calc(100% - 8px); /* keep matching edge look */
+  }
+}
+
+
+/* other stuff */
+/* Large tablets / small desktops (≤1000px) */
+@media screen and (max-width: 1000px) {
+  .chapter-box {
+      padding: 5px 40px;
+  }
+}
+
+/* Tablets (≤800px) */
+@media screen and (max-width: 800px) {
+  .top-bar {
+      flex-direction: column;
+      height: auto;
+  }
+
+  #Chapter {
+   padding: 1px;
+  }
+
+  #Title {
+    padding: 1px;
+  }
+
+  .chapter-box {
+      padding: 5px 25px;
+      font-size: 0.95em;
+  }
+
+  #Title h2 {
+      font-size: 1.2em;
+  }
+}
+
+/* Mobile (≤480px) */
+@media screen and (max-width: 480px) {
+  body {
+      background-size: cover;
+  }
+
+  .top-bar {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+  }
+
+  #Title h2 {
+      font-size: 1.1em;
+  }
+
+  .head {
+      font-size: 0.9em;
+      margin: 10px 0;
+  }
+
+  .chapter-box {
+      margin: 30px 10px;
+      padding: 5px 15px;
+      font-size: 0.9em;
+  }
+
+  .nav-btn span {
+      font-size: 1.4em;
+  }
+
+  .support {
+      width: 100%;
+      font-size: 1em;
+  }
+}
+
+.footer {
+    padding: 20px 20px;
+    margin: 0px;
+    background-color: #201A18;
+}
+
+#copyright {
+  font-size: 0.7em;
+  text-align: center;
+   color: #B19F90;
+}
