@@ -600,7 +600,13 @@ h6 {
 }
 
 .age-rating {
+  display:flex;
   padding: 10px;
+}
+
+#rating {
+  margin-left: 4px;
+  color:#E9D899;
 }
 
 #toggle {
