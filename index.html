@@ -61,9 +61,10 @@
 
   <ul class="nav-bar" id="nav-bar">
     <li class="nav-button" id="selected"><a href="index.html">Home</a></li>
-    <li class="nav-button"><a href="Episode Pages/A0 Ch0.html">Latest Episode</a></li>
-    <li class="nav-button"><a href="Characters/Characters.html">Characters</a></li>
-    <li class="nav-button"><a href="Support me/Support Me.html">Support Me</a></li>
+    <!-- Update!!! and copy to other pages -->
+    <li class="nav-button"><a href="../Episode Pages/Arc 1/Ch1.html">Latest Episode</a></li>
+    <li class="nav-button"><a href="../Characters/Characters.html">Characters</a></li>
+    <li class="nav-button"><a href="../Support me/Support Me.html">Support Me</a></li>
     <li style="text-decoration: line-through;" class="disabled" ><a href="#" class="disabled">Bonus</a></li>
   </ul>
 </nav>
@@ -130,14 +131,17 @@
   <script type="text/JavaScript">
     
   </script>
-<button id="newest-shiat"><a href="\Episode Pages\A0 Ch0.html" class="ugly-link">Jump to latest Ep</a> </button>
+
+<!-- Update!!! -->
+<button id="newest-shiat"><a href="..\Episode Pages\Arc 1\Ch1.html" class="ugly-link">Jump to latest Ep</a> </button>
 
   <div class="arc-decoration">
     <div class="chapter-box" id="Arc-box">
       <h1 class="Arc"> Issue 1: Beginning</h1>
    
+<!-- Update!!! -->
         <ul>
-          <li><a href="Episode Pages\A0 Ch0.html" class="chapter">Prolouge</a></li>
+          <li><a href="..\Episode Pages\Arc 1\Ch1.html" class="chapter">Prolouge</a></li>
           <li><a href="#" class="chapter">Chapter 1</a></li>
           <li><a href="#" class="chapter">Chapter 2</a></li>
         </ul>
@@ -152,6 +156,22 @@
     <div id="bottom-left"> <img src="Img\corner bottom left.png" width="60px" height="60px"/></div>
     <div id="bottom-right"> <img src="Img\corner bottom right.png" width="60px" height="60px"/></div>
   </div>
+</div>
+
+<div class="top-jump-box">
+<a href="#top" id="jumpTopBtn" class="nav-btn" title="Nach oben">
+  <svg class="arrow" viewBox="0 0 1000 1000" width="20" height="20" aria-hidden="true">
+    <path d="M500 200 L800 600 L200 600 Z" fill="currentColor"/>
+  </svg>
+  <span>to the top</span>
+</a>
+
+  <script>
+  document.getElementById('jumpTopBtn').addEventListener('click', function(e){
+      e.preventDefault(); // verhindert Sprung ohne Animation
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  </script>
 </div>
 
 <div class="about-creator">

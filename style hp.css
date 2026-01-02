@@ -176,6 +176,7 @@ padding: 0;
   flex-direction: column;
   gap: 8px;
   z-index: 4; 
+  
 }
 
 .stack img {
@@ -197,12 +198,6 @@ h6 {
   font-family: cursive;
 }
 
-
-#artist {
-    position: absolute;
-    text-align: left;
-    left: 10px;
-}
 
 .navbar {
   width: 100%;
@@ -617,6 +612,7 @@ h6 {
   background-color: #51423D;
   border: none;
   border-radius: 4px;
+  transition: all 0.3s ease-in-out;
 }
 
 
@@ -632,6 +628,7 @@ h6 {
   background-color: #51423D;
   color: #E808CA !important;
   border: none;
+  transition: all 0.3s ease-in-out;
   border-radius: 6px;
 }
 
@@ -804,4 +801,63 @@ li {color: black(255, 0, 208);
 
 #selected {
     color:#E9D899 !important;
+}
+
+#jumpTopBtn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;          /* Text + Icon inline */
+    align-items: center;           /* vertikal zentrieren */
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-family: cursive;
+    font-size: 16px;
+    font-weight: bold;             /* Text fett */
+    color: #E808CA;                /* DEFAULT Farbe für Text + Pfeil */
+    background: linear-gradient(to right, transparent, transparent);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    text-decoration: none;         /* Unterstreichung entfernen */
+}
+
+/* Text innerhalb des Buttons übernimmt Farbe */
+#jumpTopBtn span {
+    color: inherit;               /* erbt Farbe vom Button */
+    font-weight: bold;            /* Fett auch hier */
+}
+
+/* Pfeil übernimmt Farbe */
+#jumpTopBtn .arrow {
+    display: inline-block;
+    vertical-align: middle;        /* optische Zentrierung */
+    width: 20px;
+    height: 20px;
+}
+
+#jumpTopBtn .arrow path {
+    fill: currentColor;            /* Farbe = Button Text */
+    transition: fill 0.3s ease-in-out;
+}
+
+/* Hover-Effekt für Text und Pfeil */
+#jumpTopBtn:hover {
+    color: #E9D899;                /* Hover-Farbe für Text + Pfeil */
+    background: linear-gradient(90deg, rgba(233,216,153,0.2), rgba(232,8,202,0.2));
+}
+
+#jumpTopBtn .arrow {
+    margin-bottom: -2px; /* kleiner Offset für perfekte optische Zentrierung */
+}
+
+#jumpTopBtn .arrow path {
+    transition: fill 0.3s ease-in-out;
+}
+
+.top-jump-box {
+display: flex;
+
 }

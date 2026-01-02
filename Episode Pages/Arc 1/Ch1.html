@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+ <!--Header-->
+ <head>
+    <!-- Light Mode -->
+    <link rel="stylesheet" href="../style page.css" media="(prefers-color-scheme: light)">
+
+    <!-- Dark Mode -->
+    <link rel="stylesheet" href="../style page dark.css" media="(prefers-color-scheme: dark)">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>chapter 0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+<body>
+  <!--Top Bar-->
+  <div class="top-bar">
+      <h4 class="head">Prolouge</h4>
+      <div id="Title"> <h2 class="head"> A lone free Hunter </h2> </div>
+  </div>
+
+<div class="container1">
+  <div class="nav-btn" id="previous">
+   <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
+  <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
+</svg>
+    <h4 class="row2 text-btn">Previous</h4>
+  </div>
+  
+   <a href="../../../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
+  
+   <div class="nav-btn" id="next">
+    <h4 class="row2 text-btn">Next</h4>
+    <svg
+  class="arrow"
+  viewBox="0 0 1000 1000"
+  height="25"
+  aria-hidden="true"
+>
+  <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
+</svg>
+  </div>
+</div>
+  
+  <!--Contents-->
+  <div class="chapter-box" id="Arc-box">
+
+    <div class="corner-top">
+      <img id="top-left" src="../../Img/corner top left.png" width="40px" height="40px"/>
+      <img id="top-right" src="../../Img/corner top right.png" width="40px" height="40px"/>
+    </div>
+
+   
+    <div class="chapter"><h3>Jump to Episodes </h3></div>
+      <ul class="chapter1">
+        <li> <a href="#episode1" class="episode"> Episode 1 </a></li>
+        <li><a href="#episode2" class="episode"> Episode 2 </a></li>
+        <li><a href="#episode1" class="episode"> Episode 3 </a></li>
+      </ul>
+      
+
+      <div class="corner-bottom">
+        <div id="bottom-left"> <img src="../../Img/corner bottom left.png" width="40px" height="40px"/></div>
+        <div id="bottom-right"> <img src="../../Img/corner bottom right.png" width="40px" height="40px"/></div>
+      </div>
+  </div>
+  <div id="map"> <img id="map-shadow" src="../../../Img/Maps/Map1.png" width="80%"/></div>
+ 
+<!-- Jump to top button -->
+<button id="scrollTopBtn" title="Nach oben" class="nav-btn">
+  <svg class="arrow" viewBox="0 0 1000 1000" width="20" height="20" aria-hidden="true">
+    <path d="M500 200 L800 600 L200 600 Z"/>
+  </svg>
+</button>
+
+<script>
+  (function(){
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", () => {
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (st < lastScrollTop && st > 100) {
+       
+        scrollBtn.classList.add("show");
+      } else {
+
+        scrollBtn.classList.remove("show");
+      }
+
+      lastScrollTop = st <= 0 ? 0 : st; 
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
+
+<!-- comic -->
+
+  <div class="comic">
+    <img id="episode1" src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge_001.png"/>
+    <img  src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge_002.png"/>
+    <img  src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge_003.png"/>
+    <img  src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge_004.png"/>
+    <img  src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge_005.png"/>
+    <img  src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge_006.png"/>
+    <img  src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge_007.png"/>
+    <img  src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge_008.png"/>
+    <img id="episode2" src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge 1_001.png"/>
+    <img  src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge 1_002.png"/>
+    <img  src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge 1_003.png"/>
+    <img  src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge 1_004.png"/>
+    <img  src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge 1_005.png"/>
+    <img  src="../../../Episode Pages\Arc 1\0_Prolouge\Prolouge 1_006.png"/>
+    
+  </div>
+
+  <div class="foot-box">
+    <p id="thank-you">Thank you so much for sticking around to the end. 
+      If you like what you're reading, feel free to:</p>
+    <div class="container2">
+      <div class="support"><img src="../../../Img/small decoration left.png" height="40px" id="smalldeco"/> 
+        <h2 href="../../Support me/Support Me.html" id="support">Support Me</h2> 
+        <img src="../../Img/small decoration right.png" height="40px" id="smalldeco"/> </div>
+    </div>
+  </div>
+
+ <div class="container1">
+  <div class="nav-btn" id="previous">
+   <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
+  <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
+</svg>
+    <h4 class="row2 text-btn">Previous</h4>
+  </div>
+  
+   <a href="../../../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
+  
+   <div class="nav-btn" id="next">
+    <h4 class="row2 text-btn">Next</h4>
+    <svg
+  class="arrow"
+  viewBox="0 0 1000 1000"
+  height="25"
+  aria-hidden="true"
+>
+  <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
+</svg>
+  </div>
+</div>
+</div>  
+
+<div class="footer">
+<div> <p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p> </div>
+</div>
+</body>
+</html>

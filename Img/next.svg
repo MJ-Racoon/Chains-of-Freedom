@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1000"
+  height="1000"
+  viewBox="0 0 1000 1000"
+  fill="currentColor"
+>
+  <g stroke-linecap="round" stroke-linejoin="miter">
+    <path
+      d="M800.00,509.00 L143.00,126.00 L364.00,505.00 L145.00,882.00 L800.00,509.00 Z"
+      stroke="currentColor"
+      stroke-width="8"
+    />
+  </g>
+</svg>
+
