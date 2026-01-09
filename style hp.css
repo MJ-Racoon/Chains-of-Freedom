@@ -109,6 +109,10 @@ padding: 0;
  text-align: center;
 }
 
+#update-schedule {
+  color:#E9D899;
+}
+
 .top-bar .top-line {
   top: 0px; 
   margin-top: 4px;
@@ -588,6 +592,7 @@ h6 {
   margin-bottom: 20px;
   margin-top: 5px;
   display: block;
+  font-size: medium;
 }
 
 #triggers {
@@ -641,6 +646,7 @@ h6 {
 .ugly-link {
   color: #E808CA !important;
   text-decoration: none;
+  font-size: 1.4em;
   font-weight: bold;
 }
 
@@ -668,6 +674,7 @@ h6 {
 
 .chapter {
     text-decoration: none;
+    font-size: 1.4em;
 }
 
 .chapter:hover {
@@ -860,4 +867,8 @@ li {color: black(255, 0, 208);
 .top-jump-box {
 display: flex;
 
+}
+
+#to-top {
+  font-size: larger;
 }

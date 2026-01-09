@@ -204,6 +204,10 @@ a {
     text-align: center;
 }
 
+.episode-selection {
+    font-size: 1.2em;
+}
+
 .episode:hover {
     text-decoration: underline;
     color:#E9D899;
