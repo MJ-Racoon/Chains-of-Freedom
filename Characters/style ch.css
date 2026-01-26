@@ -177,6 +177,10 @@ padding: 0;
   height: auto;
 }
 
+.title-card-img {
+  content: url("Img/Title Card dark.png");
+}
+
 /* --- Language buttons --- */
 .stack {
   position: absolute;
