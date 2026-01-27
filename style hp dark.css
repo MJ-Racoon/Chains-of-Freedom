@@ -15,6 +15,7 @@ body {
     background-repeat: repeat-y, repeat;
     background-size: 100%, 500px 500px;
     justify-content: center;
+    font-family: "Noto Serif", serif;
     align-items: center;
     min-height: 100vh;
     margin: 0;
@@ -22,7 +23,6 @@ body {
 }
 
 * {
-    font-family: "Noto Serif", serif;
     color: #B19F90;
     margin: 0px;
     padding:0px;
@@ -61,7 +61,7 @@ padding: 0;
 }
 
 .title-card-img {
-  content: url("Img/Title Card dark.png");
+  content: url("../Img/Title Card dark.png");
 }
 
 /* Right ornament container */
@@ -115,7 +115,25 @@ padding: 0;
 
 #update-note {
  text-align: center;
+ font-style: italic;
+ padding-bottom: 30px;
+ width:80%
+ 
 }
+
+#update-schedule {
+  color:#f7db75;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-family: "Sue Ellen Francisco", cursive;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 2.5em;
+
+}
+
+
+
 
 .top-bar .top-line {
   top: 0px; 
@@ -202,7 +220,6 @@ padding: 0;
 /* --- TEXT --- */
 h6 {
   color: beige!important;
-  font-family: cursive;
 }
 
 
@@ -410,16 +427,21 @@ h6 {
   opacity: 0%;
 }
 
-#update-schedule {
-  margin-top: 30px;
-}
 
 /* --- Summary box --- */
+
+.summary {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.2em;
+  color:#f7db75;
+}
+
 .sumtext {
   position: relative; /* anchor Amari here */
   z-index: 2;
   width: 95%;
-  font-size: clamp(0.7rem, 2vw, 0.9rem);
   padding: 20px;
   padding-bottom: 10px;
   margin: 10px auto;
@@ -473,6 +495,10 @@ h6 {
   transform: translateX(calc(-38px - 2vw)); /* viewport-based overlap */
 }
 
+#carol img {
+  width: 350px;
+}
+
 /* ====== Mid-size (tablet-ish, up to ~1100px) ====== */
 @media (max-width: 1100px) {
   .chibi img {
@@ -484,6 +510,10 @@ h6 {
     left:23px;
     transform: translateX(calc(-32px - 3vw)); /* slightly more inward overlap */
   }
+
+  #carol img{
+  width: 270px;
+}
 }
 
 /* ====== Small screens (mobile landscape / narrow tablets) ====== */
@@ -507,11 +537,15 @@ h6 {
     transform: translateX(calc(-24px - 2vw)); 
   }
 
+    #carol img{
+  width: 230px;
+}
 
   .sumtext {
     width: 95%;
     padding: 5px;
     font-size: clamp(0.65rem, 2.2vw, 0.9rem);
+    text-align: justify;
   }
 }
 
@@ -522,12 +556,17 @@ h6 {
     transform: translateX(calc(-20px - 1.5vw)); /* even gentler overlap */
   }
 
+  #carol img{
+  width: 200px;
+}
+
   .chibi img {
     width: clamp(30px, 22vw, 80px);
   }
 
   .sumtext {
     font-size: clamp(0.6rem, 2vw, 0.8rem);
+    text-align: block;
   }
 }
   
@@ -537,6 +576,10 @@ h6 {
     left: -20px;
     transform: translate(-14%, -2%); /* slight vertical adjustment */
   }
+
+    #carol img{
+  width: 190px;
+}
 
   .chibi img {
     width: clamp(28px, 24vw, 70px); /* smaller image for tiny screens */
@@ -596,6 +639,9 @@ h6 {
   margin-bottom: 20px;
   margin-top: 5px;
   display: block;
+  font-family: "Noto Serif", serif;
+  font-weight:bold;
+  font-size: 1.2em;
 }
 
 #triggers {
@@ -633,7 +679,16 @@ h6 {
   margin: 5%;
   background-color: #51423D;
   color: #E808CA !important;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 1000;
+  font-style: normal;
+  font-size: 1.3em;
   border: none;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 40px;
+  height: 80px;
+  transition: all 0.3s ease-in-out;
   border-radius: 6px;
 }
 
@@ -643,14 +698,16 @@ h6 {
 }
 
 /* Utility */
-.ugly-link {
+#ugly-link {
   color: #E808CA !important;
   text-decoration: none;
+  font-size: 1.4em;
   font-weight: bold;
+  transition: all 0.3s ease-in-out;
 }
 
-.ugly-link:hover {
-  text-decoration: underline;
+#ugly-link:hover {
+  font-size: 1.5em;
 }
 
 .arc-decoration {
@@ -767,6 +824,11 @@ li {color: black(255, 0, 208);
 
 #creator {
   color:#DFD4D1 !important;
+  padding-top: 2px;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5em;
 }
 
 .about-creator {
@@ -781,7 +843,7 @@ li {color: black(255, 0, 208);
 
 #avatar{
     border-radius: 50%;
-    
+    align-self: center;
 }
 
 .me {
@@ -803,6 +865,9 @@ li {color: black(255, 0, 208);
 #about-me {
     padding-top: 15px;
     color:#DFD4D1 !important;
+    width: 80%;
+    text-align: center;
+    align-self: center;
 }
 
 #selected {
@@ -818,8 +883,10 @@ li {color: black(255, 0, 208);
     gap: 6px;
     padding: 8px 14px;
     border-radius: 8px;
-    font-family: cursive;
-    font-size: 16px;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2em;
     font-weight: bold;             /* Text fett */
     color: #E808CA;                /* DEFAULT Farbe für Text + Pfeil */
     background: linear-gradient(to right, transparent, transparent);

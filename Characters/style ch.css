@@ -21,6 +21,15 @@ body {
     background-image: url(".\Img\Chains.webp"), url("../Img/Wallpaper.webp")
 }
 
+
+* {
+    font-family: "Noto Serif", serif;
+    color: rgb(0, 0, 0);
+    margin: 0px;
+    padding:0px;
+    text-align: center;
+}
+
 html, body {
   overflow-x: hidden;      /* prevent horizontal scroll */
   width: 100%;
@@ -30,21 +39,6 @@ html, body {
 /* ensure box model consistency everywhere */
 *, *::before, *::after {
   box-sizing: border-box;
-}
-
-/* images should never stretch beyond container */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-* {
-    font-family: "Noto Serif", serif;
-    color: rgb(0, 0, 0);
-    margin: 0px;
-    padding:0px;
-    text-align: center;
 }
 
 hr {
@@ -69,6 +63,7 @@ padding: 0;
 .title-card {
   padding: 2px;
 }
+
 
 /* Right ornament container */
 .top-deco-right {
@@ -177,10 +172,6 @@ padding: 0;
   height: auto;
 }
 
-.title-card-img {
-  content: url("Img/Title Card dark.png");
-}
-
 /* --- Language buttons --- */
 .stack {
   position: absolute;
@@ -208,6 +199,12 @@ padding: 0;
 h6 {
     color: beige;
     font-family: cursive;
+}
+
+#artist {
+    position: absolute;
+    text-align: left;
+    left: 10px;
 }
 
 
@@ -361,6 +358,15 @@ h6 {
 }
   
 
+
+
+
+
+
+
+
+
+
 /* ======================== */
 /*         Content          */
 /* ======================== */
@@ -373,7 +379,10 @@ p {
 
 h1 {
   color: #e6dccb;
-  text-decoration: underline;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 5em;
 }
 
 #main-cast {
@@ -462,6 +471,10 @@ h1 {
   color: #f2e8d0;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2em;
 }
 
 /* supporting cast container */
@@ -547,6 +560,15 @@ h1 {
 /* SIDE CHARACTER PROFILES         */
 /* =============================== */
 
+h2 {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.2em;
+}
+
+
+
 /* Grid layout: picture + info on row 1, bio full width on row 2 */
 .character-profile {
   display: grid;
@@ -614,7 +636,14 @@ h1 {
   min-width: 0;
 }
 
-.info-q { font-weight: bold; color: #3a2d23; flex-shrink: 0; }
+.info-q {
+  color:#f0eadf; 
+  flex-shrink: 0; 
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.6em;
+}
 .info { color: #51423d; overflow-wrap: anywhere; }
 
 /* =============================== */

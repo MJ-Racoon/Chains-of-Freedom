@@ -16,13 +16,13 @@ body {
     background-size: 100%, 500px 500px;
     justify-content: center;
     align-items: center;
+    font-family: "Noto Serif", serif;
     min-height: 100vh;
     margin: 0;
     background-image: url("../Img/Wallpaper.webp")
 }
 
 * {
-    font-family: "Noto Serif", serif;
     color: rgb(0, 0, 0);
     margin: 0px;
     padding:0px;
@@ -182,10 +182,6 @@ padding: 0;
   display: block;
 }
 
-h6 {
-    color: beige;
-    font-family: cursive;
-}
 
 #artist {
     position: absolute;
@@ -356,10 +352,16 @@ h6 {
 }
 
 .support-me {
-  color: #968170;
+  color: #e9ddd3;
   text-align: center;
-  font-family: "Noto Serif", serif;
   margin-bottom: 15px;
+}
+
+#support-me {
+  font-family: "Sue Ellen Francisco", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5em;
 }
 
 #comic-work {
@@ -381,6 +383,7 @@ h6 {
   max-width: 720px; /* Wider on desktop */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  
 }
 
 .support-button:hover {
@@ -390,10 +393,12 @@ h6 {
 
 /* --- TEXT --- */
 .support-button h2 {
-  font-family: "Cinzel", serif;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-weight: 600;
   color: #e9d899;
-  font-size: 5.4rem;
+  font-size: 7.5rem;
   margin: 0;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
   white-space: nowrap; /* prevent wrapping */

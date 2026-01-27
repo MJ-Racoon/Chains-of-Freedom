@@ -36,12 +36,6 @@ html, body {
   color:#000 ;
 }
 
-/* images should never stretch beyond container */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
 
 * {
     font-family: "Noto Serif", serif;
@@ -75,7 +69,7 @@ padding: 0;
 }
 
 .title-card-img {
-  content: url("Img/Title Card dark.png");
+  content: url("../Img/Title Card dark.png");
 }
 
 /* Right ornament container */
@@ -377,7 +371,10 @@ p {
 
 h1 {
   color: #e6dccb;
-  text-decoration: underline;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 5em;
 }
 
 #main-cast {
@@ -466,6 +463,10 @@ h1 {
   color: #f2e8d0;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2em;
 }
 
 /* supporting cast container */
@@ -551,6 +552,13 @@ h1 {
 /* SIDE CHARACTER PROFILES         */
 /* =============================== */
 
+h2 {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.2em;
+}
+
 /* Grid layout: picture + info on row 1, bio full width on row 2 */
 .character-profile {
   display: grid;
@@ -617,7 +625,15 @@ h1 {
   min-width: 0;
 }
 
-.info-q { font-weight: bold; color:#E9D899; flex-shrink: 0; }
+.info-q { 
+  font-weight: bold; 
+  color:#E9D899; 
+  flex-shrink: 0; 
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.6em;
+}
 .info { color: #B19F90; overflow-wrap: anywhere; }
 
 /* =============================== */
