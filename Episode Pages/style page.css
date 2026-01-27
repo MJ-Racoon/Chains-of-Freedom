@@ -200,9 +200,6 @@
 
 #jumpTopBtn {
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-flex;          /* Text + Icon inline */
     align-items: center;           /* vertikal zentrieren */
     gap: 6px;
     margin: 20px;
@@ -216,7 +213,6 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    
     text-decoration: none;         /* Unterstreichung entfernen */
 }
 
