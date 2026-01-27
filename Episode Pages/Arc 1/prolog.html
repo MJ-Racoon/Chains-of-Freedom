@@ -29,28 +29,28 @@
       <div id="Title"> <h2 class="head"> A lone free Hunter </h2> </div>
   </div>
 
-<div class="container1">
-  <div class="nav-btn" id="previous">
+ <div class="container1">
+  <a class="nav-btn prev">
    <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
   <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
-</svg>
+   </svg>
     <h4 class="row2 text-btn">Previous</h4>
-  </div>
+  </a>
   
-   <a href="../../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
+  <a href="../../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
   
-   <div class="nav-btn" id="next">
+  <a class="nav-btn next" >
     <h4 class="row2 text-btn">Next</h4>
     <svg
-  class="arrow"
-  viewBox="0 0 1000 1000"
-  height="25"
-  aria-hidden="true"
->
-  <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
-</svg>
-  </div>
-</div>
+    class="arrow"
+    viewBox="0 0 1000 1000"
+    height="25"
+    aria-hidden="true"
+    >
+      <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
+    </svg>
+  </a>
+</div> 
   
   <!--Contents-->
   <div class="chapter-box" id="Arc-box">
@@ -133,39 +133,74 @@
   <div class="foot-box">
     <p id="thank-you">Thank you so much for sticking around to the end. 
       If you like what you're reading, feel free to:</p>
-    <div class="container2">
-      <div class="support"><img src="../../../Img/small decoration left.png" height="40px" id="smalldeco"/> 
-        <h2 href="../../Support me/Support Me.html" id="support">Support Me</h2> 
-        <img src="../../Img/small decoration right.png" height="40px" id="smalldeco"/> </div>
-    </div>
-  </div>
 
- <div class="container1">
-  <div class="nav-btn" id="previous">
+    <div class="donk">
+      <img src="../../Img/small decoration left.png" height="90px"/>
+      <div class="top-jump-box">
+        <a href="../../Support me/Support Me.html" id="jumpTopBtn" class="nav-btn" title="Nach oben">
+          <span id="to-top">support me</span>
+        </a>
+      </div>
+      <img src="../../Img/small decoration right.png" height="90px"/>
+    </div>
+  </div> 
+
+<div class="container1">
+  <a class="nav-btn prev">
    <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
   <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
-</svg>
+   </svg>
     <h4 class="row2 text-btn">Previous</h4>
-  </div>
+  </a>
   
-   <a href="../../../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
+  <a href="../../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
   
-   <div class="nav-btn" id="next">
+  <a class="nav-btn next" >
     <h4 class="row2 text-btn">Next</h4>
     <svg
-  class="arrow"
-  viewBox="0 0 1000 1000"
-  height="25"
-  aria-hidden="true"
->
-  <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
-</svg>
-  </div>
-</div>
-</div>  
+    class="arrow"
+    viewBox="0 0 1000 1000"
+    height="25"
+    aria-hidden="true"
+    >
+      <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
+    </svg>
+  </a>
+</div> 
 
 <div class="footer">
 <div> <p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p> </div>
 </div>
+
+
+
+
+  <script>
+const pages = [
+  "prolog.html",
+  "Ch1.html",
+  "index.html" // Homepage
+];
+
+const current = window.location.pathname.split("/").pop();
+const index = pages.indexOf(current);
+
+document.querySelectorAll(".prev").forEach(btn => {
+  if (index > 0) {
+    btn.href = pages[index - 1];
+  } else {
+    btn.classList.add("disabled");
+  }
+});
+
+document.querySelectorAll(".next").forEach(btn => {
+  if (index < pages.length - 1) {
+    btn.href = pages[index + 1];
+  } else {
+    btn.classList.add("disabled");
+  }
+});
+</script>
+
 </body>
 </html>

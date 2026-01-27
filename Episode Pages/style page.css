@@ -363,7 +363,6 @@ ul {
 }
 
 #map img {
-  width: 50%;
   height: auto;
   transition: width 0.3s ease-in-out;
   max-width: 100%;
@@ -393,38 +392,6 @@ ul {
     margin-top: 40px;
 }
 
-.container2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 20px 0 40px 0; /* top + bottom margin spacing */
-}
-
-.support {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px 35px;
-    border-radius: 12px;
-    transition: all 0.3s ease-in-out;
-    gap: 10px;
-    margin: 0 auto;               /* centers it horizontally */
-    max-width: fit-content;       /* keeps button compact and centered */
-}
-
-.support:hover {
-    background-color: #968170;
-    transform: scale(1.05);       /* subtle “button grow” effect */
-}
-
-#smalldeco {
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
-}
 
 
 /* ----------------------------
@@ -546,4 +513,62 @@ ul {
 #copyright {
   font-size: 0.7em;
   text-align: center;
+}
+
+.donk {
+    display: flex;
+    justify-content: center;
+}
+
+#jumpTopBtn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;          /* Text + Icon inline */
+    align-items: center;           /* vertikal zentrieren */
+    gap: 6px;
+    margin: 20px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bold;             /* Text fett */
+    color:#E808CA;                /* DEFAULT Farbe für Text + Pfeil */
+    background: linear-gradient(to right, transparent, transparent);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+    text-decoration: none;         /* Unterstreichung entfernen */
+}
+
+
+#jumpTopBtn span {
+    color: inherit;               
+    font-weight: bold;        
+    padding-bottom: 4px;    
+}
+
+
+/* Hover-Effekt für Text und Pfeil */
+#jumpTopBtn:hover {
+    color: #E9D899;                /* Hover-Farbe für Text + Pfeil */
+    background: linear-gradient(90deg, rgba(233,216,153,0.2), rgba(232,8,202,0.2));
+}
+
+#jumpTopBtn .arrow {
+    margin-bottom: -2px; /* kleiner Offset für perfekte optische Zentrierung */
+}
+
+#jumpTopBtn .arrow path {
+    transition: fill 0.3s ease-in-out;
+}
+
+.top-jump-box {
+display: flex;
+
+}
+
+#to-top {
+  font-size: larger;
 }
