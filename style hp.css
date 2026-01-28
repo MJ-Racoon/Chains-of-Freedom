@@ -31,8 +31,7 @@
   font-style: normal;
   font-size: 1.8em;
   text-shadow: #1d1815;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding: 10px;
   margin-bottom: 40px;
   height: 80px;
   transition: all 0.3s ease-in-out;
@@ -74,10 +73,30 @@
     color: #DFD4D1 !important;
     
 }
+.content {
+  display:flex;
+  justify-content:space-evenly;
+  margin: 0px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .cover {
+margin-bottom: 20px;
+height: 65%;
+width: 65%;
+}
+
+}
 
 .chapter {
     text-decoration: none;
     font-size: 1.4em;
+    transition: all 0.3s ease-in-out;
 }
 
 .chapter:hover {
@@ -169,6 +188,14 @@ li {color: black(255, 0, 208);
     margin: 7px 2px;
 }
 
+#unreleased {
+  text-decoration:line-through;
+}
+
+#unreleased:hover {
+  color:#E808CA!important;
+}
+
 #creator {
   color:#DFD4D1 !important;
   padding-top: 2px;
@@ -229,8 +256,8 @@ li {color: black(255, 0, 208);
     font-weight: 900;
     font-style: normal;
     font-size: 2em;
-    font-weight: bold;             /* Text fett */
-    color: #E808CA;                /* DEFAULT Farbe für Text + Pfeil */
+    color: #E808CA;
+    --icon-color: #E808CA;                /* DEFAULT Farbe für Text + Pfeil */
     background: linear-gradient(to right, transparent, transparent);
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     cursor: pointer;
@@ -248,14 +275,20 @@ li {color: black(255, 0, 208);
 /* Pfeil übernimmt Farbe */
 #jumpTopBtn .arrow {
     display: inline-block;
-    vertical-align: middle;        /* optische Zentrierung */
+    color: inherit;
     width: 30px;
     height: 30px;
+    margin-bottom: -9px; /* kleiner Offset für perfekte optische Zentrierung */
 }
 
-#jumpTopBtn .arrow path {
-    fill: currentColor;            /* Farbe = Button Text */
-    transition: fill 0.3s ease-in-out;
+#jumpTopBtn svg path {
+  fill: var(--icon-color) !important;
+  transition: fill 0.3s ease-in-out;
+}
+
+#jumpTopBtn:hover {
+  --icon-color: #E9D899;
+  color: #E9D899;
 }
 
 /* Hover-Effekt für Text und Pfeil */
@@ -264,19 +297,9 @@ li {color: black(255, 0, 208);
     background: linear-gradient(90deg, rgba(233,216,153,0.2), rgba(232,8,202,0.2));
 }
 
-#jumpTopBtn .arrow {
-    margin-bottom: -2px; /* kleiner Offset für perfekte optische Zentrierung */
-}
-
-#jumpTopBtn .arrow path {
-    transition: fill 0.3s ease-in-out;
-}
-
-.top-jump-box {
-display: flex;
-
-}
 
 #to-top {
   font-size: larger;
 }
+
+

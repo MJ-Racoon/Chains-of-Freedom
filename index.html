@@ -523,7 +523,10 @@ h6 {
 
   #carol img{
   width: 270px;
-}
+  }
+
+
+
 }
 
 /* ====== Small screens (mobile landscape / narrow tablets) ====== */
@@ -552,7 +555,7 @@ h6 {
 }
 
   .sumtext {
-    width: 95%;
+    width: 90%;
     padding: 5px;
     font-size: clamp(0.65rem, 2.2vw, 0.9rem);
     text-align: justify;
@@ -576,7 +579,8 @@ h6 {
 
   .sumtext {
     font-size: clamp(0.6rem, 2vw, 0.8rem);
-    text-align: block;
+    text-align: justify;
+    width: 70%!important;
   }
 }
   
@@ -597,7 +601,7 @@ h6 {
 
   .sumtext {
     font-size: clamp(0.55rem, 2vw, 0.75rem); /* ensure text stays readable */
-    margin: 5px;;
+    width: 100%!important;
   }
 }
 
@@ -609,11 +613,13 @@ h6 {
   }
 
   .sumtext {
-    width: 100%;
-    max-width: 100%;
-    margin: 2px;            /* remove extra horizontal margin */
+    width: 100%!important;
     font-size: clamp(0.8rem, 2.5vw, 1rem);
-     text-align: block;
+    text-align: block;
+  }
+
+  .sumtext p {
+    text-align: justify;
   }
 
   p {
@@ -869,15 +875,24 @@ h6 {
 <button id="newest-shiat"><a href="Episode Pages\Arc 1\prolog.html" id="ugly-link">Jump to latest Ep</a> </button>
 
   <div class="arc-decoration">
+
     <div class="chapter-box" id="Arc-box">
-      <h1 class="Arc"> Issue 1: Beginning</h1>
    
+
 <!-- Update!!! -->
+  <div class="content">
+    <img class="cover" src="Episode Pages\Arc 1\Cover Issue 1 - Beginning.webp" width="50%"/>
+
+    <div class="glossar">
+        <h1 class="Arc"> Issue 1: Beginning</h1>
         <ul>
           <li><a href="Episode Pages\Arc 1\prolog.html" class="chapter">Prolouge</a></li>
           <li><a href="Episode Pages\Arc 1\Ch1.html" class="chapter">Chapter 1</a></li>
-          <li><a href="#" class="chapter">Chapter 2</a></li>
+          <li ><a href="#" id="unreleased" class="chapter">Chapter 2</a></li>
         </ul>
+    </div>
+    
+  </div>
     </div>  
 
     <div id="jun" class="chibi">
@@ -894,7 +909,7 @@ h6 {
 <div class="top-jump-box">
 <a href="#top" id="jumpTopBtn" class="nav-btn" title="Nach oben">
   <svg class="arrow" viewBox="0 0 1000 1000" width="20" height="20" aria-hidden="true">
-    <path d="M500 200 L800 600 L200 600 Z" fill="currentColor"/>
+    <path d="M500 200 L800 600 L200 600 Z"/>
   </svg>
   <span id="to-top">to the top</span>
 </a>
@@ -912,7 +927,7 @@ h6 {
   <img id="avatar" src="Img/Profile pics/MJ Sona.webp" width="230px" height="230px" alt="creator-image"/>
   <p id="about-me">
 Hey there! I'm MJ, a lost little racoon from Germany and the author and artist behind this webcomic. 
-Gratuating from Josia Missionary school, I realized I wanted to use my gifts and passion in Art for Christ.
+Gratuating from "Josia missionary" school, I realized I wanted to use my gifts and passion in art for Christ.
 Now weather you're christian or not, I hope you will stick around to hear my story. 
     </p>
 </div>
