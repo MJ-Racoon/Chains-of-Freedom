@@ -13,6 +13,21 @@
 
 
 
+.button-deco {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0% 10%;
+  padding: 0% 10%;
+  position: relative;
+}
+
+#button-deco {
+  margin-top: 45px;
+  padding: 10px 50px;
+  position: relative;
+}
+
 /* Button below summary */
 #newest-shiat {
   padding: 15px 80px;
@@ -63,14 +78,51 @@
 .Arc {
     text-align: center;
     text-decoration: underline;
-    padding-bottom: 20px;
-    color: #B19F90!important;
+    color: #DFD4D1 !important;
     
+}
+.content {
+  display:flex;
+  justify-content:space-evenly;
+  margin: 0px;
+}
+
+.glossar {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.g-border {
+border-style:solid;
+  border-width: 2px;
+  border-color:#DFD4D1;
+  padding: 13px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .cover {
+margin-bottom: 20px;
+height: 80%;
+width: 80%;
+}
+
+#button-deco {
+  position:absolute;
+  display: none;
+}
+
 }
 
 .chapter {
     text-decoration: none;
     font-size: 1.4em;
+    transition: all 0.3s ease-in-out;
 }
 
 .chapter:hover {
@@ -94,14 +146,6 @@
   flex-direction: column;
   align-items: center; /* keeps list centered */
   justify-content: flex-start;
-}
-
-/* Keep list centered regardless of Jun */
-ul {
-  text-align: center;
-  padding-bottom: 20px;
-  margin: 0 auto;
-  position: relative;
 }
 
 #jun {
@@ -160,7 +204,7 @@ li {color: black(255, 0, 208);
     font-weight: bold;
     font-size:large;
     margin: 7px 2px;
-}
+} 
 
 #creator {
   color:#DFD4D1 !important;
@@ -213,4 +257,65 @@ li {color: black(255, 0, 208);
 #selected {
     color:#E9D899 !important;
 }
+
+
+#jumpTopBtn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;          /* Text + Icon inline */
+    align-items: center;           /* vertikal zentrieren */
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2em;
+    color: #E808CA;
+    --icon-color: #E808CA;                /* DEFAULT Farbe für Text + Pfeil */
+    background: linear-gradient(to right, transparent, transparent);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    text-decoration: none;         /* Unterstreichung entfernen */
+}
+
+/* Text innerhalb des Buttons übernimmt Farbe */
+#jumpTopBtn span {
+    color: inherit;               /* erbt Farbe vom Button */
+    font-weight: bold;            /* Fett auch hier */
+}
+
+/* Pfeil übernimmt Farbe */
+#jumpTopBtn .arrow {
+    display: inline-block;
+    color: inherit;
+    width: 30px;
+    height: 30px;
+    margin-bottom: -9px; /* kleiner Offset für perfekte optische Zentrierung */
+}
+
+#jumpTopBtn svg path {
+  fill: var(--icon-color) !important;
+  transition: fill 0.3s ease-in-out;
+}
+
+#jumpTopBtn:hover {
+  --icon-color: #E9D899;
+  color: #E9D899;
+}
+
+/* Hover-Effekt für Text und Pfeil */
+#jumpTopBtn:hover {
+    color: #E9D899;                /* Hover-Farbe für Text + Pfeil */
+    background: linear-gradient(90deg, rgba(233,216,153,0.2), rgba(232,8,202,0.2));
+}
+
+
+#to-top {
+  font-size: larger;
+}
+
 

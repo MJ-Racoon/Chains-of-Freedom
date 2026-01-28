@@ -450,7 +450,7 @@ ul {
       <ul class="chapter1">
         <li class="episode-selection"> <a href="#episode1" class="episode"> Episode 1 </a></li>
         <li class="episode-selection"><a href="#episode2" class="episode"> Episode 2 </a></li>
-        <li class="episode-selection"><a href="#episode1" class="episode"> Episode 3 </a></li>
+        <li class="episode-selection"><a href="#episode3" class="episode"> Episode 3 </a></li>
       </ul>
       
 
@@ -513,7 +513,7 @@ ul {
     <img  src="0_Prolouge\Prolouge 1_006.webp" alt="Chains of Freedom - Episode 2, Page 14" loading="lazy"/>
     <img  src="0_Prolouge\Prolouge 1_007.webp" alt="Chains of Freedom - Episode 2, Page 15" loading="lazy"/>
     <img  src="0_Prolouge\Prolouge 1_008.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
-    <img  src="0_Prolouge\Prolouge 1_009.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
+    <img id="episode3" src="0_Prolouge\Prolouge 1_009.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
   </div>
 
   <div class="foot-box">
@@ -562,30 +562,35 @@ ul {
 
 
 
-  <script>
-const pages = [
-  "prolog.html",
-  "Ch1.html",
-  "index.html" // Homepage
-];
+<script>
+window.addEventListener("load", function() {
+    if(location.hash){
+        const target = document.querySelector(location.hash);
+        if(target){
+            // Alle Bilder in .comic fertig laden?
+            const comicImgs = document.querySelectorAll(".comic img");
+            let loaded = 0;
+            comicImgs.forEach(img => {
+                if(img.complete) loaded++;
+                else img.addEventListener("load", () => {
+                    loaded++;
+                    if(loaded === comicImgs.length) scrollToTarget();
+                });
+            });
+            if(loaded === comicImgs.length) scrollToTarget();
 
-const current = window.location.pathname.split("/").pop();
-const index = pages.indexOf(current);
+            function scrollToTarget(){
+                const headerOffset = 0; // optional für Sticky Header
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-document.querySelectorAll(".prev").forEach(btn => {
-  if (index > 0) {
-    btn.href = pages[index - 1];
-  } else {
-    btn.classList.add("disabled");
-  }
-});
-
-document.querySelectorAll(".next").forEach(btn => {
-  if (index < pages.length - 1) {
-    btn.href = pages[index + 1];
-  } else {
-    btn.classList.add("disabled");
-  }
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        }
+    }
 });
 </script>
 

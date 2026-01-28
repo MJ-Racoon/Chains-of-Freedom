@@ -11,28 +11,36 @@
 }
 
 
+.button-deco {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0% 10%;
+  padding: 0% 10%;
+  position: relative;
+}
 
-
-
-
-
-
-
+#button-deco {
+  margin-top: 45px;
+  padding: 10px 50px;
+  position: relative;
+}
 
 /* Button below summary */
 #newest-shiat {
-  
   margin: 5%;
   background-color: #51423D;
   color: #E808CA !important;
+  position: relative;
   border: none;
   font-family: "Amatic SC", sans-serif;
   font-weight: 1000;
   font-style: normal;
+  min-width: 230px;
   font-size: 1.8em;
   text-shadow: #1d1815;
   padding: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
   height: 80px;
   transition: all 0.3s ease-in-out;
   border-radius: 6px;
@@ -69,14 +77,27 @@
 .Arc {
     text-align: center;
     text-decoration: underline;
-    padding-bottom: 20px;
-    color: #DFD4D1 !important;
+    padding-bottom: 10px;
+    padding-top:15px;
     
 }
 .content {
   display:flex;
   justify-content:space-evenly;
   margin: 0px;
+}
+
+.glossar {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.g-border {
+border-style:solid;
+  border-width: 2px;
+  border-color:#1d1815;
+  padding: 13px;
 }
 
 @media (max-width: 768px) {
@@ -87,8 +108,13 @@
 
   .cover {
 margin-bottom: 20px;
-height: 65%;
-width: 65%;
+height: 80%;
+width: 80%;
+}
+
+#button-deco {
+  position:absolute;
+  display: none;
 }
 
 }

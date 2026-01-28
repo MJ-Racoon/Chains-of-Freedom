@@ -411,6 +411,9 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url(./Img/texturelight.webp);
+  background-repeat: repeat;
+  background-size: 300px;
   background-color: #968170;
   border: 3px solid #1d1815;
   margin: 5% 10%;
@@ -803,7 +806,7 @@ h6 {
   <ul class="nav-bar" id="nav-bar">
     <li class="nav-button" id="selected"><a href="index.html">Home</a></li>
     <!-- Update!!! and copy to other pages -->
-    <li class="nav-button"><a href="Episode Pages/Arc 1/prolog.html">Latest Episode</a></li>
+    <li class="nav-button"><a href="Episode Pages/Arc 1/prolog.html#episode2">Latest Episode</a></li>
     <li class="nav-button"><a href="Characters/Characters.html">Characters</a></li>
     <li class="nav-button"><a href="Support me/Support Me.html">Support Me</a></li>
     <li style="text-decoration: line-through;" class="disabled" ><a href="#" class="disabled">Bonus</a></li>
@@ -872,24 +875,28 @@ h6 {
   
 
 <!-- Update!!! -->
-<button id="newest-shiat"><a href="Episode Pages\Arc 1\prolog.html" id="ugly-link">Jump to latest Ep</a> </button>
+
+<div class="button-deco">
+  <img src="/Img/button deco left.webp" id="button-deco" width="200px" height="60px" alt=""/>
+  <button id="newest-shiat"><a href="Episode Pages\Arc 1\prolog.html#episode2" id="ugly-link">Jump to latest Ep</a> </button>
+  <img src="/Img/button deco right.webp" id="button-deco" width="200px" height="60px" alt=""/>
+</div> 
 
   <div class="arc-decoration">
-
     <div class="chapter-box" id="Arc-box">
-   
-
 <!-- Update!!! -->
   <div class="content">
-    <img class="cover" src="Episode Pages\Arc 1\Cover Issue 1 - Beginning.webp" width="50%"/>
+    <img class="cover" src="Episode Pages\Arc 1\Cover Issue 1 - Beginning.webp" width="50%" alt="Cover Chains of Freedom Issue 1"/>
 
     <div class="glossar">
+      <div class="g-border">
         <h1 class="Arc"> Issue 1: Beginning</h1>
         <ul>
           <li><a href="Episode Pages\Arc 1\prolog.html" class="chapter">Prolouge</a></li>
           <li><a href="Episode Pages\Arc 1\Ch1.html" class="chapter">Chapter 1</a></li>
           <li ><a href="#" id="unreleased" class="chapter">Chapter 2</a></li>
         </ul>
+      </div>
     </div>
     
   </div>
