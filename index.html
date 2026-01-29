@@ -139,11 +139,14 @@ padding: 0;
   color:#f7db75;
   padding-top: 50px;
   padding-bottom: 2px;
+  width:300px;
+  min-width: 200px;
+
   font-family: "Amatic SC", sans-serif;
   font-weight: 400;
   font-style: bold;
   font-size: 3em;
-  text-shadow: #0d0705;
+  
 }
 
 
@@ -708,6 +711,10 @@ h6 {
   color:#968170;
 }
 
+.body {
+  background-image: url(./Img\texturedark.webp)!important;
+}
+
 .disabled {
   color:#000 !important;
 }
@@ -750,6 +757,18 @@ h6 {
   background-color: #51423D;
 }
 
+}
+
+
+.arrow-d {
+  width: 190px;
+  height: auto;
+  transform: translateY(19px);
+}
+
+.updates {
+  display: flex;
+  justify-content: center;
 }
 
 </style>
@@ -832,8 +851,16 @@ h6 {
     <img id="top-right" src="Img/corner top right.webp" width="60px" height="60px" alt=""/>
   </div>
   
-  <h1 id="update-schedule">Updates every second sunday</h2>
-  <p id="update-note">If you are reading this, congratulations. You made it on this Website, before the Comic even officially released.</p>
+ 
+    <div class="button-deco">
+      <img src="Img\upload deco left.webp" class="button-deco-img-L arrow-d" alt=""/>
+
+      <h1 id="update-schedule">Updates every second sunday</h2>
+
+      <img src="Img\upload deco right.webp" class="button-deco-img-L arrow-d" alt=""/>
+    </div>
+    <p id="update-note">If you are reading this, congratulations. You made it on this Website, before the Comic even officially released.</p>
+
 
   <div class="chibi-container">
   <div id="amari" class="chibi">
@@ -881,7 +908,7 @@ h6 {
 
   <a href="Episode Pages/Arc 1/prolog.html#episode2"
      class="newest-shiat-btn">
-     Jump to latest Ep
+     Jump to latest Episode
   </a>
 
   <img src="Img/button deco right long.webp" class="button-deco-img-L right" alt=""/>
@@ -900,6 +927,7 @@ h6 {
           <li><a href="Episode Pages\Arc 1\prolog.html" class="chapter">Prolouge</a></li>
           <li><a href="Episode Pages\Arc 1\Ch1.html" class="chapter">Chapter 1</a></li>
           <li ><a href="#" id="unreleased" class="chapter">Chapter 2</a></li>
+          <li ><a href="#" id="unreleased" class="chapter">Chapter 3</a></li> 
         </ul>
       </div>
     </div>
