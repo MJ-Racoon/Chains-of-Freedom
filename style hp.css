@@ -13,43 +13,80 @@
 
 .button-deco {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0% 10%;
-  padding: 0% 10%;
-  position: relative;
+  align-items: center;        /* ✅ vertikal mittig */
+  justify-content: center;
+  gap: 24px;
+
+  max-width: 100%;
+  margin: 0 10%;
+  padding: 0 10%;
+
+  overflow: hidden;           /* 🔒 bleibt im body */
+  box-sizing: border-box;
 }
 
-#button-deco {
-  margin-top: 45px;
-  padding: 10px 50px;
-  position: relative;
+/* Deko-Bilder */
+.button-deco-img-L {
+  display: block;             /* ✅ kein Baseline-Offset */
+  height: 50px;               /* 🔥 größer & präsent */
+  width: auto;                /* Verhältnis bleibt */
+  flex-shrink: 0;             /* nicht zerquetschen */
+  transform: translateY(-18px);
 }
 
-/* Button below summary */
-#newest-shiat {
-  margin: 5%;
+
+/* Button */
+.newest-shiat-btn {
+  width: 200px;
+  height: 50px;
+  margin-bottom: 40px;
+  padding: 5px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+
   background-color: #51423D;
-  color: #E808CA !important;
-  position: relative;
-  border: none;
-  font-family: "Amatic SC", sans-serif;
-  font-weight: 1000;
-  font-style: normal;
-  min-width: 230px;
-  font-size: 1.8em;
-  text-shadow: #1d1815;
-  padding: 10px;
-  margin-bottom: 70px;
-  height: 80px;
-  transition: all 0.3s ease-in-out;
-  border-radius: 6px;
+  color: #E808CA;
+
+  border: 2px;
+  border-color:#000000;
+  border-style: solid;
+  border-radius: 4px;
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;   /* 👈 wichtig */
 }
 
-#newest-shiat:hover {
+.newest-shiat-btn:hover {
   background-color: #E9D899;
-  cursor: pointer;
+  transform: scale(1.05); /* 👈 minimal größer */
 }
+
+
+/* Optional: mobilfreundlich */
+@media (max-width: 600px) {
+
+  .button-deco-img-L {
+    display: none;
+    position: absolute;
+  }
+
+  .newest-shiat-btn {
+    width: 160px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
 
 /* Utility */
 #ugly-link {
@@ -112,12 +149,9 @@ height: 80%;
 width: 80%;
 }
 
-#button-deco {
-  position:absolute;
-  display: none;
 }
 
-}
+
 
 .chapter {
     text-decoration: none;
