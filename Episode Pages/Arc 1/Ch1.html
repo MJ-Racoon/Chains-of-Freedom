@@ -563,6 +563,37 @@ ul {
 
 
   <script>
+
+window.addEventListener("load", function() {
+    if(location.hash){
+        const target = document.querySelector(location.hash);
+        if(target){
+            // Alle Bilder in .comic fertig laden?
+            const comicImgs = document.querySelectorAll(".comic img");
+            let loaded = 0;
+            comicImgs.forEach(img => {
+                if(img.complete) loaded++;
+                else img.addEventListener("load", () => {
+                    loaded++;
+                    if(loaded === comicImgs.length) scrollToTarget();
+                });
+            });
+            if(loaded === comicImgs.length) scrollToTarget();
+
+            function scrollToTarget(){
+                const headerOffset = 0; // optional für Sticky Header
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        }
+    }
+});
+
 const pages = [
   "prolog.html",
   "Ch1.html",

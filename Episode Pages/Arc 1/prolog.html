@@ -451,6 +451,7 @@ ul {
         <li class="episode-selection"> <a href="#episode1" class="episode"> Episode 1 </a></li>
         <li class="episode-selection"><a href="#episode2" class="episode"> Episode 2 </a></li>
         <li class="episode-selection"><a href="#episode3" class="episode"> Episode 3 </a></li>
+         <li class="episode-selection"><a href="#episode4" class="episode"> Episode 4 </a></li>
       </ul>
       
 
@@ -514,13 +515,19 @@ ul {
     <img  src="0_Prolouge\Prolouge 1_007.webp" alt="Chains of Freedom - Episode 2, Page 15" loading="lazy"/>
     <img  src="0_Prolouge\Prolouge 1_008.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
     <img id="episode3" src="0_Prolouge\Prolouge 1_009.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 1_010.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 1_010.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_001.webp" alt="Chains of Freedom - Episode 2, Page 14" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_002.webp" alt="Chains of Freedom - Episode 2, Page 15" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_003.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
+    <img id="episode4" src="0_Prolouge\Prolouge 2_004.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
   </div>
 
   <div class="foot-box">
 
+    <img src="../../Img\Eliot favicon fancy.webp" width="140px"/>
     <p id="thank-you">Thank you so much for sticking around to the end. 
       If you like what you're reading, feel free to:</p>
-
      <div class="donk">
       <img src="../../Img/small decoration left.webp" height="90px"/>
       <div class="top-jump-box">
@@ -591,6 +598,30 @@ window.addEventListener("load", function() {
             }
         }
     }
+});
+
+const pages = [
+  "prolog.html",
+  "Ch1.html",
+  "../../index.html" // Homepage
+];
+const current = window.location.pathname.split("/").pop();
+const index = pages.indexOf(current);
+
+document.querySelectorAll(".prev").forEach(btn => {
+  if (index > 0) {
+    btn.href = pages[index - 1];
+  } else {
+    btn.classList.add("disabled");
+  }
+});
+
+document.querySelectorAll(".next").forEach(btn => {
+  if (index < pages.length - 1) {
+    btn.href = pages[index + 1];
+  } else {
+    btn.classList.add("disabled");
+  }
 });
 </script>
 
