@@ -31,17 +31,19 @@
 
 <style>
   body {
-    background-color:#383B28!important; 
-    background-repeat: repeat-y, repeat;
-    background-size: 100%, 500px 500px;
-    font-family: "Noto Serif", serif;
-    font-weight: 400;
-    font-style: normal;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-image: url("./Img/Chains.webp"), url("./Img/Wallpaper.webp")
+  display: flex;              /* 👈 DAS fehlt */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: #383B28 !important;
+  background-repeat: repeat-y, repeat;
+  background-size: 100%, 500px 500px;
+  background-image: url("./Img/Chains.webp"), url("./Img/Wallpaper.webp");
+
+  font-family: "Noto Serif", serif;
+  min-height: 100vh;
+  margin: 0;
 }
 
 * {
@@ -52,15 +54,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-
-hr {
-display: block;
-height: 1px;
-border: 0;
-border-top: 4px solid #51423D;
-padding: 0;
 }
 
 
@@ -89,56 +82,119 @@ padding: 0;
 
 
 /* Content */
+
+.home-button {
+  display: flex;
+  align-items: left;
+  justify-content: left; 
+
+  
+  width: 100%;
+  max-width: 800px;
+  margin: 3vh auto;
+  margin-bottom: 1px;
+}
+
+.home-button a {
+  color:#E9D899;
+  padding: 2px 8px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-button a:hover {
+  color: rgb(230, 228, 208);                /* Hover-Farbe für Text + Pfeil */
+  background: linear-gradient(90deg, rgba(233,216,153,0.2), rgba(232,8,202,0.2));
+  padding: 2px 8px;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0 0 3px rgb(230, 228, 208);
+}
+
 .body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(./Img/texturelight.webp);
-  background-repeat: repeat;
+  justify-content: center; 
+
+
   background-size: 300px;
   background-color: #968170;
   border: 3px solid #1d1815;
-  margin: 5% 10%;
-  padding: 20px 80px;
-  text-align: center;
+  margin: 3% 10%;
   position: relative; /* so Jun can anchor here */
   box-sizing: border-box;
+
+  width: 100%;
+  max-width: 800px;
+  margin: 3vh auto;
+  
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.brevo-form {
+  width: 100%;
+  min-height: 780px;
+  padding-top: 50px;
+  border: none;
+  display: block;
+  margin: auto;
+  background-color: transparent;
+}
+
+.form-wrapper {
+  flex: 1;                   /* nimmt verfügbaren Platz */
+  display: flex;
+  align-items: center;       /* vertikal */
+  justify-content: center;   /* horizontal */
+  width: 100%;
+}
 
 .footer {
     padding: 20px 20px;
-    margin: 0px;
+    margin-top: auto;   
     background-color: #968170;
-   
+    width: 100%;          
+    box-sizing: border-box;
 }
 
 #copyright {
   font-size: 0.7em;
   text-align: center;
 }
-
-
-
 </style>
 
 
 
   </head>
 <body>
-  
  
-
 <!-- Content -->
+
+<div class="home-button">
+ <a href="index.html">Home</a>
+</div>
+
 <div class="body">
   <div class="corner-top">
     <img id="top-left" src="Img/corner top left.webp" width="60px" height="60px" alt=""/>
     <img id="top-right" src="Img/corner top right.webp" width="60px" height="60px" alt=""/>
   </div>
 
-<h1>Subscribe</h1>
-<p>and Don't miss another episode</p>
-
+<div class="form-wrapper">
+  <iframe class="brevo-form"
+    loading="lazy" 
+    frameborder="0" 
+    scrolling="auto" 
+    allowfullscreen 
+    src="https://bd1ff42e.sibforms.com/serve/MUIFAHPOjfQ0HkvHQKawf8OOE0eByUaN85rvmto1jpYVo4jUZunc3UoQencvSzPxcawhfJ9f10xKHhoLklgHSxgS1MQm7h4t1tWOYLWQ2PcsCFPxDK64pMTwrZn1hw6YuAOhpEjvZ99OmNRPA1RFku2FcF76_8zj8emxVfsSfIIjzos6-pfq0ZOgAdrmmRna9UC5gFlTvO8Omn-4UQ==">
+  </iframe>
+</div>
 
 
   <div class="corner-bottom">
