@@ -30,18 +30,25 @@
      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
 
 <style>
-  body {
-    background-color:#383B28!important; 
-    background-repeat: repeat-y, repeat;
-    background-size: 100%, 500px 500px;
-    font-family: "Noto Serif", serif;
-    font-weight: 400;
-    font-style: normal;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-image: url("./Img/Chains.webp"), url("./Img/Wallpaper.webp")
+ body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: #383B28;
+  background-image: url("./Img/Chains.webp"), url("./Img/Wallpaper.webp");
+  background-repeat: repeat-y, repeat;
+  background-size: 100%, 500px 500px;
+  font-family: "Noto Serif", serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 * {
@@ -52,15 +59,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-
-hr {
-display: block;
-height: 1px;
-border: 0;
-border-top: 4px solid #51423D;
-padding: 0;
 }
 
 
@@ -89,28 +87,91 @@ padding: 0;
 
 
 /* Content */
+
+.home-button {
+  display: flex;
+  justify-content: center; 
+
+ 
+  margin-bottom: 0px;
+  
+  width: 100%;
+  max-width: 800px;
+}
+
+.home-button a {
+  color:#E9D899;
+  padding: 2px 8px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-button a:hover {
+  color: rgb(230, 228, 208);                /* Hover-Farbe für Text + Pfeil */
+  background: linear-gradient(90deg, rgba(233,216,153,0.2), rgba(232,8,202,0.2));
+  padding: 2px 8px;
+  cursor: pointer;
+  border-radius: 1em;
+  text-decoration: none;
+  text-shadow: 0 0 3px rgb(230, 228, 208);
+}
+
+.center-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(./Img/texturelight.webp);
-  background-repeat: repeat;
-  background-size: 300px;
+  justify-content: center;
+
+  position: relative;
+  box-sizing: border-box;
+
+  width: 100%;           /* Container will so breit wie möglich sein */
+  max-width: 1500px;     /* aber nicht breiter als 1000px */
+  min-width: 300px;      /* optional für sehr kleine Bildschirme */
+  
+  margin: 0 10px;        /* horizontalen Abstand von 10px auf kleinen Bildschirmen */
+  height: 500px;
+
   background-color: #968170;
   border: 3px solid #1d1815;
-  margin: 5% 10%;
-  padding: 20px 80px;
+  padding: 20px;         /* optional für Innenabstand */
+}
+
+
+
+.Confirmed {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  position: relative; /* so Jun can anchor here */
-  box-sizing: border-box;
+  padding: 50px 5px;
+}
+
+.Confirmed p {
+   color: #1d1815;
+   font-size: 1em;
+}
+
+.Confirmed h3 {
+   color:#1d1815;
+   font-size: 2em;
 }
 
 
 .footer {
     padding: 20px 20px;
-    margin: 0px;
+    margin-top: auto;   
     background-color: #968170;
-   
+    width: 100%;          
+    box-sizing: border-box;
 }
 
 #copyright {
@@ -118,35 +179,41 @@ padding: 0;
   text-align: center;
 }
 
-
-
 </style>
 
 
 
-  </head>
-<body>
-  
- 
+</head>
 
+
+<body>
 <!-- Content -->
+
+<main class="center-wrapper">
 <div class="body">
   <div class="corner-top">
     <img id="top-left" src="Img/corner top left.webp" width="60px" height="60px" alt=""/>
     <img id="top-right" src="Img/corner top right.webp" width="60px" height="60px" alt=""/>
   </div>
 
-<h1>Subscribe</h1>
-<p>and Don't miss another episode</p>
 
-
-
+  <div class="Confirmed">
+    <p>
+  Thank you so much for subscribing to my Comic.
+    </p>
+    <h3>Please check your Email inbox</h3>
+  </div>
   <div class="corner-bottom">
     <div id="bottom-left"> <img src="Img\corner bottom left.webp" width="60px" height="60px" alt=""/></div>
     <div id="bottom-right"> <img src="Img\corner bottom right.webp" width="60px" height="60px" alt=""/></div>
   </div>
-</div>
 
+ <div class="home-button">
+    <a href="index.html">return to Homepage</a>
+  </div>
+
+</div>
+</main>
 
 <div class="footer">
   <div> <p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p> </div>

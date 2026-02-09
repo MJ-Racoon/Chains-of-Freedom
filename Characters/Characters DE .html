@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+  <head>
+    <!-- Light Mode -->
+    <link rel="stylesheet" href="style ch.css" media="(prefers-color-scheme: light)">
+
+    <!-- Dark Mode -->
+    <link rel="stylesheet" href="style ch dark.css" media="(prefers-color-scheme: dark)">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Chains of Freedom - Characters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A library containing little bios of every relevant character from the Wembomic Chains of Freedom.">
+  
+    <!-- Favivons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="Img/Favicon/flame 16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Img/Favicon/flame 32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="Img/Favicon/flame 48.png">
+
+    <!-- iOS / Mobile -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Img/Favicon/flame 180.png">
+
+    <!-- fonts -->
+  
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+
+
+  </head>
+
+<body>
+  
+<div class="top-bar">
+  <div class="line top-line"></div>
+
+  <div class="top-deco-left">
+    <img src="../Img/head deco desktop left.webp" class="bar-deco desktop" alt=""/>
+    <img src="../Img/head deco tablet left.webp" class="bar-deco tablet" alt=""/>
+    <img src="../Img/head deco mobile left.webp" class="bar-deco mobile" alt=""/>
+  </div>
+
+  <div class="top-deco-right">
+    <img src="../Img/head deco desktop right.webp" class="bar-deco desktop"/>
+    <img src="../Img/head deco tablet right.webp" class="bar-deco tablet"/>
+    <img src="../Img/head deco mobile right.webp" class="bar-deco mobile"/>
+  </div>
+
+<div class="title-card">
+  <img src="../Img/Title card.webp" width="390px" class="title-card-img" alt="">
+</div>
+
+  <div class="stack" id="desktop-languages">
+    <div class="eng">
+      <img src="../Img/Eng on.webp" width="70px" alt="" />
+    </div>
+    <div class="deu">
+      <img id="deuFlag" src="../Img/Deu off.webp" width="70px" alt="" />
+    </div>
+  </div>
+
+  <div class="line bottom-line"></div>
+</div>
+
+<hr style="color:#1d1815" />
+
+<nav class="navbar">
+  <div class="mobile-top">
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+    <div class="languages">
+      <img src="../Img/Eng on.webp" width="40" alt=""/>
+      <img src="../Img/Deu off.webp" width="40" alt=""
+           onmouseover="this.src='../Img/Deu on.webp';"
+           onmouseout="this.src='../Img/Deu off.webp';" />
+    </div>
+  </div>
+
+  <ul class="nav-bar" id="nav-bar">
+    <li class="nav-button" id="selected"><a href="../index.html">Home</a></li>
+    <!-- Update!!! and copy to other pages -->
+    <li class="nav-button"><a href="../Episode Pages/Arc 1/prolog.html#episode3">Latest Episode</a></li>
+    <li class="nav-button"><a href="../Characters/Characters.html">Characters</a></li>
+    <li class="nav-button"><a href="../Support me/Support Me.html">Support Me</a></li>
+    <li style="text-decoration: line-through;" class="disabled" ><a href="#" class="disabled">Bonus</a></li>
+  </ul>
+</nav>
+
+<script>
+  const menuIcon = document.getElementById("menu-icon");
+  const navBar = document.getElementById("nav-bar");
+  menuIcon.addEventListener("click", () => { navBar.classList.toggle("show"); });
+
+  const deuFlag = document.getElementById("deuFlag");
+  deuFlag.addEventListener("mouseover", () => { deuFlag.src = "../Img/Deu on.webp"; });
+  deuFlag.addEventListener("mouseout",  () => { deuFlag.src = "../Img/Deu off.webp"; });
+</script>
+
+<hr style="color:#1d1815">
+
+<!-- Content -->
+<div id="main-cast">
+  <h1 id="headline">Main Cast</h1> 
+
+  <div class="main-character">
+    <div class="profile">
+      <img class="mc-profile-picture" src="../Img/Profile pics/Carol.webp" alt="Carol" />
+
+      <div class="character-info">
+        <div class="info-row">
+          <span class="label">Name:</span>
+          <span class="value">Carol</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Age:</span>
+          <span class="value">25</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Nation:</span>
+          <span class="value">Morbidon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      <h3>Description</h3>
+      <p>
+        A grumpy Hunter, who rather wants to be left alone... like... by everyone... 
+        exept his best friend eliot.
+        ... And yes of course Carol can also be a male name, leave me alone!
+      </p>
+    </div>
+  </div>
+
+  <div class="main-character">
+    <div class="profile">
+      <img class="mc-profile-picture" src="../Img/Profile pics/Amari.webp" alt="Amari" />
+
+      <div class="character-info">
+        <div class="info-row">
+          <span class="label">Name:</span>
+          <span class="value">Amari</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Age:</span>
+          <span class="value">19</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Nation:</span>
+          <span class="value">Pyronia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      <h3>Description</h3>
+      <p>
+        A young post girl from Pyronia, who wants to do the will of her great King. 
+        She loves to do parcour and that's also how she's delivering a letter.
+      </p>
+    </div>
+  </div>
+
+<div class="main-character">
+    <div class="profile">
+      <img class="mc-profile-picture" src="../Img/Profile pics/Eliot.webp" alt="Eliot"/>
+
+      <div class="character-info">
+        <div class="info-row">
+          <span class="label">Name:</span>
+          <span class="value">Eliot</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Age:</span>
+          <span class="value">6</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Nation:</span>
+          <span class="value">Morbidon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      <h3>Description</h3>
+      <p>
+        He's Carols loyal emotional support donkey and he's probably only using 5% of his power.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- supporting characters -->
+<div id="supporting-cast">
+  <h1 id="headline">Supporting Cast</h1>
+  <p id="spoilers" style="color:antiquewhite">click to view Characters:</p>
+  <p id="spoilers" style="color:#E808CA;">(SPOILERS!)</p>
+
+  <div id="Arc1" class="arc-box" onclick="toggleArc(this)">
+  <div class="corner-top">
+    <img id="top-left" src="../Img/corner top left.webp" width="60px" height="60px"/>
+    <img id="top-right" src="../Img/corner top right.webp" width="60px" height="60px"/>
+  </div>
+
+  <div class="headline">
+    <img src="../Img/closed deco left.webp" id="arrow-left" width="30px" height="40px"/>
+    <h3 class="Arc-h">
+    Volume 1<span class="arrow">▶</span>
+    </h3>
+    <img src="../Img/closed deco right.webp" id="arrow-right" width="30px" height="40px"/>
+  </div>
+    <div class="arc-content">
+      <div class="major-characters">
+        <h2 class="major-ch-h">Major characters:</h2>
+        
+<!-- put infos for major characters here -->
+
+         <div class="character-profile">
+          <img class="profile-picture" src="../Img/Profile pics/Smith.webp" alt="Smith" />
+          <div class="chr-info">
+            <div class="side-character-info">
+              <div class="info-block">
+                <h3 class="info-q">Name:</h3>
+                <h3 class="info">Smith Rotor</h3>
+              </div>
+              <div class="info-block">
+                <h3 class="info-q">Age:</h3>
+                <h3 class="info">58</h3>
+              </div>
+              <div class="info-block">
+                <h3 class="info-q">Nation:</h3>
+                <h3 class="info">Morbidon</h3>
+              </div>
+            </div>
+          </div>
+          <div class="character-bio">
+            <p id="character-bio">A mad streetsmark inventor, who had his finger eaten by one of 
+              his machines. He invented the toaster, but chose to keep this groundbreaking invention 
+              from huvanity. He still has trauma from putting the thermal blender on the market. 
+              Those capitalistic swines can lick his ***.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    <div class="minor-characters">
+      <h2 class="major-ch-h">Minor characters:</h2>
+  <!-- put infos for major characters here -->
+ 
+        <div class="character-profile">
+          <img class="profile-picture" src="../Img/Profile pics/Margarete.webp" alt="Margarete Amaris Sister" />
+          <div class="chr-info">
+            <div class="side-character-info">
+              <div class="info-block">
+                <h3 class="info-q">Name:</h3>
+                <h3 class="info">Margarete Tyler</h3>
+              </div>
+              <div class="info-block">
+                <h3 class="info-q">Age:</h3>
+                <h3 class="info">24</h3>
+              </div>
+              <div class="info-block">
+                <h3 class="info-q">Nation:</h3>
+                <h3 class="info">Pyronia</h3>
+              </div>
+            </div>
+          </div>
+          <div class="character-bio">
+            <p id="character-bio">Amaris big sister, who keeps annoying Amari with her weird humor. 
+              She's a cool potato. She has great dreams of studying physics at the Central University 
+              of Novuterra one day and although she has the brains and talent, she's like a little bit too lazy to 
+              ACTUALLY put too much effort in. Like… tomorrow doesn't run away. 
+            </p>
+          </div>
+        </div>
+
+        <div class="character-profile">
+          <img class="profile-picture" src="../Img/Profile pics/Nathaniel.webp" alt="Nathaniel Amaris Dad"/>
+          <div class="chr-info">
+            <div class="side-character-info">
+              <div class="info-block">
+                <h3 class="info-q">Name:</h3>
+                <h3 class="info">Nathaniel Tyler</h3>
+              </div>
+              <div class="info-block">
+                <h3 class="info-q">Age:</h3>
+                <h3 class="info">45</h3>
+              </div>
+              <div class="info-block">
+                <h3 class="info-q">Nation:</h3>
+                <h3 class="info">Pyronia</h3>
+              </div>
+            </div>
+          </div>
+          <div class="character-bio">
+            <p id="character-bio">He's Amaris Dad, whom Amari learned her habit of parcouring and 
+              climbing on places, they have no buisiness being at. When the flagpole sitting trend was 
+              in it's full hype, you can believe this man took his nine year old daughter up there 
+              with him. Oh yeah, I guess he's also an experienced doctor, 
+              who suffered a serious burnout episode. But he's fine now.
+            </p>
+          </div>
+        </div>
+
+        <div class="character-profile">
+          <img class="profile-picture" src="../Img/Profile pics/Alea.webp" alt="Alea Amaris Mom"/>
+          <div class="chr-info">
+            <div class="side-character-info">
+              <div class="info-block">
+                <h3 class="info-q">Name:</h3>
+                <h3 class="info">Alea Tyler</h3>
+              </div>
+              <div class="info-block">
+                <h3 class="info-q">Age:</h3>
+                <h3 class="info">42</h3>
+              </div>
+              <div class="info-block">
+                <h3 class="info-q">Nation:</h3>
+                <h3 class="info">Pyronia</h3>
+              </div>
+            </div>
+          </div>
+          <div class="character-bio">
+            <p id="character-bio">Amaris loving Mother. She has trust in the Lord and oh man, 
+              she needs it. Sometimes she feels like the only normal person in this house, 
+              but no matter what, she still loves her family very much. Although this love gets challanged 
+              by her husband very intensely sometimes. Like for example when he takes his nine year old daughter 
+              flagpole sitting!!!
+            </p>
+          </div>
+        </div>
+
+        <div class="character-profile">
+          <img class="profile-picture" src="../Img/Profile pics/Gloria.webp" alt="Gloria Amaris Grandma" />
+          <div class="chr-info">
+            <div class="side-character-info">
+              <div class="info-block">
+                <h3 class="info-q">Name:</h3>
+                <h3 class="info">Gloria Tyler</h3>
+              </div>
+              <div class="info-block">
+                <h3 class="info-q">Age:</h3>
+                <h3 class="info">67</h3>
+              </div>
+              <div class="info-block">
+                <h3 class="info-q">Nation:</h3>
+                <h3 class="info">Pyronia</h3>
+              </div>
+            </div>
+          </div>
+          <div class="character-bio">
+            <p id="character-bio">Amaris Grandma and Mother of five children, among them Nathaniel. 
+              She isn't very good at respecting other peoples boundaries and can be a very needy person. 
+              But oh well, I guess she ended up in her youngest childs house. 
+            </p>
+          </div>
+        </div>
+
+        <div class="character-profile">
+          <img class="profile-picture" src="../Img/Profile pics/Terry.webp" alt="Terry the Map merchant"/>
+          <div class="chr-info">
+            <div class="side-character-info">
+              <div class="info-block">
+                <h3 class="info-q">Name:</h3>
+                <h3 class="info">Terry the map merchant</h3>
+              </div>
+              <div class="info-block">
+                <h3 class="info-q">Age:</h3>
+                <h3 class="info">?</h3>
+              </div>
+              <div class="info-block">
+                <h3 class="info-q">Nation:</h3>
+                <h3 class="info">?</h3>
+              </div>
+            </div>
+          </div>
+          <div class="character-bio">
+            <p id="character-bio">He's a suspicious little map merchant, who may be scamming people a lot, 
+              but at least he's taking the quality of his maps very seriously. Wait what are you doing here? 
+              You're not an important character. 
+            </p>
+          </div>
+        </div>
+
+        
+    </div>
+
+    <div class="corner-bottom">
+      <div id="bottom-left"><img src="../Img/corner bottom left.webp" width="60px" height="60px"/></div>
+      <div id="bottom-right"><img src="../Img/corner bottom right.webp" width="60px" height="60px"/></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleArc(box) {
+    box.classList.toggle("open");
+  }
+</script>
+
+<div class="footer">
+<div> <p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p> </div>
+</div>
+</body>
+</html>

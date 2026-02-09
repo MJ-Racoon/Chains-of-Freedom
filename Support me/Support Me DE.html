@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <!-- Light Mode -->
+    <link rel="stylesheet" href="style sp.css" media="(prefers-color-scheme: light)">
+
+    <!-- Dark Mode -->
+    <link rel="stylesheet" href="style sp dark.css" media="(prefers-color-scheme: dark)">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Chains of Freedom - Support Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="If you like Chains of Freedom, feel free to support the project!">
+   
+    <!-- Favivons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="Img/Favicon/flame 16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Img/Favicon/flame 32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="Img/Favicon/flame 48.png">
+
+    <!-- iOS / Mobile -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Img/Favicon/flame 180.png">
+  
+    <!-- fonts -->
+  
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+
+  </head> 
+
+<body>
+  
+ <div class="top-bar">
+  <div class="line top-line"></div>
+
+  <div class="top-deco-left">
+    <img src="../Img/head deco desktop left.webp" class="bar-deco desktop" alt=""/>
+    <img src="../Img/head deco tablet left.webp" class="bar-deco tablet" alt=""/>
+    <img src="../Img/head deco mobile left.webp" class="bar-deco mobile" alt=""/>
+  </div>
+
+  <div class="top-deco-right">
+    <img src="../Img/head deco desktop right.webp" class="bar-deco desktop" alt=""/>
+    <img src="../Img/head deco tablet right.webp" class="bar-deco tablet" alt=""/>
+    <img src="../Img/head deco mobile right.webp" class="bar-deco mobile" alt=""/>
+  </div>
+
+ <div class="title-card">
+  <img src="../Img/Title card.webp" width="390px" class="title-card-img" alt="">
+</div>
+
+  <div class="stack" id="desktop-languages">
+    <div class="eng">
+      <img src="../Img/Eng on.webp" width="70px" alt="" />
+    </div>
+    <div class="deu">
+      <img id="deuFlag" src="../Img/Deu off.webp" width="70px" alt="" />
+    </div>
+  </div>
+
+  <div class="line bottom-line"></div>
+</div>
+
+<hr style="color:#1d1815" />
+
+<nav class="navbar">
+  <div class="mobile-top">
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+    <div class="languages">
+      <img src="../Img/Eng on.webp" width="40" alt="" />
+      <img src="../Img/Deu off.webp" width="40" alt=""
+           onmouseover="this.src='../Img/Deu on.webp';"
+           onmouseout="this.src='../Img/Deu off.webp';" />
+    </div>
+  </div>
+
+  <ul class="nav-bar" id="nav-bar">
+    <li class="nav-button" id="selected"><a href="../index.html">Home</a></li>
+    <!-- Update!!! and copy to other pages -->
+    <li class="nav-button"><a href="../Episode Pages/Arc 1/prolog.html#episode3">Latest Episode</a></li>
+    <li class="nav-button"><a href="../Characters/Characters.html">Characters</a></li>
+    <li class="nav-button"><a href="../Support me/Support Me.html">Support Me</a></li>
+    <li style="text-decoration: line-through;" class="disabled" ><a href="#" class="disabled">Bonus</a></li>
+  </ul>
+</nav>
+
+<script>
+  const menuIcon = document.getElementById("menu-icon");
+  const navBar = document.getElementById("nav-bar");
+  menuIcon.addEventListener("click", () => { navBar.classList.toggle("show"); });
+
+  const deuFlag = document.getElementById("deuFlag");
+  deuFlag.addEventListener("mouseover", () => { deuFlag.src = "../Img/Deu on.webp"; });
+  deuFlag.addEventListener("mouseout",  () => { deuFlag.src = "../Img/Deu off.webp"; });
+</script>
+
+<hr style="color:#1d1815">
+
+<div class="support-links">
+  <h1 class="support-me" id="support-me">Support me</h1>
+  <p class="support-me" id="comic-work">
+   I am working full time currently and it 
+will stay this way until I graduate my 
+apprenticeship
+in 2028. But with your help I could make it possible to literally buy myself more time. 
+More time means either longer or quicker 
+uploads and that would mean less years until I 
+finish this comic.
+  </p>
+
+  <div class="support-button patreon-btn">
+    <img class="patreon-icon" src="../Img/patreon.webp" alt="" />
+    <h2 class="patreon">Patreon</h2>
+  </div>
+
+  <div class="support-button tipjar-btn">
+    <h2 class="tipjar">Tipjar</h2>
+    <img class="tipjar-icon" src="../Img/tipjar.webp" alt=""/>
+  </div>
+</div>
+
+
+
+<div id="thanks-page">
+  <img src="../Img/Special thanks.webp" width="99%" alt="Special thanks"/>
+</div>
+
+<div class="footer">
+  <div><p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p></div>
+</div>
+</body>
+</html>
