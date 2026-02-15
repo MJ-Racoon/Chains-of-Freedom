@@ -93,7 +93,8 @@ html {
   justify-content: center; 
 
  
-  margin-bottom: 0px;
+  padding-bottom: 50px;
+  
   
   width: 100%;
   max-width: 800px;
@@ -113,7 +114,6 @@ html {
   background: linear-gradient(90deg, rgba(233,216,153,0.2), rgba(232,8,202,0.2));
   padding: 2px 8px;
   cursor: pointer;
-  border-radius: 1em;
   text-decoration: none;
   text-shadow: 0 0 3px rgb(230, 228, 208);
 }
@@ -123,6 +123,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction:column;
 }
 
 .body {
@@ -139,11 +140,12 @@ html {
   min-width: 300px;      /* optional für sehr kleine Bildschirme */
   
   margin: 0 10px;        /* horizontalen Abstand von 10px auf kleinen Bildschirmen */
-  height: 500px;
+  height: 250px;
 
   background-color: #968170;
-  border: 3px solid #1d1815;
-  padding: 20px;         /* optional für Innenabstand */
+  border: 3px solid #1d1815;  
+  margin: 20px;      
+ 
 }
 
 
@@ -157,12 +159,14 @@ html {
 
 .Confirmed p {
    color: #1d1815;
-   font-size: 1em;
+   font-size: 1.5em;
+   font-weight: bold;
 }
 
 .Confirmed h3 {
+  padding-top: 20px;
    color:#1d1815;
-   font-size: 2em;
+   font-size: 1em;
 }
 
 
@@ -208,11 +212,11 @@ html {
     <div id="bottom-right"> <img src="Img\corner bottom right.webp" width="60px" height="60px" alt=""/></div>
   </div>
 
+</div>
  <div class="home-button">
     <a href="index.html">return to Homepage</a>
   </div>
 
-</div>
 </main>
 
 <div class="footer">
