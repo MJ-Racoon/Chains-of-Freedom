@@ -52,7 +52,7 @@ padding: 0;
 }
 
 .title-card-img {
-  content: url("../Img/Title Card dark.png");
+  content: url("../Img/Title Card dark.webp")!important;
 }
 
 /* Right ornament container */
@@ -382,6 +382,7 @@ padding: 0;
   align-items: center;
   justify-content: center;
   gap: 28px;
+  text-decoration: none;
   background-color: #1E240F;
   box-shadow: 0 0 16px 12px #1E240F;
   border-radius: 28px;
@@ -572,12 +573,36 @@ padding: 0;
 }
 
 .footer {
-    padding: 20px 20px;
-    margin: 0px;
-    background-color: #201A18;
+  display: flex;
+  justify-content: center;
+  padding: 25px 20px;
+  margin: 0;
+  background-color: #201A18;
+  border-top: 2px solid #1d1815;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 }
 
 #copyright {
-  font-size: 0.7em;
+  font-size: 0.75em;
+  margin-bottom: 8px;
   text-align: center;
+}
+
+.footer-links {
+  font-size: 0.75em;
+}
+
+.footer-links a {
+  color:#51423D;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }

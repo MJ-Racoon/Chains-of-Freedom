@@ -13,12 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <!-- Favivons -->
-    <link rel="icon" type="image/png" sizes="16x16" href="Img/Favicon/flame 16.webp">
-    <link rel="icon" type="image/png" sizes="32x32" href="Img/Favicon/flame 32.webp">
-    <link rel="icon" type="image/png" sizes="48x48" href="Img/Favicon/flame 48.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="Img/Favicon/flame 16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Img/Favicon/flame 32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="Img/Favicon/flame 48.png">
 
     <!-- iOS / Mobile -->
-    <link rel="apple-touch-icon" sizes="180x180" href="Img/Favicon/flame 180.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="Img/Favicon/flame 180.png">
 
 <style>
 
@@ -213,11 +213,38 @@ a {
 }
 
 .chapter {
-    text-align: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.chapter h3 {
+  font-size: 1.3em !important;
 }
 
 .episode-selection {
-    font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+.episode {
+  position: relative;   /* wichtig für absolute Positionierung */
+}
+
+.new-badge {
+  position: absolute;
+  top: -11px;
+  right: -57px;
+  font-size: 0.9em;
+  padding-top: 12px;
+  color:#E9D899;
+  font-weight: bold;
+}
+
+.episode:hover {
+  text-decoration: underline;
+  color: #E9D899;
+  cursor: pointer;
 }
 
 .episode:hover {
@@ -405,17 +432,16 @@ ul {
 
 </style>
 
-
   </head>
 
 <body>
   <!--Top Bar-->
-  <div class="top-bar">
+  <div class="top-bar"> <!--update-->
       <h4 class="head">Chapter 1</h4>
-      <div id="Title"> <h2 class="head"> Irresistable Envalope </h2> </div>
+      <div id="Title"> <h2 class="head"> Irresistable envalope </h2> </div>
   </div>
 
-<div class="container1">
+ <div class="container1">
   <a class="nav-btn prev">
    <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
   <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
@@ -447,12 +473,12 @@ ul {
     </div>
 
    
-    <div class="chapter"><h3>Jump to Episodes </h3></div>
-      <ul class="chapter1">
-        <li class="episode-selection"> <a href="#episode1" class="episode"> Episode 1 </a></li>
-        <li class="episode-selection"><a href="#episode2" class="episode"> Episode 2 </a></li>
-        <li class="episode-selection"><a href="#episode1" class="episode"> Episode 3 </a></li>
-      </ul>
+   <ul class="chapter1">
+  <li class="episode-selection"><a href="#episode1" class="episode">Episode 1</a></li>
+  <li class="episode-selection"><a href="#episode2" class="episode">Episode 2</a></li>
+  <li class="episode-selection"><a href="#episode3" class="episode">Episode 3</a></li>
+  <li class="episode-selection"><a href="#episode4" class="episode">Episode 4 <span class="new-badge">(New)</span></a></li>
+</ul>
       
 
       <div class="corner-bottom">
@@ -460,6 +486,7 @@ ul {
         <div id="bottom-right"> <img src="../../Img/corner bottom right.webp" width="40px" height="40px" alt=""/></div>
       </div>
   </div>
+
   <div id="map"> <img id="map-shadow" src="../../Img/Maps/Map1.webp" width="80%" alt="Map"/></div>
  
 <!-- Jump to top button -->
@@ -497,7 +524,7 @@ ul {
 <!-- comic -->
 
   <div class="comic">
-    <img id="episode1" src="0_Prolouge/Prolouge_001.webp" alt="Chains of Freedom - Chapter 0, Page 1"/>
+   <img id="episode1" src="0_Prolouge/Prolouge_001.webp" loading="eager" fetchpriority="high" alt="Chains of Freedom - Chapter 0, Page 1"/>
     <img  src="0_Prolouge/Prolouge_002.webp" alt="Chains of Freedom - Episode 1, Page 2" loading="lazy"/>
     <img  src="0_Prolouge/Prolouge_003.webp" alt="Chains of Freedom - Episode 1, Page 3" loading="lazy"/>
     <img  src="0_Prolouge\Prolouge_004.webp" alt="Chains of Freedom - Episode 1, Page 4" loading="lazy"/>
@@ -513,26 +540,36 @@ ul {
     <img  src="0_Prolouge\Prolouge 1_006.webp" alt="Chains of Freedom - Episode 2, Page 14" loading="lazy"/>
     <img  src="0_Prolouge\Prolouge 1_007.webp" alt="Chains of Freedom - Episode 2, Page 15" loading="lazy"/>
     <img  src="0_Prolouge\Prolouge 1_008.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
-    <img  src="0_Prolouge\Prolouge 1_009.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
+    <img id="episode3" src="0_Prolouge\Prolouge 1_009.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 1_010.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 1_010.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_001.webp" alt="Chains of Freedom - Episode 2, Page 17" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_002.webp" alt="Chains of Freedom - Episode 2, Page 18" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_003.webp" alt="Chains of Freedom - Episode 2, Page 19" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_004.webp" alt="Chains of Freedom - Episode 2, Page 20" loading="lazy"/>
+    <img id="episode4" src="0_Prolouge\Prolouge 2_005.webp" alt="Chains of Freedom - Episode 2, Page 21" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_006.webp" alt="Chains of Freedom - Episode 2, Page 22" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_007.webp" alt="Chains of Freedom - Episode 2, Page 23" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_008.webp" alt="Chains of Freedom - Episode 2, Page 24" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_009.webp" alt="Chains of Freedom - Episode 2, Page 25" loading="lazy"/>
   </div>
+   
+  
 
   <div class="foot-box">
     <p id="thank-you">Thank you so much for sticking around to the end. 
       If you like what you're reading, feel free to:</p>
-
-    <div class="donk">
-      <img src="../../Img/small decoration left.webp" height="90px"/>
-      <div class="top-jump-box">
-        <a href="../../Support me/Support Me.html" id="jumpTopBtn" class="nav-btn" title="Nach oben">
-          <span id="to-top">support me</span>
-        </a>
+    <div class="pay-and-subscribe">
+      <img src="../../Img\Eliot favicon fancy.webp" class="fancy-eliot"/>
+      <div class="dialouge-options">
+        <a href="../../Support me/Support Me.html">Support me</a>
+        <p>or</p>
+        <a href="../../subscribe.html">Subscribe</a>
       </div>
-      <img src="../../Img/small decoration right.webp" height="90px"/>
     </div>
   </div> 
 
-
-  <div class="container1">
+<div class="container1">
   <a class="nav-btn prev">
    <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
   <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
@@ -562,8 +599,7 @@ ul {
 
 
 
-  <script>
-
+<script>
 window.addEventListener("load", function() {
     if(location.hash){
         const target = document.querySelector(location.hash);

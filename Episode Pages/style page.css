@@ -181,14 +181,38 @@
 }
 
 .footer {
-    padding: 20px 20px;
-    margin: 0px;
-    background-color: #968170;
+  display: flex;
+  justify-content: center;
+  padding: 25px 20px;
+  margin: 0;
+  background-color: #968170;
+  border-top: 2px solid #1d1815;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 }
 
 #copyright {
-  font-size: 0.7em;
+  font-size: 0.75em;
+  margin-bottom: 8px;
   text-align: center;
+}
+
+.footer-links {
+  font-size: 0.75em;
+}
+
+.footer-links a {
+  color: #1d1815;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 

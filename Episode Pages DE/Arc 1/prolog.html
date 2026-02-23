@@ -46,7 +46,7 @@ a {
     text-decoration: none;
 }
 
-/*Top Bar*/
+/*/////////////////Top Bar/////////////////////*/
 
 .head {
     color:#968170;
@@ -73,7 +73,7 @@ a {
 }
 
 
-/* Navigation container */
+/*/////////////////////// Navigation container/////////////// */
 .container1 {
     display: flex;
     justify-content: space-between;
@@ -81,10 +81,10 @@ a {
     padding:10px;
     background: #000000;
     color: #E808CA;
-    position: relative; /* add this */
+    position: relative; 
 }
 
-/* Home button centering */
+
 .container1 .home-bottom {
     position: absolute;
     left: 50%;
@@ -96,7 +96,7 @@ a {
     color:#E808CA
 }
 
-/* Replaced arrow images with text-based icons */
+
 .nav-btn {
     display: flex;
     align-items: center;
@@ -123,7 +123,7 @@ a {
     transition: fill 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* gradient hover effect for arrows and text together */
+
 .nav-btn:hover {
     color: #E9D899;
     background: linear-gradient(90deg, rgba(233,216,153,0.2), rgba(232,8,202,0.2));
@@ -162,7 +162,9 @@ a {
   width: 1.3em;
   height: 1.3em;
 }
-/*Content box*/
+
+
+/*///////////////Content box////////////////////*/
 
 
 #scrollTopBtn {
@@ -213,11 +215,38 @@ a {
 }
 
 .chapter {
-    text-align: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.chapter h3 {
+  font-size: 1.3em !important;
 }
 
 .episode-selection {
-    font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+.episode {
+  position: relative;   
+}
+
+.new-badge {
+  position: absolute;
+  top: -11px;
+  right: -57px;
+  font-size: 0.9em;
+  padding-top: 12px;
+  color:#E9D899;
+  font-weight: bold;
+}
+
+.episode:hover {
+  text-decoration: underline;
+  color: #E9D899;
+  cursor: pointer;
 }
 
 .episode:hover {
@@ -279,9 +308,9 @@ ul.chapter1 li a {
   display: inline-block;
 }
 
-/* ----------------------------
-   Responsive Font Scaling
----------------------------- */
+/* //////////////////////////////////////////////////// */
+/* Media Queries */
+/* //////////////////////////////////////////////////// */
 
 /* Large tablets / small desktops (≤1000px) */
 @media screen and (max-width: 1000px) {
@@ -378,7 +407,7 @@ ul {
 
 
 
-/*Content box*/
+/*///////////////Content box////////////////////*/
 
 .Arc {
     color: Beige;  
@@ -399,19 +428,24 @@ ul {
    
 }
 
-
-
 }
+
+
+
+
+
 
 </style>
 
   </head>
 
 <body>
+    <!--///////////////////////////////////////////////-->
   <!--Top Bar-->
-  <div class="top-bar">
-      <h4 class="head">Prolouge</h4>
-      <div id="Title"> <h2 class="head"> A lone free Hunter </h2> </div>
+  <!--///////////////////////////////////////////////-->
+  <div class="top-bar"> <!--update-->
+      <h4 class="head">Prolog</h4>
+      <div id="Title"> <h2 class="head"> der einsame freie Jäger </h2> </div>
   </div>
 
  <div class="container1">
@@ -419,13 +453,13 @@ ul {
    <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
   <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
    </svg>
-    <h4 class="row2 text-btn">Previous</h4>
+    <h4 class="row2 text-btn">Vorherige</h4>
   </a>
   
-  <a href="../../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
+  <a href="../../index DE.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
   
   <a class="nav-btn next" >
-    <h4 class="row2 text-btn">Next</h4>
+    <h4 class="row2 text-btn">Nächste</h4>
     <svg
     class="arrow"
     viewBox="0 0 1000 1000"
@@ -437,7 +471,9 @@ ul {
   </a>
 </div> 
   
+   <!--///////////////////////////////////////////////-->
   <!--Contents-->
+  <!--///////////////////////////////////////////////-->
   <div class="chapter-box" id="Arc-box">
 
     <div class="corner-top">
@@ -446,13 +482,12 @@ ul {
     </div>
 
    
-    <div class="chapter"><h3>Jump to Episodes </h3></div>
-      <ul class="chapter1">
-        <li class="episode-selection"> <a href="#episode1" class="episode"> Episode 1 </a></li>
-        <li class="episode-selection"><a href="#episode2" class="episode"> Episode 2 </a></li>
-        <li class="episode-selection"><a href="#episode3" class="episode"> Episode 3 </a></li>
-         <li class="episode-selection"><a href="#episode4" class="episode"> Episode 4 </a></li>
-      </ul>
+   <ul class="chapter1">
+  <li class="episode-selection"><a href="#episode1" class="episode">Episode 1</a></li>
+  <li class="episode-selection"><a href="#episode2" class="episode">Episode 2</a></li>
+  <li class="episode-selection"><a href="#episode3" class="episode">Episode 3</a></li>
+  <li class="episode-selection"><a href="#episode4" class="episode">Episode 4 <span class="new-badge">(Neu)</span></a></li>
+</ul>
       
 
       <div class="corner-bottom">
@@ -495,7 +530,9 @@ ul {
   })();
 </script>
 
-<!-- comic -->
+  <!--///////////////////////////////////////////////-->
+  <!--Comic-->
+  <!--///////////////////////////////////////////////-->
 
   <div class="comic">
    <img id="episode1" src="0_Prolouge/Prolouge_001.webp" loading="eager" fetchpriority="high" alt="Chains of Freedom - Chapter 0, Page 1"/>
@@ -517,25 +554,28 @@ ul {
     <img id="episode3" src="0_Prolouge\Prolouge 1_009.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
     <img  src="0_Prolouge\Prolouge 1_010.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
     <img  src="0_Prolouge\Prolouge 1_010.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
-    <img  src="0_Prolouge\Prolouge 2_001.webp" alt="Chains of Freedom - Episode 2, Page 14" loading="lazy"/>
-    <img  src="0_Prolouge\Prolouge 2_002.webp" alt="Chains of Freedom - Episode 2, Page 15" loading="lazy"/>
-    <img  src="0_Prolouge\Prolouge 2_003.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
-    <img id="episode4" src="0_Prolouge\Prolouge 2_004.webp" alt="Chains of Freedom - Episode 2, Page 16" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_001.webp" alt="Chains of Freedom - Episode 2, Page 17" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_002.webp" alt="Chains of Freedom - Episode 2, Page 18" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_003.webp" alt="Chains of Freedom - Episode 2, Page 19" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_004.webp" alt="Chains of Freedom - Episode 2, Page 20" loading="lazy"/>
+    <img id="episode4" src="0_Prolouge\Prolouge 2_005.webp" alt="Chains of Freedom - Episode 2, Page 21" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_006.webp" alt="Chains of Freedom - Episode 2, Page 22" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_007.webp" alt="Chains of Freedom - Episode 2, Page 23" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_008.webp" alt="Chains of Freedom - Episode 2, Page 24" loading="lazy"/>
+    <img  src="0_Prolouge\Prolouge 2_009.webp" alt="Chains of Freedom - Episode 2, Page 25" loading="lazy"/>
   </div>
+   
+  
 
   <div class="foot-box">
-
-    <img src="../../Img\Eliot favicon fancy.webp" width="140px"/>
-    <p id="thank-you">Thank you so much for sticking around to the end. 
-      If you like what you're reading, feel free to:</p>
-     <div class="donk">
-      <img src="../../Img/small decoration left.webp" height="90px"/>
-      <div class="top-jump-box">
-        <a href="../../Support me/Support Me.html" id="jumpTopBtn" class="nav-btn" title="Nach oben">
-          <span id="to-top">support me</span>
-        </a>
+    <p id="thank-you">Vielen Dank für deine Aufmerksamkeit. Wenn dir Gefällt, was du liest, dann fühl dich frei:</p>
+    <div class="pay-and-subscribe">
+      <img src="../../Img\Eliot favicon fancy.webp" class="fancy-eliot"/>
+      <div class="dialouge-options">
+        <a href="../../Support me/Support Me.html">eine kleine Spende da zu lassen</a>
+        <p>oder</p>
+        <a href="../../subscribe.html">zu Abonnieren</a>
       </div>
-      <img src="../../Img/small decoration right.webp" height="90px"/>
     </div>
   </div> 
 
@@ -544,13 +584,13 @@ ul {
    <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
   <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
    </svg>
-    <h4 class="row2 text-btn">Previous</h4>
+    <h4 class="row2 text-btn">Vorherige</h4>
   </a>
   
-  <a href="../../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
+  <a href="../../index DE.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
   
   <a class="nav-btn next" >
-    <h4 class="row2 text-btn">Next</h4>
+    <h4 class="row2 text-btn">Nächste</h4>
     <svg
     class="arrow"
     viewBox="0 0 1000 1000"
@@ -563,7 +603,16 @@ ul {
 </div> 
 
 <div class="footer">
-<div> <p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p> </div>
+  <div class="footer-content">
+    <p id="copyright">
+      Chains of Freedom © 2025 MJM. All rights reserved.
+    </p>
+
+    <p class="footer-links">
+      <a href="../../datenschutz erklärung.html">Datenschut und Impressum</a> |
+      <a href="../../privacy policy.html">Privacy and Imprint</a>
+    </p>
+  </div>
 </div>
 
 
@@ -603,7 +652,7 @@ window.addEventListener("load", function() {
 const pages = [
   "prolog.html",
   "Ch1.html",
-  "../../index.html" // Homepage
+  "../../index DE.html" // Homepage
 ];
 const current = window.location.pathname.split("/").pop();
 const index = pages.indexOf(current);

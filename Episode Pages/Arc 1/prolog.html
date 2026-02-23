@@ -22,6 +22,10 @@
 
 <style>
 
+/* //////////////////////////////////////////////////// */
+/* General Stuff */
+/* //////////////////////////////////////////////////// */
+
 body {
     justify-content: center;
     align-items: center;
@@ -73,7 +77,12 @@ a {
 }
 
 
-/* Navigation container */
+
+
+
+/* /////////////////Navigation container/////////////////////// */
+
+
 .container1 {
     display: flex;
     justify-content: space-between;
@@ -81,10 +90,10 @@ a {
     padding:10px;
     background: #000000;
     color: #E808CA;
-    position: relative; /* add this */
+    position: relative; 
 }
 
-/* Home button centering */
+
 .container1 .home-bottom {
     position: absolute;
     left: 50%;
@@ -96,7 +105,7 @@ a {
     color:#E808CA
 }
 
-/* Replaced arrow images with text-based icons */
+
 .nav-btn {
     display: flex;
     align-items: center;
@@ -123,7 +132,7 @@ a {
     transition: fill 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* gradient hover effect for arrows and text together */
+
 .nav-btn:hover {
     color: #E9D899;
     background: linear-gradient(90deg, rgba(233,216,153,0.2), rgba(232,8,202,0.2));
@@ -212,12 +221,44 @@ a {
     color: Beige;  
 }
 
+
+/* //////////////////////////////////////////////////// */
+/* Episodes */
+/* //////////////////////////////////////////////////// */
+
 .chapter {
-    text-align: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.chapter h3 {
+  font-size: 1.3em !important;
 }
 
 .episode-selection {
-    font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+.episode {
+  position: relative;   
+}
+
+.new-badge {
+  position: absolute;
+  top: -11px;
+  right: -57px;
+  font-size: 0.9em;
+  padding-top: 12px;
+  color:#E9D899;
+  font-weight: bold;
+}
+
+.episode:hover {
+  text-decoration: underline;
+  color: #E9D899;
+  cursor: pointer;
 }
 
 .episode:hover {
@@ -280,7 +321,7 @@ ul.chapter1 li a {
 }
 
 /* ----------------------------
-   Responsive Font Scaling
+   Media queries
 ---------------------------- */
 
 /* Large tablets / small desktops (≤1000px) */
@@ -408,8 +449,10 @@ ul {
   </head>
 
 <body>
+   <!--///////////////////////////////////////////////-->
   <!--Top Bar-->
-  <div class="top-bar">
+  <!--///////////////////////////////////////////////-->
+  <div class="top-bar"> <!--update-->
       <h4 class="head">Prolouge</h4>
       <div id="Title"> <h2 class="head"> A lone free Hunter </h2> </div>
   </div>
@@ -436,8 +479,9 @@ ul {
     </svg>
   </a>
 </div> 
-  
-  <!--Contents-->
+<!--///////////////////////////////////////////////-->
+<!--Contents-->
+<!--///////////////////////////////////////////////-->
   <div class="chapter-box" id="Arc-box">
 
     <div class="corner-top">
@@ -446,14 +490,19 @@ ul {
     </div>
 
    
-    <div class="chapter"><h3>Jump to Episodes </h3></div>
-      <ul class="chapter1">
-        <li class="episode-selection"> <a href="#episode1" class="episode"> Episode 1 </a></li>
-        <li class="episode-selection"><a href="#episode2" class="episode"> Episode 2 </a></li>
-        <li class="episode-selection"><a href="#episode3" class="episode"> Episode 3 </a></li>
-         <li class="episode-selection"><a href="#episode4" class="episode"> Episode 4 </a></li>
-      </ul>
-      
+   <ul class="chapter1">
+  <li class="episode-selection"><a href="#episode1" class="episode">Episode 1</a></li>
+  <li class="episode-selection"><a href="#episode2" class="episode">Episode 2</a></li>
+  <li class="episode-selection"><a href="#episode3" class="episode">Episode 3</a></li>
+  <li class="episode-selection"><a href="#episode4" class="episode">Episode 4 <span class="new-badge">(New)</span></a></li>
+</ul>
+
+<div class="Ep-vs-Ch">
+  <h4>Important!</h4>
+  <p> Chapters and Episodes are not the same thing!
+      This whole page is one chapter, and each upload is an Episode on this List.
+  </p>
+</div>
 
       <div class="corner-bottom">
         <div id="bottom-left"> <img src="../../Img/corner bottom left.webp" width="40px" height="40px" alt=""/></div>
@@ -495,8 +544,9 @@ ul {
   })();
 </script>
 
+<!--///////////////////////////////////////////////-->
 <!-- comic -->
-
+<!--///////////////////////////////////////////////-->
   <div class="comic">
    <img id="episode1" src="0_Prolouge/Prolouge_001.webp" loading="eager" fetchpriority="high" alt="Chains of Freedom - Chapter 0, Page 1"/>
     <img  src="0_Prolouge/Prolouge_002.webp" alt="Chains of Freedom - Episode 1, Page 2" loading="lazy"/>
@@ -567,7 +617,18 @@ ul {
 </div> 
 
 <div class="footer">
-<div> <p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p> </div>
+  <div class="footer-content">
+    <p id="copyright">
+      Chains of Freedom © 2025 MJM. All rights reserved.
+    </p>
+
+    <p class="footer-links">
+      <a href="/datenschutz.html">Datenschutz</a> |
+      <a href="/impressum.html">Impressum</a> |
+      <a href="/privacy.html">Privacy</a> |
+      <a href="/imprint.html">Imprint</a>
+    </p>
+  </div>
 </div>
 
 

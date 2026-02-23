@@ -230,13 +230,122 @@
 }
 
 .footer {
-    padding: 20px 20px;
-    margin: 0px;
-    background-color: #201A18;
+  display: flex;
+  justify-content: center;
+  padding: 25px 20px;
+  margin: 0;
+  background-color: #201A18;
+  border-top: 2px solid #1d1815;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 }
 
 #copyright {
-  font-size: 0.7em;
+  font-size: 0.75em;
+  margin-bottom: 8px;
   text-align: center;
-   color: #B19F90;
+}
+
+.footer-links {
+  font-size: 0.75em;
+}
+
+.footer-links a {
+  color:#51423D;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.pay-and-subscribe {
+display: flex;
+flex-direction: row;
+
+margin-top: 30px;
+}
+
+.fancy-eliot {
+    width: 140px;
+    height: auto;
+}
+
+.dialouge-options {
+    display: flex;
+    padding-left: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dialouge-options a {
+  color: white;
+  font-size: 1.3em;
+  background-color:#2d2320;
+  padding: 6px;
+  margin-left: 10px;
+  border: 2px solid black;
+  border-radius: 3px;
+  font-weight: bold;
+} 
+
+.dialouge-options p {
+   color: #968170;
+   padding-bottom: 2px;
+}
+
+.dialouge-options a:hover {
+  color:white;
+  cursor: pointer;
+  border-color:rgb(240, 146, 216);
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 6px rgb(255, 255, 255);
+  background-color:#E808CA;
+  transform: scale(1.05); /* 👈 minimal größer */
+ 
+}
+
+.foot-box {
+    padding: 40px 20px;
+}
+
+/* Desktop / größere Bildschirme */
+@media (min-width: 768px) {
+    .foot-box p#thank-you {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .pay-and-subscribe {
+        flex-direction: row; /* Bild links, Links rechts */
+        align-items: center;
+        gap: 30px;
+        padding-left: 10px;
+    }
+
+  .fancy-eliot {
+    width: 240px;
+    height: auto;
+}
+
+    .dialouge-options {
+        gap: 15px;
+        align-items: center;
+    }
+
+    .dialouge-options a {
+        font-size: 2em;
+        width: 250px;
+        font-weight: bold;
+    }
+
+    .dialouge-options p {
+        padding-bottom: 0;
+        margin: 0 5px;
+    }
 }

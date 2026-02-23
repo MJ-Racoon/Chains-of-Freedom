@@ -31,7 +31,7 @@
 
 <style>
   body {
-  display: flex;              /* 👈 DAS fehlt */
+  display: flex;             
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -165,12 +165,38 @@ html {
     background-color: #968170;
     width: 100%;          
     box-sizing: border-box;
+    padding: 25px 20px;
+    margin: 0;
+    background-color: #968170;
+   border-top: 2px solid #1d1815;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 }
 
 #copyright {
-  font-size: 0.7em;
+  font-size: 0.75em;
+  margin-bottom: 8px;
   text-align: center;
 }
+
+.footer-links {
+  font-size: 0.75em;
+}
+
+.footer-links a {
+  color: #1d1815;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 </style>
 
 
@@ -189,7 +215,7 @@ html {
   </div>
 
   <div class="home-button">
-   <a href="index.html">Home</a>
+   <a href="index DE.html">Home</a>
   </div>
 
   <div class="form-wrapper">
@@ -210,9 +236,17 @@ html {
 </div>
 
 
-<div class="footer">
-  <div> <p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p> </div>
-</div>
+ <div class="footer">
+    <div class="footer-content">
+      <p id="copyright">
+        Chains of Freedom © 2025 MJM. All rights reserved.
+      </p>
+
+     <p class="footer-links">
+      <a href="datenschutz erklärung.html">Datenschut und Impressum</a> |
+      <a href="privacy policy.html">Privacy and Imprint</a>
+    </p>
+    </div>
 
 </body>
 </html>
