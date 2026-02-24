@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="de">
   <head>
     <!-- Light Mode -->
     <link rel="stylesheet" href="style ch.css" media="(prefers-color-scheme: light)">
@@ -14,9 +14,9 @@
     <meta name="description" content="A library containing little bios of every relevant character from the Wembomic Chains of Freedom.">
   
     <!-- Favivons -->
-    <link rel="icon" type="image/png" sizes="16x16" href="Img/Favicon/flame 16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Img/Favicon/flame 32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="Img/Favicon/flame 48.png">
+    <link rel="icon" type="imAlter/png" sizes="16x16" href="Img/Favicon/flame 16.png">
+    <link rel="icon" type="imAlter/png" sizes="32x32" href="Img/Favicon/flame 32.png">
+    <link rel="icon" type="imAlter/png" sizes="48x48" href="Img/Favicon/flame 48.png">
 
     <!-- iOS / Mobile -->
     <link rel="apple-touch-icon" sizes="180x180" href="Img/Favicon/flame 180.png">
@@ -31,33 +31,36 @@
 
 <body>
   
-<div class="top-bar">
-  <div class="line top-line"></div>
+ <div class="top-bar">
+    <div class="line top-line"></div>
 
-  <div class="top-deco-left">
-    <img src="../Img/head deco desktop left.webp" class="bar-deco desktop" alt=""/>
-    <img src="../Img/head deco tablet left.webp" class="bar-deco tablet" alt=""/>
-    <img src="../Img/head deco mobile left.webp" class="bar-deco mobile" alt=""/>
-  </div>
+    <div class="top-deco-left">
+      <img src="../Img/head deco desktop left.webp" class="bar-deco desktop" alt="" />
+      <img src="../Img/head deco tablet left.webp" class="bar-deco tablet" alt="" />
+      <img src="../Img/head deco mobile left.webp" class="bar-deco mobile" alt="" />
+    </div>
 
-  <div class="top-deco-right">
-    <img src="../Img/head deco desktop right.webp" class="bar-deco desktop"/>
-    <img src="../Img/head deco tablet right.webp" class="bar-deco tablet"/>
-    <img src="../Img/head deco mobile right.webp" class="bar-deco mobile"/>
-  </div>
+    <div class="top-deco-right">
+      <img src="../Img/head deco desktop right.webp" class="bar-deco desktop" alt="" />
+      <img src="../Img/head deco tablet right.webp" class="bar-deco tablet" alt="" />
+      <img src="../Img/head deco mobile right.webp" class="bar-deco mobile" alt="" />
+    </div>
 
- <div class="title-card">
+    <div class="title-card">
       <img src="../Img/Title card.webp" width="390px" class="title-card-img" loading="eager" fetchpriority="high" alt="">
     </div>
 
-    <div class="stack" id="desktop-languages">
-      <div class="eng">
-        <img src="../Img/Eng on.webp" width="70px" />
-      </div>
-   
-      <a href="../Characters/Characters DE.html" class="deu">
-        <img id="deuFlag" src="../Img/Deu off.webp" width="70px" href="../Support me/Support Me DE.html"/>
+  <div class="stack" id="desktop-languages">
+     
+      <a href="../Characters/Characters.html" class="eng">
+        <img id="engFlag" src="../Img/Eng off.webp" width="70px"/>
       </a>
+     
+      <div class="deu">
+        <img src="../Img/Deu on.webp" width="70px" />
+      </div>
+
+    </div>
       
     </div>
 
@@ -70,39 +73,41 @@
     <div class="mobile-top">
       <div class="menu-icon" id="menu-icon">&#9776;</div>
       <div class="languages">
-        <img src="../Img/Eng on.webp" width="40" alt="" />
-        <a href="../Characters/Characters DE.html"> 
-          <img src="../Img/Deu off.webp" width="40" alt="" onmouseover="this.src='../Img/Deu on.webp';"
-          onmouseout="this.src='../Img/Deu off.webp';" />
+        <a href="../Characters/Characters.html"> 
+          <img src="../Img/Eng off.webp" width="40" alt="" onmouseover="this.src='../Img/Eng on.webp';"
+          onmouseout="this.src='../Img/Eng off.webp';" />
         </a>
+        <img src="../Img/Deu on.webp" width="40" alt="" />
+        
       </div>
     </div>
 
     <ul class="nav-bar" id="nav-bar">
-      <li class="nav-button" id="selected"><a href="../index.html">Home</a></li>
+      <li class="nav-button" id="selected"><a href="../index DE.html">Home</a></li>
       <!-- Update!!! and copy to other pages -->
-      <li class="nav-button"><a href="../Episode Pages/Arc 1/prolog.html#episode4">Latest Episode</a></li>
-      <li class="nav-button"><a href="../Characters/Characters.html">Characters</a></li>
-      <li class="nav-button"><a href="../Support me/Support Me.html">Support Me</a></li>
+      <li class="nav-button"><a href="../Episode Pages DE/Arc 1/prolog.html#episode4">Neueste Episode</a></li>
+      <li class="nav-button"><a href="../Characters/Characters DE.html">Charaktere</a></li>
+      <li class="nav-button"><a href="../Support me/Support Me DE.html">Unterstützt mich</a></li>
       <li style="text-decoration: line-through;" class="disabled"><a href="#" class="disabled">Bonus</a></li>
     </ul>
   </nav>
 
-  <script>
+ <script>
     const menuIcon = document.getElementById("menu-icon");
     const navBar = document.getElementById("nav-bar");
     menuIcon.addEventListener("click", () => { navBar.classList.toggle("show"); });
 
-    const deuFlag = document.getElementById("deuFlag");
-    deuFlag.addEventListener("mouseover", () => { deuFlag.src = "../Img/Deu on.webp"; });
-    deuFlag.addEventListener("mouseout", () => { deuFlag.src = "../Img/Deu off.webp"; });
+    const engFlag = document.getElementById("engFlag");
+    engFlag.addEventListener("mouseover", () => { engFlag.src = "../Img/Eng on.webp"; });
+    engFlag.addEventListener("mouseout", () => { engFlag.src = "../Img/Eng off.webp"; });
   </script>
 
-<hr style="color:#1d1815">
+ <hr style="color:#1d1815">
+
 
 <!-- Content -->
 <div id="main-cast">
-  <h1 id="headline">Main Cast</h1> 
+  <h1 id="headline">Hauptcharaktere</h1> 
 
   <div class="main-character">
     <div class="profile">
@@ -114,7 +119,7 @@
           <span class="value">Carol</span>
         </div>
         <div class="info-row">
-          <span class="label">Age:</span>
+          <span class="label">Alter:</span>
           <span class="value">25</span>
         </div>
         <div class="info-row">
@@ -125,11 +130,11 @@
     </div>
 
     <div class="description">
-      <h3>Description</h3>
+      <h3>Beschreibung</h3>
       <p>
-        A grumpy Hunter, who rather wants to be left alone... like... by everyone... 
-        exept his best friend eliot.
-        ... And yes of course Carol can also be a male name, leave me alone!
+       Ein schlecht gelaunter Jäger, der einfach nur in Ruhe gelassen werden will… halt so… von jedem… 
+       UND JA, Carol kann auch ein männlicher Name sein, lasst mich in Ruhe!!!
+
       </p>
     </div>
   </div>
@@ -144,7 +149,7 @@
           <span class="value">Amari</span>
         </div>
         <div class="info-row">
-          <span class="label">Age:</span>
+          <span class="label">Alter:</span>
           <span class="value">19</span>
         </div>
         <div class="info-row">
@@ -155,10 +160,10 @@
     </div>
 
     <div class="description">
-      <h3>Description</h3>
+      <h3>Beschreibung</h3>
       <p>
-        A young post girl from Pyronia, who wants to do the will of her great King. 
-        She loves to do parcour and that's also how she's delivering a letter.
+        Eine junge pyronische Briefträgerin aus Babel, die sich danach sehnt, den Willen des großen Königs zu tun. Sie liebt Parkour und das ist genau die Methode mit der sie Briefe austeilt. 
+
       </p>
     </div>
   </div>
@@ -173,7 +178,7 @@
           <span class="value">Eliot</span>
         </div>
         <div class="info-row">
-          <span class="label">Age:</span>
+          <span class="label">Alter:</span>
           <span class="value">6</span>
         </div>
         <div class="info-row">
@@ -184,9 +189,9 @@
     </div>
 
     <div class="description">
-      <h3>Description</h3>
+      <h3>Beschreibung</h3>
       <p>
-        He's Carols loyal emotional support donkey and he's probably only using 5% of his power.
+        Er ist Carols emotionaler Support Esel und er nutzt vermutlich nur 5% seiner Macht.
       </p>
     </div>
   </div>
@@ -195,9 +200,9 @@
 
 <!-- supporting characters -->
 <div id="supporting-cast">
-  <h1 id="headline">Supporting Cast</h1>
-  <p id="spoilers" style="color:antiquewhite">click to view Characters:</p>
-  <p id="spoilers" style="color:#E808CA;">(SPOILERS!)</p>
+  <h1 id="headline">Nebencharaktere</h1>
+  <p id="spoilers" style="color:antiquewhite">Klicke um mehr Charaktere zu sehen:</p>
+  <p id="spoilers" style="color:#E808CA;">(SPOILER!)</p>
 
   <div id="Arc1" class="arc-box" onclick="toggleArc(this)">
   <div class="corner-top">
@@ -208,13 +213,13 @@
   <div class="headline">
     <img src="../Img/closed deco left.webp" id="arrow-left" width="30px" height="40px"/>
     <h3 class="Arc-h">
-    Volume 1<span class="arrow">▶</span>
+    Band 1<span class="arrow">▶</span>
     </h3>
     <img src="../Img/closed deco right.webp" id="arrow-right" width="30px" height="40px"/>
   </div>
     <div class="arc-content">
       <div class="major-characters">
-        <h2 class="major-ch-h">Major characters:</h2>
+        <h2 class="major-ch-h">Wichtige Nebencharaktere:</h2>
         
 <!-- put infos for major characters here -->
 
@@ -227,7 +232,7 @@
                 <h3 class="info">Smith Rotor</h3>
               </div>
               <div class="info-block">
-                <h3 class="info-q">Age:</h3>
+                <h3 class="info-q">Alter:</h3>
                 <h3 class="info">58</h3>
               </div>
               <div class="info-block">
@@ -237,10 +242,13 @@
             </div>
           </div>
           <div class="character-bio">
-            <p id="character-bio">A mad streetsmark inventor, who had his finger eaten by one of 
-              his machines. He invented the toaster, but chose to keep this groundbreaking invention 
-              from huvanity. He still has trauma from putting the thermal blender on the market. 
-              Those capitalistic swines can lick his ***.
+            <p id="character-bio">Ein verrückter gewiefter Erfinder und Mechaniker, dessen Finger von einer 
+              seiner Maschinen verschlungen wurde. 
+              Er hat zwar den Toaster erfunden, doch er hat noch 
+              immer Träume davon, als er den Thermal Mixer auf den 
+              Markt brachte. Diese kapitalistischen Schweine können 
+              ihn mal!
+
             </p>
           </div>
         </div>
@@ -248,7 +256,7 @@
       </div>
 
     <div class="minor-characters">
-      <h2 class="major-ch-h">Minor characters:</h2>
+      <h2 class="major-ch-h">weniger relevante Charaktere:</h2>
   <!-- put infos for major characters here -->
  
         <div class="character-profile">
@@ -260,7 +268,7 @@
                 <h3 class="info">Margarete Tyler</h3>
               </div>
               <div class="info-block">
-                <h3 class="info-q">Age:</h3>
+                <h3 class="info-q">Alter:</h3>
                 <h3 class="info">24</h3>
               </div>
               <div class="info-block">
@@ -270,10 +278,15 @@
             </div>
           </div>
           <div class="character-bio">
-            <p id="character-bio">Amaris big sister, who keeps annoying Amari with her weird humor. 
-              She's a cool potato. She has great dreams of studying physics at the Central University 
-              of Novuterra one day and although she has the brains and talent, she's like a little bit too lazy to 
-              ACTUALLY put too much effort in. Like… tomorrow doesn't run away. 
+            <p id="character-bio">Amaris große Schwester, 
+              die Amari gern mal auf den Sack geht mit 
+              ihrem seltsamen Humor. Sie ist ne coole Nudel 
+              und sie träumt davon, eines Tages mal Physik 
+              an der zentralen Universität von Novuterra zu 
+              studieren. Allerdings… ist sie vielleicht 
+              etwas zu faul, zu viel Effort in ihre Pläne 
+              zu stecken, obwohl sie die Kompetenz dazu hätte. Ich meine… was du heute kannst besorgen… ich beende diesen Satz besser nicht. 
+
             </p>
           </div>
         </div>
@@ -284,10 +297,10 @@
             <div class="side-character-info">
               <div class="info-block">
                 <h3 class="info-q">Name:</h3>
-                <h3 class="info">Nathaniel Tyler</h3>
+                <h3 class="info">Nataniel Tyler</h3>
               </div>
               <div class="info-block">
-                <h3 class="info-q">Age:</h3>
+                <h3 class="info-q">Alter:</h3>
                 <h3 class="info">45</h3>
               </div>
               <div class="info-block">
@@ -297,11 +310,14 @@
             </div>
           </div>
           <div class="character-bio">
-            <p id="character-bio">He's Amaris Dad, whom Amari learned her habit of parcouring and 
-              climbing on places, they have no buisiness being at. When the flagpole sitting trend was 
-              in it's full hype, you can believe this man took his nine year old daughter up there 
-              with him. Oh yeah, I guess he's also an experienced doctor, 
-              who suffered a serious burnout episode. But he's fine now.
+            <p id="character-bio">Er ist Amaris Vater, von 
+              dem Amari wohl ihre Begeisterung für Parkour 
+              und Klettern an den unmöglichsten Plätzen 
+              geerbt hat. Als der Fahnenmast kletter Trend 
+              in vollem Schwung war, kannst du dir sicher sein, dieser Mann hat seine neunjährige Tocher mit nach da oben genommen.
+				      Ach ja, und er ist erfahrener Doktor mit ernsthafter 
+              Burnout Episode hinter sich, 
+			      	aber er hat sich erholt.
             </p>
           </div>
         </div>
@@ -315,7 +331,7 @@
                 <h3 class="info">Alea Tyler</h3>
               </div>
               <div class="info-block">
-                <h3 class="info-q">Age:</h3>
+                <h3 class="info-q">Alter:</h3>
                 <h3 class="info">42</h3>
               </div>
               <div class="info-block">
@@ -325,11 +341,14 @@
             </div>
           </div>
           <div class="character-bio">
-            <p id="character-bio">Amaris loving Mother. She has trust in the Lord and oh man, 
-              she needs it. Sometimes she feels like the only normal person in this house, 
-              but no matter what, she still loves her family very much. Although this love gets challanged 
-              by her husband very intensely sometimes. Like for example when he takes his nine year old daughter 
-              flagpole sitting!!!
+            <p id="character-bio">Amaris liebende Mutter, die viel Vertrauen 
+              in den Herrn besitzt und ooh Mann… bei dieser Familie braucht 
+              sie das. Manchmal hat sie das Gefühl, sie ist die einzig 
+              normale in diesem Haushalt. Aber trotzdem, liebt sie ihre 
+              Familie sehr. Auch wenn ihr Ehemann sie manchmal etwas in den 
+              Wahnsinn treibt. Zum Beispiel, wenn er seine neunhährige 
+              Tochter zum Fahnenmast Klettern mitnimmt!!!
+
             </p>
           </div>
         </div>
@@ -343,7 +362,7 @@
                 <h3 class="info">Gloria Tyler</h3>
               </div>
               <div class="info-block">
-                <h3 class="info-q">Age:</h3>
+                <h3 class="info-q">Alter:</h3>
                 <h3 class="info">67</h3>
               </div>
               <div class="info-block">
@@ -353,9 +372,11 @@
             </div>
           </div>
           <div class="character-bio">
-            <p id="character-bio">Amaris Grandma and Mother of five children, among them Nathaniel. 
-              She isn't very good at respecting other peoples boundaries and can be a very needy person. 
-              But oh well, I guess she ended up in her youngest childs house. 
+            <p id="character-bio">Amaris Großmutter, und Mutter von fünf 
+              Kindern, von denen eins Nataniel ist. Sie ist nicht wirklich 
+              gut darin, die Grenzen von anderen zu Respektieren und kann 
+              manchmal ziemlich aufdringlich sein. Aber naja, sieht so aus, 
+              als wäre sie bei ihrem Jüngsten im Haus gelandet. 
             </p>
           </div>
         </div>
@@ -366,10 +387,10 @@
             <div class="side-character-info">
               <div class="info-block">
                 <h3 class="info-q">Name:</h3>
-                <h3 class="info">Terry the map merchant</h3>
+                <h3 class="info">Terry der Kartenhändler</h3>
               </div>
               <div class="info-block">
-                <h3 class="info-q">Age:</h3>
+                <h3 class="info-q">Alter:</h3>
                 <h3 class="info">?</h3>
               </div>
               <div class="info-block">
@@ -379,9 +400,11 @@
             </div>
           </div>
           <div class="character-bio">
-            <p id="character-bio">He's a suspicious little map merchant, who may be scamming people a lot, 
-              but at least he's taking the quality of his maps very seriously. Wait what are you doing here? 
-              You're not an important character. 
+            <p id="character-bio">Ein verdächtiger kleiner Kartenhändler, 
+              der möglicherweise seine Kunden nicht selten übers Ohr haut. 
+              Doch wenigstens sind seine Karten von guter Qualität. 
+				      Warte mal, was machst du eigentlich hier? 
+              Du bist doch kein wichtiger Charakter!
             </p>
           </div>
         </div>
@@ -409,7 +432,7 @@
     </p>
 
     <p class="footer-links">
-      <a href="../datenschutz erklärung.html">Datenschut und Impressum</a> |
+      <a href="../datenschutz erklärung.html">Datenschutz und Impressum</a> |
       <a href="../privacy policy.html">Privacy and Imprint</a>
     </p>
   </div>
