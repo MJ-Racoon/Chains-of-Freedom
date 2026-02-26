@@ -38,7 +38,7 @@
 }
 
 .comic img {
-  width: 50%;
+  width: 34%;
   height: auto;
   transition: width 0.3s ease-in-out;
   max-width: 100%;

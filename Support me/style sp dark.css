@@ -357,6 +357,16 @@ padding: 0;
   max-width: 1000px;
 }
 
+.support-links h4 {
+  margin-bottom: 1px;
+  color:#E9D899;
+  font-weight: normal;
+}
+
+.support-links p {
+  color: #e9ddd3;
+}
+
 .support-me {
   color: #968170;
   text-align: center;
@@ -374,6 +384,7 @@ padding: 0;
 #comic-work {
   margin-bottom: 60px;
   font-size: 1.4rem;
+  margin-bottom: 90px;
 }
 
 /* --- SUPPORT BUTTONS --- */
@@ -386,7 +397,7 @@ padding: 0;
   background-color: #1E240F;
   box-shadow: 0 0 16px 12px #1E240F;
   border-radius: 28px;
-  padding: 45px 80px; /* Bigger padding */
+  padding: 45px 80px; 
   margin: 40px auto;
   max-width: 720px; /* Wider on desktop */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -571,6 +582,34 @@ padding: 0;
 .Patreon-avatar {
   position: relative;
 }
+
+
+#thanks-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;          
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+
+
+.special-thanks {
+  width: 60%;
+  height: auto;
+}
+
+
+@media (max-width: 650px) {
+  .special-thanks {
+    width:99%;
+    height: auto;
+  }
+}
+  
+
 
 .footer {
   display: flex;
