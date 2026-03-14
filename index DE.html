@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html lang="en">
+ 
 <head>
   <!-- Light Mode -->
   <link rel="stylesheet" href="style hp.css" media="(prefers-color-scheme: light)">
@@ -16,18 +16,25 @@
     content="Chains of Freedom is a christian fantasy Webocomic, tackling topics of Freedom, Faith and the grand controversy between good and evil.">
 
   <!-- Favivons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Delius&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Grenze+Gotisch:wght@100..900&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=New+Rocker&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rye&family=Sancreek&family=Sue+Ellen+Francisco&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="16x16" href="Img/Favicon/flame 16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Img/Favicon/flame 32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="Img/Favicon/flame 48.png">
 
   <!-- iOS / Mobile -->
   <link rel="apple-touch-icon" sizes="180x180" href="Img/Favicon/flame 180.png">
 
   <!-- fonts -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Delius&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=New+Rocker&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rye&family=Sancreek&family=Sue+Ellen+Francisco&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Sue+Ellen+Francisco&display=swap"
+    rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Sue+Ellen+Francisco&display=swap"
+    rel="stylesheet">
 
   <style>
     /* --- /////////////////////////////////////////////////////////////// --- */
@@ -37,18 +44,26 @@
       background-color: #383B28 !important;
       background-repeat: repeat-y, repeat;
       background-size: 100%, 500px 500px;
-
       font-family: "Noto Serif", serif;
       font-weight: 400;
       font-style: normal;
-
-
-      justify-content: center;
-      align-items: center;
       min-height: 100vh;
-      margin: 0;
+      margin: 0px;
       background-image: url("./Img/Chains.webp"), url("./Img/Wallpaper.webp")
     }
+
+.contents {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    
+      align-items: center;
+      margin: 0px;
+      box-sizing:border-box;
+      width: 100%;
+    
+}
 
 
     section {
@@ -70,9 +85,9 @@
 
 
     hr {
-      display: block;
       height: 1px;
       border: 0;
+      border-style: solid;
       border-top: 4px solid #51423D;
       padding: 0;
     }
@@ -145,36 +160,29 @@
     }
 
     #update-note {
-      font-family: "Noto Serif", serif;
       text-align: center;
-      font-optical-sizing: auto;
-      font-weight: 500;
       font-style: italic;
-      
-      
-      padding-bottom: 30px;
+      padding-bottom: 60px;
+      padding-top: 5px;
       color: #E9D899;
-      width: 80%
+      width: 60%;
+      max-width: 500px;
     }
 
-
-  .update-schedule {
-      
+    #update-schedule {
       color: #f7db75;
-      width: 300px;
+      padding-top: 50px;
+      padding-bottom: 2px;
+      width: 500px;
       min-width: 200px;
-      margin-top: 40px;
-      padding: 10px;
 
       font-family: "Amatic SC", sans-serif;
       font-weight: 400;
       font-style: bold;
-      font-size: 3em;
-
+      font-size: 5em;
 
     }
 
- 
 
     .top-bar .top-line {
       top: 0px;
@@ -233,7 +241,17 @@
       .bar-deco.mobile {
         opacity: 0;
       }
+
+      #update-schedule {
+      width: 450px;
+      min-width: 200px;
+      font-size: 4em;
+
     }
+
+    }
+
+    
 
     /* --- Mobile view ≤500px --- */
     @media (max-width: 500px) {
@@ -248,6 +266,13 @@
       .bar-deco.mobile {
         opacity: 1;
       }
+
+        #update-schedule {
+      width: 300px;
+      min-width: 200px;
+      font-size: 3em;
+
+    }
     }
 
     /* --- Title card --- */
@@ -526,28 +551,39 @@
       font-weight: 400;
       font-style: normal;
       font-size: 2.2em;
-      
+
       color: #f7db75;
+      position: relative;
+      padding-top: 25px;
+      display: inline-block;
     }
 
     .sumtext {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       position: relative;
+
       z-index: 2;
-      width: 95%;
-      font-size: clamp(0.7rem, 2vw, 0.9rem);
+    
       padding: 20px;
       padding-bottom: 10px;
-      margin: 10px auto;
+      margin: 50px auto;
+
       border-radius: 5px;
       background-color: #B19F90;
       max-width: 500px;
       text-align: justify;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+
+      
+      width: 80%;
+      max-width: 700px;
+      grid-area: 1 / 1;
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      box-sizing: border-box;
     }
 
-
+   
     /* ====== Chibi base (replace previous .chibi and .chibi img rules) ====== */
     .chibi {
       position: absolute;
@@ -585,14 +621,15 @@
       position: absolute;
       top: clamp(4px, 0.6vw, 10px);
 
-      left: 9px;
-      top: 25px;
+      left: -50px;
+      top: -146px;
       transform: translateX(calc(-38px - 2vw));
 
     }
 
     #carol img {
-      width: 350px;
+      width: 340px;
+      height: auto;
     }
 
 
@@ -663,13 +700,14 @@
       .age-rating {
         display: flex;
         padding: 10px;
-        color:#E9D899!important;
       }
 
-       .age-rating h4 {
+      .age-rating h4 {
         color:#E9D899!important;
       }
-
+      .rating {
+        color: #E9D899;
+      }
 
       #toggle {
         color: #E9D899;
@@ -701,6 +739,7 @@
     .sub-note {
       text-align: center;
       color:#E9D899;
+      margin-top: 60px;
     }
 
     .subscribe:hover {
@@ -738,13 +777,14 @@
       }
 
       #amari {
-        top: clamp(26px, 1.2vw, 50px);
-        left: 23px;
-        transform: translateX(calc(-32px - 3vw));
+        top: -110px;
+        left: -60px;
+        transform: translate(-14%, -2%);
       }
 
       #carol img {
         width: 270px;
+        height: auto;
       }
 
 
@@ -768,12 +808,14 @@
       }
 
       #amari {
-        top: clamp(20px, 2vw, 24px);
-        transform: translateX(calc(-24px - 2vw));
+       top: -110px;
+        left: -20px;
+        transform: translate(-14%, -2%);
       }
 
       #carol img {
         width: 230px;
+        height: auto;
       }
 
       .sumtext {
@@ -794,6 +836,7 @@
 
       #carol img {
         width: 200px;
+        height: auto;
       }
 
       .chibi img {
@@ -809,13 +852,14 @@
 
     @media (max-width: 480px) {
       #amari {
-        top: 13px;
+        top: -80px;
         left: -20px;
         transform: translate(-14%, -2%);
       }
 
       #carol img {
         width: 190px;
+        height: auto;
       }
 
       .chibi img {
@@ -861,23 +905,7 @@
     }
 
     /* Desktop Summary Box */
-    .sumtext {
-      width: 80%;
-      max-width: 700px;
-      grid-area: 1 / 1;
-      z-index: 1;
-      margin: 5% auto;
-      font-size: clamp(0.9rem, 2vw, 1.1rem);
-      background-color: #B19F90;
-      text-align: justify;
-      box-sizing: border-box;
-    }
-
-    .summary {
-      position: relative;
-      padding-top: 25px;
-      display: inline-block;
-    }
+   
 
     /* Trigger Button + Text */
     .trigger-warnings {
@@ -901,7 +929,7 @@
     }
 
     .age-rating h4 {
-      color:#383B28
+      color:#383B28;
     }
    
      #age-rating {
@@ -922,6 +950,18 @@
       cursor: pointer;
       background-color: #E808CA !important;
     }
+
+
+    .glossar {
+      font-family: "Amatic SC", sans-serif;
+      font-weight: bold;
+      font-size: 5em;
+
+      color: #f7db75;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
   </style>
 
 
@@ -951,7 +991,7 @@
       <img src="Img/Title card.webp" width="390px" class="title-card-img" loading="eager" fetchpriority="high" alt="">
     </div>
 
-    <div class="stack" id="desktop-languages">
+  <div class="stack" id="desktop-languages">
      
       <a href="index.html" class="eng">
         <img id="engFlag" src="Img/Eng off.webp" width="70px"/>
@@ -962,30 +1002,33 @@
       </div>
 
     </div>
+      
+    </div>
 
     <div class="line bottom-line"></div>
   </div>
 
   <hr style="color:#1d1815" />
 
+
+
+
+
   <nav class="navbar">
     <div class="mobile-top">
       <div class="menu-icon" id="menu-icon">&#9776;</div>
       <div class="languages">
         <a href="index.html"> 
-          <img src="Img/Eng off.webp" width="40" alt="" onmouseover="this.src='Img/Eng on.webp';"
-          onmouseout="this.src='Img/Eng off.webp';" />
+          <img src="Img/Eng off.webp" width="40" alt="" onmouseover="this.src='../Img/Eng on.webp';"
+          onmouseout="this.src='../Img/Eng off.webp';" />
         </a>
-        <img src="Img/Deu on.webp" width="40" alt=""  />
+        <img src="Img/Deu on.webp" width="40" alt="" />
+        
       </div>
     </div>
 
-
-
-
-
     <ul class="nav-bar" id="nav-bar">
-      <li class="nav-button" id="selected"><a href="index.html">Home</a></li>
+      <li class="nav-button" id="selected"><a href="index DE.html">Home</a></li>
       <!-- Update!!! and copy to other pages -->
       <li class="nav-button"><a href="Episode Pages DE/Arc 1/prolog.html#episode4">Neueste Episode</a></li>
       <li class="nav-button"><a href="Characters/Characters DE.html">Charaktere</a></li>
@@ -994,7 +1037,7 @@
     </ul>
   </nav>
 
-  <script>
+ <script>
     const menuIcon = document.getElementById("menu-icon");
     const navBar = document.getElementById("nav-bar");
     menuIcon.addEventListener("click", () => { navBar.classList.toggle("show"); });
@@ -1020,6 +1063,17 @@
   <!--////////////////////////////////////////////////////////////-->
                                <!-- Content -->
   <!--////////////////////////////////////////////////////////////-->
+<div class="contents">
+
+  <!-- ////////////////// About ////////////////// -->
+<div class="button-deco">
+      <img src="Img\upload deco left.webp" class="button-deco-img-L arrow-d" alt="" />
+
+      <h1 id="update-schedule">Updates jeden zweiten Sonntag</h2>
+
+        <img src="Img\upload deco right.webp" class="button-deco-img-L arrow-d" alt="" />
+    </div>
+    <p id="update-note">Wenn du das hier liest, herzlichen Glückwunsch. Du hast diese Seite Gefunden, bevor mein Comic überhaupt offiziell veröffentlicht wurde.</p>
 
 
   <div class="body">
@@ -1029,33 +1083,17 @@
     </div>
 
 
-
-    <!-- ////////////////// About ////////////////// -->
-
-
-    <div class="button-deco ">
-      <img src="Img\upload deco left.webp" class="button-deco-img-L arrow-d" alt="" />
-
-  
-      <h1 class="update-schedule">	Updates jeden zweiten Sonntag</h1>
-  
-        <img src="Img\upload deco right.webp" class="button-deco-img-L arrow-d" alt="" />
-    </div>
-    <p id="update-note">Wenn du das hier liest, herzlichen Glückwunsch. Du hast diese Seite Gefunden, bevor mein Comic überhaupt offiziell veröffentlicht wurde. </p>
-
-
     <div class="chibi-container">
       <div id="amari" class="chibi">
-        <img src="Img/Chibi Amari.webp" alt="Amari" />
+        <img src="Img/Chibi Amari sitting.webp" alt="Amari" />
       </div>
 
-      <div class="sumtext">
+       <div class="sumtext">
         <h3 class="summary">Klappentext</h3>
         <p>Als ihm das Eiserne Halsband angelegt wird, ist Carols freies Leben als Jäger vorbei. Aber als er vom sogenannten Elixier der Freiheit erfährt, 
            was einen Huvanen angeblich von ihrer korrupten Natur befreien kann, kehrt ein Schimmer Hoffnung in sein Leben zurück. 
            Durch ein kleines versehen wird das Postmädchen Amari in die Sache mit reingezogen, deren Glaube an den großen König dadurch auf die Probe gestellt wird, wie noch nie zuvor in ihrem Leben. 
-           Auf der Suche nach den Schlüsseln für das Elixier reisen sie durch die ihnen bekannte Welt und treffen neue Freunde, Feinde und Rivalen. 
-
+           Auf der Suche nach den Schlüsseln für das Elixier reisen sie durch die ihnen bekannte Welt und treffen neue Freunde, Feinde und Rivalen.
         </p>
         <div class="age-rating">
           <h4 id="age-rating">Alters Empfehlung: </h4>
@@ -1088,33 +1126,58 @@
 
 
 
-    <!-- ////////////////// Glossar ////////////////// -->
+    
 
 
-    <div id="carol"><img src="Img\Chibi Carol.webp" alt="Carol" /></div>
+    <div class="corner-bottom">
+      <div id="bottom-left"> <img src="Img\corner bottom left.webp" width="60px" height="60px" alt="" /></div>
+      <div id="bottom-right"> <img src="Img\corner bottom right.webp" width="60px" height="60px" alt="" /></div>
+    </div>
+  </div>
+
+
 
 
     <!-- Update!!! -->
     <div class="button-deco">
       <img src="Img/button deco left long.webp" class="button-deco-img-L left" alt="" />
 
-      <a href="Episode Pages/Arc 1/prolog.html#episode4" class="newest-shiat-btn">
+      <a href="Episode Pages DE/Arc 1/prolog.html#episode4" class="newest-shiat-btn">
         Lies die neueste Episode!
       </a>
 
       <img src="Img/button deco right long.webp" class="button-deco-img-L right" alt="" />
     </div>
 
+
+
+
+
+<div class="body">
+    <div class="corner-top">
+      <img id="top-left" src="Img/corner top left.webp" width="60px" height="60px" alt="" />
+      <img id="top-right" src="Img/corner top right.webp" width="60px" height="60px" alt="" />
+    </div>
+
+    <!-- ////////////////// Glossar ////////////////// -->
+
+<h1 class="glossar">Inhaltsverzeichnis</h1>
+
+
+
+<div id="carol"><img src="Img\Chibi Carol.webp" alt="Carol" /></div>
+
+
     <div class="arc-decoration">
       <div class="chapter-box" id="Arc-box">
         <!-- Update!!! -->
         <div class="content">
-          <img class="cover" src="Episode Pages DE\Arc 1\Cover Band 1 - Aufbruch.webp" width="50%"
+          <img class="cover" src="Episode Pages\Arc 1\Cover Issue 1 - Beginning.webp" width="50%"
             alt="Cover Chains of Freedom Issue 1" />
 
-          <div class="glossar">
+          <div>
             <div class="g-border">
-              <h1 class="Arc"> Issue 1: Beginning</h1>
+              <h1 class="Arc"> Issue 1: Aufbruch aus Babel</h1>
               <ul>
                 <li><a href="Episode Pages\Arc 1\prolog.html" class="chapter">Prolog</a></li>
                 <li><a href="Episode Pages\Arc 1\Ch1.html" class="chapter">Kapitel 1</a></li>
@@ -1137,13 +1200,15 @@
 
     <!-- ////////////////// Subscribe ////////////////// -->
 
+    <hr style="color:#1d1815">
     <section>
+      
       <p class="sub-note">
         Wenn du keine zukünftigen Episoden Upload verpassen möchtest, dann kannst du meinen Newsletter:
       </p>
 
-      <a href="abonnieren.html" class="newest-shiat-btn subscribe">
-        Abonnieren 
+      <a href="subscribe.html" class="newest-shiat-btn subscribe">
+       Abonniere den Comic
       </a>
     </section>
 
@@ -1153,9 +1218,6 @@
       <div id="bottom-right"> <img src="Img\corner bottom right.webp" width="60px" height="60px" alt="" /></div>
     </div>
   </div>
-
-
-
 
 
 
@@ -1176,13 +1238,22 @@
 
   </div>
 
+
+</div>
+
+
+
   <div class="about-creator">
-    <h3 id="creator">Über den Künstler</h3>
+    <h3 id="creator">Über den Künstler:</h3>
     <img id="avatar" src="Img/Profile pics/MJ Sona.webp" width="230px" height="230px" alt="creator-image" />
     <p id="about-me">
-     Hi, ich bin MJ, ein verpeilter kleiner Waschbär aus Deutschland und habe diesen Webcomic geschrieben und gezeichnet.
-Nach einem Jahr auf der "Josia Missionsschule" habe ich mich entschieden, dass ich meine Begabung und Leidenschaft für Kunst, 
-Christus übergeben möchte. Aber egal, ob du nun Christ bist oder nicht, ich freue mich über jeden, der kommt um meine Geschichte zu hören. :3
+    Hi, ich bin MJ, ein verpeilter kleiner Waschbär aus Deutschland 
+    und habe diesen Webcomic geschrieben und gezeichnet. 
+    Nach einem Jahr auf der "Josia Missionsschule" habe ich mich 
+    entschieden, dass ich meine Begabung und Leidenschaft für Kunst, 
+    Christus übergeben möchte. Aber egal, ob du nun Christ bist oder 
+    nicht, ich freue mich über jeden, der kommt um meine Geschichte 
+    zu hören. :3
     </p>
   </div>
 
@@ -1192,12 +1263,13 @@ Christus übergeben möchte. Aber egal, ob du nun Christ bist oder nicht, ich fr
       Chains of Freedom © 2025 MJM. All rights reserved.
     </p>
 
-  <p class="footer-links">
+    <p class="footer-links">
       <a href="datenschutz erklärung.html">Datenschut und Impressum</a> |
       <a href="privacy policy.html">Privacy and Imprint</a>
     </p>
   </div>
 </div>
+
 </body>
 
 </html>

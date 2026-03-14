@@ -59,13 +59,16 @@
   font-weight: 700;
 
   background-color: #51423D;
-  color: #E808CA;
+  color:#B19F90;
 
   border: 2px;
   border-color: #000000;
   border-style: solid;
   border-radius: 4px;
   cursor: pointer;
+
+
+box-shadow:#E9D899;
 
   white-space: nowrap;
 
