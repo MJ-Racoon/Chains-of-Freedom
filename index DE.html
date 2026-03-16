@@ -36,6 +36,7 @@
     href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Sue+Ellen+Francisco&display=swap"
     rel="stylesheet">
 
+    
   <style>
     /* --- /////////////////////////////////////////////////////////////// --- */
                        /* --- Normal Page styling --- */
@@ -83,6 +84,16 @@
       scroll-behavior: smooth;
     }
 
+    html, body {
+      overflow-x: hidden;
+    }
+
+
+    .container,
+    .section,
+    .row {
+      max-width: 100%;
+    }
 
     hr {
       height: 1px;
@@ -171,7 +182,7 @@
 
     #update-schedule {
       color: #f7db75;
-      padding-top: 50px;
+      padding-top: 70px;
       padding-bottom: 2px;
       width: 500px;
       min-width: 200px;
@@ -550,7 +561,7 @@
       font-family: "Sue Ellen Francisco", cursive;
       font-weight: 400;
       font-style: normal;
-      font-size: 2.2em;
+      font-size: 5em;
 
       color: #f7db75;
       position: relative;
@@ -872,6 +883,8 @@
 
         width: 100% !important;
       }
+
+     
     }
 
     /* MOBILE FIXES */
@@ -902,6 +915,10 @@
         width: 100%;
         margin: 20px 0;
       }
+       
+      .glossar {
+      font-size: 3em!important;
+    }
     }
 
     /* Desktop Summary Box */
@@ -953,15 +970,15 @@
 
 
     .glossar {
-      font-family: "Amatic SC", sans-serif;
-      font-weight: bold;
+      font-family: "Sue Ellen Francisco", cursive;
+      font-weight: 400;
+      font-style: normal;
       font-size: 5em;
 
       color: #f7db75;
       margin-bottom: 20px;
       padding: 10px;
     }
-
   </style>
 
 
@@ -1012,8 +1029,6 @@
 
 
 
-
-
   <nav class="navbar">
     <div class="mobile-top">
       <div class="menu-icon" id="menu-icon">&#9776;</div>
@@ -1030,7 +1045,7 @@
     <ul class="nav-bar" id="nav-bar">
       <li class="nav-button" id="selected"><a href="index DE.html">Home</a></li>
       <!-- Update!!! and copy to other pages -->
-      <li class="nav-button"><a href="Episode Pages DE/Arc 1/prolog.html#episode4">Neueste Episode</a></li>
+      <li class="nav-button"><a href="Episode Pages DE/Arc 1/prolog.html#episode1">Neueste Episode</a></li>
       <li class="nav-button"><a href="Characters/Characters DE.html">Charaktere</a></li>
       <li class="nav-button"><a href="Support me/Support Me DE.html">Unterstützt mich</a></li>
       <li style="text-decoration: line-through;" class="disabled"><a href="#" class="disabled">Bonus</a></li>
@@ -1057,9 +1072,6 @@
 
 
 
-
-
-
   <!--////////////////////////////////////////////////////////////-->
                                <!-- Content -->
   <!--////////////////////////////////////////////////////////////-->
@@ -1073,7 +1085,7 @@
 
         <img src="Img\upload deco right.webp" class="button-deco-img-L arrow-d" alt="" />
     </div>
-    <p id="update-note">Wenn du das hier liest, herzlichen Glückwunsch. Du hast diese Seite Gefunden, bevor mein Comic überhaupt offiziell veröffentlicht wurde.</p>
+    <p id="update-note">Die Episoden mögen fürs erste kurz sein. <br>Aber lieber kurz und regelmäßig posten, anstatt lang, burnout und gar nicht posten. :)</p>
 
 
   <div class="body">
@@ -1092,14 +1104,17 @@
         <h3 class="summary">Klappentext</h3>
         <p>Als ihm das Eiserne Halsband angelegt wird, ist Carols freies Leben als Jäger vorbei. Aber als er vom sogenannten Elixier der Freiheit erfährt, 
            was einen Huvanen angeblich von ihrer korrupten Natur befreien kann, kehrt ein Schimmer Hoffnung in sein Leben zurück. 
-           Durch ein kleines versehen wird das Postmädchen Amari in die Sache mit reingezogen, deren Glaube an den großen König dadurch auf die Probe gestellt wird, wie noch nie zuvor in ihrem Leben. 
+           Durch ungewöhnliche Umstände wird das Postmädchen Amari in die Sache mit reingezogen, nachdem sie ein gefährliches Gebet gebetet hat. 
+           Wird ihr Glaube den Herausforderungen dieses Abenteuers standhalten?
            Auf der Suche nach den Schlüsseln für das Elixier reisen sie durch die ihnen bekannte Welt und treffen neue Freunde, Feinde und Rivalen.
         </p>
         <div class="age-rating">
           <h4 id="age-rating">Alters Empfehlung: </h4>
           <h4 id="rating">teen/junge Erwachsene</h4>
         </div>
-        <div id="triggers">religiöse-themen, christliche-themen, mildes-fluchen, darstellung-emotionaler-mishandlung, milde-Wunden-und-Verletzungen
+        <div id="triggers"> mildes-Blut, mäßige-Gewalt, Kämpfe, religiöse/christliche-Thematiken, mildes/zensiertes-Fluchen
+          <br><br> (Trigger Warnungen betreffen primär sensitive Leute. 
+          Für die Meisten sollten die ernsteren Themen des Comics absolut kein Problem darstellen.)
           </div>
         <button id="toggle" class="trigger-warnings">Trigger Warnungen</button>
         <script>
@@ -1142,7 +1157,7 @@
     <div class="button-deco">
       <img src="Img/button deco left long.webp" class="button-deco-img-L left" alt="" />
 
-      <a href="Episode Pages DE/Arc 1/prolog.html#episode4" class="newest-shiat-btn">
+      <a href="Episode Pages DE/Arc 1/prolog.html#episode1" class="newest-shiat-btn">
         Lies die neueste Episode!
       </a>
 
