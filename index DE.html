@@ -1045,7 +1045,7 @@
     <ul class="nav-bar" id="nav-bar">
       <li class="nav-button" id="selected"><a href="index DE.html">Home</a></li>
       <!-- Update!!! and copy to other pages -->
-      <li class="nav-button"><a href="Episode Pages DE/Arc 1/prolog.html#episode1">Neueste Episode</a></li>
+      <li class="nav-button"><a data-link="NeuEp">Neueste Episode</a></li>
       <li class="nav-button"><a href="Characters/Characters DE.html">Charaktere</a></li>
       <li class="nav-button"><a href="Support me/Support Me DE.html">Unterstützt mich</a></li>
       <li style="text-decoration: line-through;" class="disabled"><a href="#" class="disabled">Bonus</a></li>
@@ -1061,7 +1061,7 @@
     engFlag.addEventListener("mouseover", () => { engFlag.src = "Img/Eng on.webp"; });
     engFlag.addEventListener("mouseout", () => { engFlag.src = "Img/Eng off.webp"; });
   </script>
-
+  
   <hr style="color:#1d1815">
 
 
@@ -1157,7 +1157,7 @@
     <div class="button-deco">
       <img src="Img/button deco left long.webp" class="button-deco-img-L left" alt="" />
 
-      <a href="Episode Pages DE/Arc 1/prolog.html#episode1" class="newest-shiat-btn">
+      <a data-link="NeuEp" class="newest-shiat-btn">
         Lies die neueste Episode!
       </a>
 
@@ -1194,8 +1194,8 @@
             <div class="g-border">
               <h1 class="Arc"> Issue 1: Aufbruch aus Babel</h1>
               <ul>
-                <li><a href="Episode Pages\Arc 1\prolog.html" class="chapter">Prolog</a></li>
-                <li><a href="Episode Pages\Arc 1\Ch1.html" class="chapter">Kapitel 1</a></li>
+                <li><a href="Episode Pages DE\Arc 1\prolog.html" class="chapter">Prolog</a></li>
+                <li><a href="Episode Pages DE\Arc 1\Ch1.html" class="chapter">Kapitel 1</a></li>
                 <li><a href="#" id="unreleased" class="chapter">Kapitel 2</a></li>
                 <li><a href="#" id="unreleased" class="chapter">Kapitel 3</a></li>
               </ul>
@@ -1284,7 +1284,7 @@
     </p>
   </div>
 </div>
-
+<script src="const links.js"></script>
 </body>
 
 </html>
