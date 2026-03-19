@@ -449,7 +449,7 @@ ul {
     <h4 class="row2 text-btn">Vorherige</h4>
   </a>
   
-  <a href="../../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
+  <a href="../../index DE.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
   
   <a class="nav-btn next" >
     <h4 class="row2 text-btn">Nächste</h4>
@@ -520,28 +520,20 @@ ul {
 
 <!-- comic -->
 
-  <div class="comic">
-   <img id="episode1" src="Chapter 1/Ep1_001.webp" loading="eager" fetchpriority="high" alt="Chains of Freedom - Chapter 0, Page 1"/>
-    <img  src="Chapter 1/Ep1_002.webp" alt="Chains of Freedom - Episode 1, Page 2" loading="lazy"/>
-    <img  src="Chapter 1/Ep1_003.webp" alt="Chains of Freedom - Episode 1, Page 3" loading="lazy"/>
-    <img  src="Chapter 1\Ep1_004.webp" alt="Chains of Freedom - Episode 1, Page 4" loading="lazy"/>
-    <img  src="Chapter 1\Ep1_005.webp" alt="Chains of Freedom - Episode 1, Page 5" loading="lazy"/>
-    <img  src="Chapter 1\Ep1_006.webp" alt="Chains of Freedom - Episode 1, Page 6" loading="lazy"/>
-    <img  src="Chapter 1\Ep1_007.webp" alt="Chains of Freedom - Episode 1, Page 7" loading="lazy"/>
-    <img  src="Chapter 1\Ep1_008.webp" alt="Chains of Freedom - Episode 1, Page 8" loading="lazy"/>
-  </div>
+ <div class="comic" id="comic">
+
+ </div>
    
   
 
   <div class="foot-box">
-    <p id="thank-you">Thank you so much for sticking around to the end. 
-      If you like what you're reading, feel free to:</p>
+    <p id="thank-you">Vielen Dank, dass du bis zum Ende gelesen hast. Wenn dir gefällt was ich hier mache, kannst du mich gerne auch:</p>
     <div class="pay-and-subscribe">
       <img src="../../Img\Eliot favicon fancy.webp" class="fancy-eliot"/>
       <div class="dialouge-options">
-        <a href="../../Support me/Support Me.html">Support me</a>
+        <a href="../../Support me/Support Me.html">Unterstützen</a>
         <p>or</p>
-        <a href="../../subscribe.html">Subscribe</a>
+        <a href="../../subscribe.html">Abonnieren</a>
       </div>
     </div>
   </div> 
@@ -631,6 +623,11 @@ document.querySelectorAll(".next").forEach(btn => {
   }
 });
 </script>
+
+<script>
+  const CURRENT_CHAPTER = 1; //bei Update! ändern
+</script>
+<script src="../../comic.js"></script>
 
 </body>
 </html>

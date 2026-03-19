@@ -13,3 +13,4 @@ document.querySelectorAll("[data-link]").forEach(el => {
 });
 
 }
+
