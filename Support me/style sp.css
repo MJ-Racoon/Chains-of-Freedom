@@ -359,6 +359,7 @@ padding: 0;
 
 .support-links p {
   color: #e9ddd3;
+  padding: 0px 10px;
 }
 
 .support-me {
@@ -594,6 +595,7 @@ padding: 0;
 .special-thanks {
   width: 60%;
   height: auto;
+  box-shadow: 10px 10px 11px rgb(19, 21, 18);
 }
 
 
@@ -602,8 +604,48 @@ padding: 0;
     width:99%;
     height: auto;
   }
+
+  .join-now h2 {
+    font-size: 1.3em !important;
+  }
+
 }
   
+
+.join-now {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  
+  box-sizing: border-box;
+  padding: 50px 20px 50px;
+}
+
+.join-now h2 {
+  color:#e9ddd3;
+  font-family: "Sue Ellen Francisco", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 42px;
+  margin-bottom: 30px;
+  
+}
+
+.join-now a {
+  color:#E9D899;
+}
+
+
+
+
+
+
+
+
+
+
 
 .footer {
   display: flex;
