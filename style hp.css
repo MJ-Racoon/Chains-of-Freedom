@@ -316,7 +316,7 @@ li {
   font-size: 1.3em;
 
  
-  padding: 1px 20px!important;
+  padding: 20px 100px!important;
 
   background-color: #51423D;
   color:#E9D899;
@@ -335,6 +335,7 @@ li {
   .news-content {
   flex-direction: column;
   align-items: center;
+  font-size: 0.95em;
 }
 
 .news-blob {
