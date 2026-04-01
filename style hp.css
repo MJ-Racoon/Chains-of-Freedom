@@ -277,12 +277,12 @@ li {
 .news-blob {
   border-style:none;
   border-radius: 17px;
-  padding: 30px;
+  padding: 30px 50px;
   margin: 0px 30px;
   display: block;
   background-color:#B19F90;
   margin-bottom: 30px;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .news-blob h2 {
@@ -311,16 +311,19 @@ li {
   flex-direction: column;
 }
 
-.news {
+.news-btn {
   align-self: center;
-  font-size: 1.3em;
 
- 
-  padding: 20px 100px!important;
+  padding: 1px 20px!important;
 
   background-color: #51423D;
   color:#E9D899;
 }
+
+.news {
+  
+}
+
 
 .news:hover {
   color:#E808CA;
