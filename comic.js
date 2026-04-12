@@ -12,7 +12,8 @@ const chapter = 1;
 // endPage = letzte Seite dieser Episode
 
 const episodes = [
-  { number: 1, startPage: 1, endPage: 8 },
+  { number: 1, startPage: 1, endPage: 7 },
+  { number: 2, startPage: 8, endPage: 11 },
   // 👉 Neue Episode hinzufügen:
   // { number: 2, startPage: 9, endPage: 16 },
 ];
@@ -52,9 +53,6 @@ episodes.forEach(ep => {
     } else {
       img.loading = "lazy";
     }
-
-    // Bildbreite (wichtig für Mobile)
-    img.style.width = "100%";
 
     container.appendChild(img);
   }
