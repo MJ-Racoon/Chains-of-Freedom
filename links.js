@@ -1,10 +1,14 @@
+const BASE = window.location.pathname.includes("Chains-of-Freedom")
+  ? "/Chains-of-Freedom/"
+  : "/";
+
 document.addEventListener("DOMContentLoaded", () => {
 
   console.log("links.js läuft");
 
   window.LINKS = {
-    NewEp: "Episode Pages/Arc 1/Ch1.html#episode2",
-    NeuEp: "Episode Pages DE/Arc 1/Ch1.html#episode2"
+    NewEp: "Episode Pages/Arc 1/Ch1.html#episode3",
+    NeuEp: "Episode Pages DE/Arc 1/Ch1.html#episode3"
   };
 
   document.querySelectorAll("[data-link]").forEach(el => {

@@ -14,6 +14,7 @@ const chapter = 1;
 const episodes = [
   { number: 1, startPage: 1, endPage: 7 },
   { number: 2, startPage: 8, endPage: 11 },
+  { number: 3, startPage: 12, endPage: 17 },
   // 👉 Neue Episode hinzufügen:
   // { number: 2, startPage: 9, endPage: 16 },
 ];
@@ -57,3 +58,26 @@ episodes.forEach(ep => {
     container.appendChild(img);
   }
 });
+
+
+// ==============================
+// 📋 AUTOMATISCHES INHALTSVERZEICHNIS
+// ==============================
+
+const toc = document.querySelector(".chapter1"); 
+// 👆 deine UL im HTML (chapter1)
+
+if (toc) {
+  episodes.forEach((ep, index) => {
+    const li = document.createElement("li");
+    li.className = "episode-selection";
+
+    const a = document.createElement("a");
+    a.className = "episode";
+    a.href = `#episode${ep.number}`;
+    a.textContent = `Episode ${ep.number}`;
+
+    li.appendChild(a);
+    toc.appendChild(li);
+  });
+}

@@ -8,6 +8,10 @@
     <!-- Dark Mode -->
     <link rel="stylesheet" href="../style page dark.css" media="(prefers-color-scheme: dark)">
    
+  <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Delius&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Grenze+Gotisch:wght@100..900&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=New+Rocker&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rye&family=Sancreek&family=Sue+Ellen+Francisco&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>chapter 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -221,24 +225,32 @@ a {
   font-size: 1.3em !important;
 }
 
+/* bleibt wie bei dir */
 .episode-selection {
-  display: flex;
-  justify-content: center;
-  font-size: 1.2em;
+  text-align: center;
 }
 
 .episode {
-  position: relative;   /* wichtig für absolute Positionierung */
+  display: inline-block;
+  position: relative; /* wichtig für das Badge */
 }
 
-.new-badge {
+.chapter1 li:last-child .episode::after {
+content: "Neu";
+  
   position: absolute;
-  top: -11px;
-  right: -57px;
-  font-size: 0.9em;
-  padding-top: 12px;
-  color:#E9D899;
+  left: 100%;        /* direkt rechts vom Text */
+  margin-left: 8px;  /* fixer Abstand in px */
+  top: 50%;
+  transform: translateY(-50%);
+  
+  background-color:#E808CA;
+  color: white;
+  font-size: 0.8em;
+  padding: 2px 8px;
+  border-radius: 10px;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .episode:hover {
@@ -473,10 +485,9 @@ ul {
     </div>
 
    <h2 class="episode-headline">Wähle Episode:</h2>
-   <ul class="chapter1">
-  <li class="episode-selection"><a href="#episode1" class="episode">Episode 1</a> </li>
-  <li class="episode-selection"><a href="#episode2" class="episode">Episode 2</a> <span class="new-badge">(Neu)</span></li>
-</ul>
+  <ul class="chapter1">
+
+  </ul>
       
 
       <div class="corner-bottom">
@@ -545,7 +556,7 @@ ul {
     <h4 class="row2 text-btn">Vorherige</h4>
   </a>
   
-  <a href="../../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
+  <a href="../../index DE.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
   
   <a class="nav-btn next" >
     <h4 class="row2 text-btn">Nächste</h4>
