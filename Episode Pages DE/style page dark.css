@@ -44,6 +44,15 @@
   max-width: 100%;
 }
 
+.continue {
+    text-align: center;
+    color:#E9D899;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: bold;
+    font-size: 4em;
+}
+
 /* Map default */
 #map {
   display: flex;
