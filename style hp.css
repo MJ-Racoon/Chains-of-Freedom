@@ -10,6 +10,12 @@
 }
 
 
+.highlight {
+  color:#d400b7;
+  font-size: 2.5em;
+
+}
+
 .button-deco {
   display: flex;
   align-items: center;
