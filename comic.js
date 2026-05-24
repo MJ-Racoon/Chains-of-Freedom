@@ -16,6 +16,7 @@ const episodes = [
   { number: 2, startPage: 8, endPage: 11 },
   { number: 3, startPage: 12, endPage: 17 },
   { number: 4, startPage: 18, endPage: 20 },
+  { number: 5, startPage: 21, endPage: 23 },
   // 👉 Neue Episode hinzufügen:
   // { number: 2, startPage: 9, endPage: 16 },
 ];
