@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("links.js läuft");
 
   window.LINKS = {
-    NewEp: "Episode Pages/Arc 1/Ch1.html#episode5",
-    NeuEp: "Episode Pages DE/Arc 1/Ch1.html#episode5"
+    NewEp: "Episode Pages/Arc 1/Ch1.html#episode6",
+    NeuEp: "Episode Pages DE/Arc 1/Ch1.html#episode6"
   };
 
   document.querySelectorAll("[data-link]").forEach(el => {

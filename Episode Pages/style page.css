@@ -37,6 +37,24 @@
     font-size: 4em;
 }
 
+.continue {
+    text-align: center;
+    color:#E9D899;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: bold;
+    font-size: 4em;
+}
+
+.continue-p {
+    text-align: center;
+    color:#E9D899;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: bold;
+    font-size: 2em;
+}
+
 /* Map default */
 #map {
   display: flex;
