@@ -47,7 +47,7 @@
     }
 
 .contents {
-      display: flex;
+      display: flex; 
       flex-direction: column;
       justify-content: center;
       text-align: center;
@@ -57,6 +57,47 @@
       box-sizing:border-box;
       width: 100%;
     
+}
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, transparent, transparent);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+/* sichtbar */
+#scrollTopBtn.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* SVG im Button übernimmt Farbe wie Nav-Buttons */
+#scrollTopBtn .arrow path {
+    fill: currentColor;
+    transition: fill 0.3s ease-in-out;
+}
+
+/* Button Farbe wie deine Nav-Buttons */
+#scrollTopBtn {
+    color: #E808CA;
+}
+
+/* Hover wie deine Nav-Buttons */
+#scrollTopBtn:hover {
+    color: #E9D899;
+    background: linear-gradient(90deg, rgba(233,216,153,0.2), rgba(232,8,202,0.2));
+    cursor: pointer;
 }
 
 
@@ -1090,6 +1131,38 @@
     <p id="update-note">Die Episoden mögen fürs erste kurz sein. <br>Aber lieber kurz und regelmäßig posten, anstatt lang, Burnout und gar nicht posten. :)</p>
 
 
+<!-- Jump to top button -->
+<button id="scrollTopBtn" title="Nach oben" class="nav-btn">
+  <svg class="arrow" viewBox="0 0 1000 1000" width="20" height="20" aria-hidden="true">
+    <path d="M500 200 L800 600 L200 600 Z"/>
+  </svg>
+</button>
+
+<script>
+  (function(){
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", () => {
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (st < lastScrollTop && st > 100) {
+       
+        scrollBtn.classList.add("show");
+      } else {
+
+        scrollBtn.classList.remove("show");
+      }
+
+      lastScrollTop = st <= 0 ? 0 : st; 
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    });
+  })();
+</script>
+
   <div class="body">
     <div class="corner-top">
       <img id="top-left" src="Img/corner top left.webp" width="60px" height="60px" alt="" />
@@ -1114,7 +1187,7 @@
           <h4 id="age-rating">Alters Empfehlung: </h4>
           <h4 id="rating">teen/junge Erwachsene</h4>
         </div>
-        <div id="triggers"> mildes-Blut, mäßige-Gewalt, Kämpfe, religiöse/christliche-Thematiken, mildes/zensiertes-Fluchen
+        <div id="triggers"> mildes-Blut, mäßige-Gewalt, Kämpfe, religiöse/christliche-Thematiken, mildes/zensiertes-Fluchen, okkulte/magische-Thematiken
           <br><br> (Trigger Warnungen betreffen primär sensitive Leute. 
           Für die Meisten sollten die ernsteren Themen des Comics absolut kein Problem darstellen.)
           </div>
@@ -1188,7 +1261,7 @@
               <h1 class="Arc"> Issue 1: Aufbruch aus Babel</h1>
               <ul>
                 <li><a href="Episode Pages DE\Arc 1\prolog.html" class="chapter">Prolog</a></li>
-                <li><a href="Episode Pages DE\Arc 1\Ch1.html" class="chapter">Kapitel 1 - ein gefährliches Gebet</a></li>
+                <li><a href="Episode Pages DE/chapter.html?chapter=1" class="chapter">Kapitel 1 - ein gefährliches Gebet</a></li>
                 <li><a href="#" id="unreleased" class="chapter">Kapitel 2</a></li>
                 <li><a href="#" id="unreleased" class="chapter">Kapitel 3</a></li>
                 <li><a href="#" id="unreleased" class="chapter">Kapitel 3</a></li>
@@ -1301,8 +1374,9 @@
     </p>
   </div>
 </div>
-<script src="news.js"></script>
+<script src="comic-data.js"></script>
 <script src="links.js"></script>
+<script src="news.js"></script>
 </body>
 
 </html>

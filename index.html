@@ -58,6 +58,46 @@
     
 }
 
+#scrollTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, transparent, transparent);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+/* sichtbar */
+#scrollTopBtn.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* SVG im Button übernimmt Farbe wie Nav-Buttons */
+#scrollTopBtn .arrow path {
+    fill: currentColor;
+    transition: fill 0.3s ease-in-out;
+}
+
+/* Button Farbe wie deine Nav-Buttons */
+#scrollTopBtn {
+    color: #E808CA;
+}
+
+/* Hover wie deine Nav-Buttons */
+#scrollTopBtn:hover {
+    color: #E9D899;
+    background: linear-gradient(90deg, rgba(233,216,153,0.2), rgba(232,8,202,0.2));
+    cursor: pointer;
+}
 
     section {
       display: flex;
@@ -1091,6 +1131,37 @@
     </div>
     <p id="update-note">The episodes may be a little short for now. <br> But rather short episodes and regular uploads, instead of long episodes, burnout and no uploads. :)</p>
 
+<!-- Jump to top button -->
+<button id="scrollTopBtn" title="Nach oben" class="nav-btn">
+  <svg class="arrow" viewBox="0 0 1000 1000" width="20" height="20" aria-hidden="true">
+    <path d="M500 200 L800 600 L200 600 Z"/>
+  </svg>
+</button>
+
+<script>
+  (function(){
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", () => {
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (st < lastScrollTop && st > 100) {
+       
+        scrollBtn.classList.add("show");
+      } else {
+
+        scrollBtn.classList.remove("show");
+      }
+
+      lastScrollTop = st <= 0 ? 0 : st; 
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    });
+  })();
+</script>
 
   <div class="body">
     <div class="corner-top">
@@ -1116,7 +1187,7 @@
           <h4 id="age-rating">Age rating: </h4>
           <h4 id="rating">teen/young adult</h4>
         </div>
-        <div id="triggers"> mild-blood, fighting, medium-violence, religious/christian-themes, mild/censored-swearing"
+        <div id="triggers"> mild-blood, fighting, medium-violence, religious/christian-themes, mild/censored-swearing, occult/magic-themes"
           <br> <br> (Trigger warnings are primarily for more sensitive people. For most readers, the more serious topics of the story should be absolutely no problem.)
           ...</div>
         <button id="toggle" class="trigger-warnings">Trigger warnings</button>
@@ -1194,7 +1265,7 @@
               <h1 class="Arc"> Issue 1: Beginning</h1>
               <ul>
                 <li><a href="Episode Pages\Arc 1\prolog.html" class="chapter">Prolouge</a></li>
-                <li><a href="Episode Pages\Arc 1\Ch1.html" class="chapter">Chapter 1 - A dangerous Prayer</a></li>
+                <li><a href="Episode Pages/chapter.html?chapter=1" class="chapter">Chapter 1 - A dangerous Prayer</a></li>
                 <li><a href="#" id="unreleased" class="chapter">Chapter 2</a></li>
                 <li><a href="#" id="unreleased" class="chapter">Chapter 3</a></li>
                  <li><a href="#" id="unreleased" class="chapter">Chapter 4</a></li>
@@ -1295,8 +1366,9 @@
     </p>
   </div>
 </div>
-<script src="news.js"></script>
+<script src="comic-data.js"></script>
 <script src="links.js"></script>
+<script src="news.js"></script>
 </body>
 
 </html>

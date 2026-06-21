@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
  <!--Header-->
  <head>
     <!-- Light Mode -->
-    <link rel="stylesheet" href="../style page.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="style page.css" media="(prefers-color-scheme: light)">
 
     <!-- Dark Mode -->
-    <link rel="stylesheet" href="../style page dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="style page dark.css" media="(prefers-color-scheme: dark)">
    
+
+    
   <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Delius&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Grenze+Gotisch:wght@100..900&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=New+Rocker&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rye&family=Sancreek&family=Sue+Ellen+Francisco&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Delius&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Grenze+Gotisch:wght@100..900&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=New+Rocker&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rye&family=Sancreek&family=Sue+Ellen+Francisco&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet">
     <title>chapter 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -25,6 +27,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="Img/Favicon/flame 180.png">
 
 <style>
+
+/* //////////////////////////////////////////////////// */
+/* General Stuff */
+/* //////////////////////////////////////////////////// */
 
 body {
     justify-content: center;
@@ -43,7 +49,7 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 a {
@@ -77,7 +83,12 @@ a {
 }
 
 
-/* Navigation container */
+
+
+
+/* /////////////////Navigation container/////////////////////// */
+
+
 .container1 {
     display: flex;
     justify-content: space-between;
@@ -85,10 +96,10 @@ a {
     padding:10px;
     background: #000000;
     color: #E808CA;
-    position: relative; /* add this */
+    position: relative; 
 }
 
-/* Home button centering */
+
 .container1 .home-bottom {
     position: absolute;
     left: 50%;
@@ -100,7 +111,7 @@ a {
     color:#E808CA
 }
 
-/* Replaced arrow images with text-based icons */
+
 .nav-btn {
     display: flex;
     align-items: center;
@@ -127,7 +138,7 @@ a {
     transition: fill 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* gradient hover effect for arrows and text together */
+
 .nav-btn:hover {
     color: #E9D899;
     background: linear-gradient(90deg, rgba(233,216,153,0.2), rgba(232,8,202,0.2));
@@ -216,6 +227,11 @@ a {
     color: Beige;  
 }
 
+
+/* //////////////////////////////////////////////////// */
+/* Episodes */
+/* //////////////////////////////////////////////////// */
+
 .chapter {
   text-align: center;
   padding: 10px;
@@ -224,6 +240,7 @@ a {
 .chapter h3 {
   font-size: 1.3em !important;
 }
+
 
 /* bleibt wie bei dir */
 .episode-selection {
@@ -235,8 +252,10 @@ a {
   position: relative; /* wichtig für das Badge */
 }
 
-.chapter1 li:last-child .episode::after {
-content: "Neu";
+/* Badge wird hier erzeugt */
+
+.episode.newest::after {
+content: "New";
   
   position: absolute;
   left: 100%;        /* direkt rechts vom Text */
@@ -252,6 +271,7 @@ content: "Neu";
   font-weight: bold;
   white-space: nowrap;
 }
+
 
 .episode:hover {
   text-decoration: underline;
@@ -318,8 +338,13 @@ ul.chapter1 li a {
   display: inline-block;
 }
 
+.Ep-vs-Ch {
+  padding: 8px;
+}
+
+
 /* ----------------------------
-   Responsive Font Scaling
+   Media queries
 ---------------------------- */
 
 /* Large tablets / small desktops (≤1000px) */
@@ -444,13 +469,18 @@ ul {
 
 </style>
 
-</head>
+  </head>
 
 <body>
+   <!--///////////////////////////////////////////////-->
   <!--Top Bar-->
-  <div class="top-bar"> <!--update-->
-      <h4 class="head">Kapitel 1</h4>
-      <div id="Title"> <h2 class="head"> Ein gefährliches Gebet </h2> </div>
+  <!--///////////////////////////////////////////////-->
+<div class="top-bar"> <!--update-->
+       <h4 id="chapter-number" class="head"></h4>
+
+      <div id="Title">
+        <h2 id="chapter-title" class="head"></h2>
+      </div>
   </div>
 
  <div class="container1">
@@ -458,13 +488,14 @@ ul {
    <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
   <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
    </svg>
-    <h4 class="row2 text-btn">Vorherige</h4>
+    <h4 id="prev-text" class="row2 text-btn"></h4>
   </a>
   
-  <a href="../../index DE.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
+  <a href="../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
   
   <a class="nav-btn next" >
-    <h4 class="row2 text-btn">Nächste</h4>
+    <h4 id="next-text" class="row2 text-btn"></h4>
+
     <svg
     class="arrow"
     viewBox="0 0 1000 1000"
@@ -475,33 +506,39 @@ ul {
     </svg>
   </a>
 </div> 
-  
-  <!--Contents-->
-  <div class="chapter-box" id="Arc-box">
+<!--///////////////////////////////////////////////-->
+<!--Contents-->
+<!--///////////////////////////////////////////////-->
+<div class="chapter-box" id="Arc-box">
 
-    <div class="corner-top">
-      <img id="top-left" src="../../Img/corner top left.webp" width="40px" height="40px" alt=""/>
-      <img id="top-right" src="../../Img/corner top right.webp" width="40px" height="40px" alt=""/>
-    </div>
+  <div class="corner-top">
+    <img id="top-left" src="../Img/corner top left.webp" width="40px" height="40px" alt=""/>    
+    <img id="top-right" src="../Img/corner top right.webp" width="40px" height="40px" alt=""/>
+  </div>
 
-   <h2 class="episode-headline">Wähle Episode:</h2>
+<h2 class="episode-headline">Choose Episode:</h2>
   <ul class="chapter1">
-
+  
   </ul>
-      
+
+<div class="Ep-vs-Ch">
+  <h4>Important!</h4>
+  <p> Chapters and episodes are not the same thing!
+      This whole page is one chapter, and each upload is an episode on this list.
+  </p>
+</div>
 
       <div class="corner-bottom">
-        <div id="bottom-left"> <img src="../../Img/corner bottom left.webp" width="40px" height="40px" alt=""/></div>
-        <div id="bottom-right"> <img src="../../Img/corner bottom right.webp" width="40px" height="40px" alt=""/></div>
+        <div id="bottom-left"> <img src="../Img/corner bottom left.webp" width="40px" height="40px" alt=""/></div>
+        <div id="bottom-right"> <img src="../Img/corner bottom right.webp" width="40px" height="40px" alt=""/></div>
       </div>
   </div>
 
-<p style="color:#fe5de9; text-align: center;"><br>Solltest du einmal nicht sofort zu deiner 
-    gewünschten Episode springen, ist das ein lokales 
-    ladeproblem. Geh dann zurück nach oben und probiere 
-    es erneut. <br></p>
+<p style="color:#fe5de9; text-align: center;"><br>If you are not jumping to your desired episode right away, 
+  it's a local loading issue. 
+  Go back to the top and try again. <br></p>
 
-  <div id="map"> <img id="map-shadow" src="../../Img/Maps/Map1.webp" width="80%" alt="Map"/></div>
+  <div id="map"> <img id="map-shadow" src="../Img/Maps/Map1.webp" width="80%" alt="Map"/></div>
  
 <!-- Jump to top button -->
 <button id="scrollTopBtn" title="Nach oben" class="nav-btn">
@@ -530,26 +567,30 @@ ul {
     });
 
     scrollBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'auto' });
     });
   })();
 </script>
 
+<!--///////////////////////////////////////////////-->
 <!-- comic -->
+<!--///////////////////////////////////////////////-->
+ <div class="comic" id="comic">
 
- <div class="comic" id="comic"></div>
-   
-  <h3 class="continue">Fortsetzung folgt</h3>
-   <p class="continue-p"> Aber bis dahin, legt vielleicht euer Handy weg und lebt ein wenig. :)</p>
+ </div>
+ <h3 class="continue">To be continued</h3>
+ <p class="continue-p"> but until then, maybe put your phone away and live a little. :)</p>
+  
 
   <div class="foot-box">
-    <p id="thank-you">Vielen Dank, dass du bis zum Ende gelesen hast. Wenn dir gefällt was ich hier mache, kannst du mich gerne auch:</p>
+    <p id="thank-you">Thank you so much for sticking around to the end. 
+      If you like what you're reading, feel free to:</p>
     <div class="pay-and-subscribe">
-      <img src="../../Img\Eliot favicon fancy.webp" class="fancy-eliot"/>
+      <img src="../Img\Eliot favicon fancy.webp" class="fancy-eliot"/>
       <div class="dialouge-options">
-        <a href="../../Support me/Support Me.html">Unterstützen</a>
+        <a href="../Support me/Support Me.html">Support me</a>
         <p>or</p>
-        <a href="../../subscribe.html">Abonnieren</a>
+        <a href="../subscribe.html">Subscribe</a>
       </div>
     </div>
   </div> 
@@ -559,13 +600,13 @@ ul {
    <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
   <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
    </svg>
-    <h4 class="row2 text-btn">Vorherige</h4>
+    <h4 id="prev-text" class="row2 text-btn"></h4>
   </a>
   
-  <a href="../../index DE.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
+  <a href="../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
   
   <a class="nav-btn next" >
-    <h4 class="row2 text-btn">Nächste</h4>
+    <h4 id="prev-text" class="row2 text-btn"></h4>
     <svg
     class="arrow"
     viewBox="0 0 1000 1000"
@@ -578,7 +619,18 @@ ul {
 </div> 
 
 <div class="footer">
-<div> <p id="copyright">Chains of Freedom© 2025 Mary-Jane Morosan. All rights reserved.</p> </div>
+  <div class="footer-content">
+    <p id="copyright">
+      Chains of Freedom © 2025 MJM. All rights reserved.
+    </p>
+
+    <p class="footer-links">
+      <a href="/datenschutz.html">Datenschutz</a> |
+      <a href="/impressum.html">Impressum</a> |
+      <a href="/privacy.html">Privacy</a> |
+      <a href="/imprint.html">Imprint</a>
+    </p>
+  </div>
 </div>
 
 
@@ -589,27 +641,36 @@ window.addEventListener("load", function() {
     if(location.hash){
         const target = document.querySelector(location.hash);
         if(target){
+
             // Alle Bilder in .comic fertig laden?
             const comicImgs = document.querySelectorAll(".comic img");
-            let loaded = 0;
-            comicImgs.forEach(img => {
-                if(img.complete) loaded++;
-                else img.addEventListener("load", () => {
-                    loaded++;
-                    if(loaded === comicImgs.length) scrollToTarget();
-                });
-            });
-            if(loaded === comicImgs.length) scrollToTarget();
+let loaded = 0;
+
+function checkDone() {
+    loaded++;
+    if (loaded === comicImgs.length) scrollToTarget();
+}
+
+comicImgs.forEach(img => {
+    if (img.decode) {
+        img.decode().then(checkDone).catch(checkDone);
+    } else if (img.complete) {
+        checkDone();
+    } else {
+        img.addEventListener("load", checkDone);
+        img.addEventListener("error", checkDone);
+    }
+});
 
             function scrollToTarget(){
                 const headerOffset = 0; // optional für Sticky Header
                 const elementPosition = target.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "auto"
+                             });
             }
         }
     }
@@ -618,7 +679,7 @@ window.addEventListener("load", function() {
 const pages = [
   "prolog.html",
   "Ch1.html",
-  "../../index DE.html" // Homepage
+  "../index.html" // Homepage
 ];
 const current = window.location.pathname.split("/").pop();
 const index = pages.indexOf(current);
@@ -643,7 +704,9 @@ document.querySelectorAll(".next").forEach(btn => {
 <script>
   const CURRENT_CHAPTER = 1; //bei Update! ändern
 </script>
-<script src="../../comic.js"></script>
+<script src="../comic-data.js"></script>
+<script src="../comic.js"></script>
+<script src="links.js"></script>
 
 </body>
 </html>

@@ -6,10 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("links.js läuft");
 
-  window.LINKS = {
-    NewEp: "Episode Pages/Arc 1/Ch1.html#episode6",
-    NeuEp: "Episode Pages DE/Arc 1/Ch1.html#episode6"
-  };
+window.LINKS = {
+
+  NewEp:
+    `${BASE}Episode Pages/chapter.html?chapter=${COMIC_INFO.latestChapter}#episode${COMIC_INFO.latestEpisode}`,
+
+  NeuEp:
+    `${BASE}Episode Pages DE/chapter.html?chapter=${COMIC_INFO.latestChapter}#episode${COMIC_INFO.latestEpisode}`
+
+};
 
   document.querySelectorAll("[data-link]").forEach(el => {
     const key = el.dataset.link;

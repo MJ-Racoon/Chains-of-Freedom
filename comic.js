@@ -1,29 +1,127 @@
 // ==============================
-// 🔧 EINSTELLUNGEN (HIER ÄNDERN)
+// 🔧 EINSTELLUNGEN
 // ==============================
 
-// 👉 Kapitelnummer ändern
-const chapter = 1;
+document.addEventListener("DOMContentLoaded", () => {
+const params = new URLSearchParams(window.location.search);
 
-// 👉 Episoden definieren
-// Format:
-// number = Episoden-Nummer
-// startPage = erste Seite dieser Episode
-// endPage = letzte Seite dieser Episode
+const chapter = params.get("chapter") || "1";
 
-const episodes = [
-  { number: 1, startPage: 1, endPage: 7 },
-  { number: 2, startPage: 8, endPage: 11 },
-  { number: 3, startPage: 12, endPage: 17 },
-  { number: 4, startPage: 18, endPage: 20 },
-  { number: 5, startPage: 21, endPage: 23 },
-  { number: 6, startPage: 24, endPage: 25 },
-  // 👉 Neue Episode hinzufügen:
-  // { number: 2, startPage: 9, endPage: 16 },
-];
+const chapterData = CHAPTERS[chapter];
 
-// 👉 Dateiformat (falls du später png/jpg nutzt)
+const episodes = chapterData.episodes;
+
+// =====================================
+// 🌍 Sprache erkennen
+// =====================================
+
+const isGerman =
+  window.location.pathname.includes("DE");
+
+const folder =
+  isGerman
+    ? chapterData.folderDE
+    : chapterData.folderEN;
+
+// =====================================
+// 📖 Kapitelüberschrift erzeugen
+// =====================================
+
+
+const chapterNumberElement =
+  document.getElementById("chapter-number");
+
+const chapterTitleElement =
+  document.getElementById("chapter-title");
+
+if (chapterNumberElement) {
+  chapterNumberElement.textContent =
+    `Chapter ${chapter}`;
+}
+
+if (chapterTitleElement) {
+  chapterTitleElement.textContent =
+    isGerman
+      ? chapterData.titleDE
+      : chapterData.titleEN;
+}
+
+// =====================================
+// ⬅️➡️ Kapitelnavigation
+// =====================================
+
+const prevText =
+  document.getElementById("prev-text");
+
+const nextText =
+  document.getElementById("next-text");
+
+if (prevText && nextText) {
+
+  if (isGerman) {
+
+    prevText.textContent = "Vorherige";
+    nextText.textContent = "Nächste";
+
+  } else {
+
+    prevText.textContent = "Previous";
+    nextText.textContent = "Next";
+
+  }
+
+}
+
+const BASE = window.location.pathname.includes("Chains-of-Freedom")
+  ? "/Chains-of-Freedom/"
+  : "/";
+
+const prevButton =
+  document.querySelector(".nav-btn.prev");
+
+const nextButton =
+  document.querySelector(".nav-btn.next");
+
+if (prevButton) {
+
+  if (chapterData.previous === "prologue") {
+
+    prevButton.href =
+  `${BASE}Episode Pages/Arc 1/prolog.html`;
+
+  } else if (chapterData.previous) {
+
+    prevButton.href =
+  `${BASE}Episode Pages/chapter.html?chapter=${chapterData.previous}`;
+
+  } else {
+
+    prevButton.style.opacity = "0.3";
+    prevButton.style.pointerEvents = "none";
+
+  }
+
+}
+
+if (nextButton) {
+
+  if (chapterData.next) {
+
+    nextButton.href =
+    `${BASE}Episode Pages/chapter.html?chapter=${chapterData.next}`;
+
+  } else {
+
+    nextButton.style.opacity = "0.3";
+    nextButton.style.pointerEvents = "none";
+
+  }
+
+}
+
 const fileFormat = "webp";
+
+
 
 
 
@@ -42,7 +140,8 @@ episodes.forEach(ep => {
     const pageNumber = String(i).padStart(3, "0");
 
     // Bildpfad generieren
-    img.src = `Chapter ${chapter}/Ep${ep.number}_${pageNumber}.${fileFormat}`;
+  img.src =
+  `${folder}/Ep${ep.number}_${pageNumber}.${fileFormat}`;
 
     // Alt-Text
     img.alt = `Chains of Freedom - Episode ${ep.number}, Page ${i}`;
@@ -77,6 +176,12 @@ if (toc) {
 
     const a = document.createElement("a");
     a.className = "episode";
+    if (
+  Number(chapter) === COMIC_INFO.latestChapter &&
+  ep.number === COMIC_INFO.latestEpisode
+) {
+  a.classList.add("newest");
+}
     a.href = `#episode${ep.number}`;
     a.textContent = `Episode ${ep.number}`;
 
@@ -84,3 +189,5 @@ if (toc) {
     toc.appendChild(li);
   });
 }
+
+});

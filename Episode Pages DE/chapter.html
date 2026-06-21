@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
  <!--Header-->
  <head>
     <!-- Light Mode -->
-    <link rel="stylesheet" href="../style page.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="style page.css" media="(prefers-color-scheme: light)">
 
     <!-- Dark Mode -->
-    <link rel="stylesheet" href="../style page dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="style page dark.css" media="(prefers-color-scheme: dark)">
    
 
     
@@ -49,7 +49,7 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 a {
@@ -254,7 +254,7 @@ a {
 
 /* Badge wird hier erzeugt */
 
-.chapter1 li:last-child .episode::after {
+.episode.newest::after {
 content: "New";
   
   position: absolute;
@@ -475,9 +475,12 @@ ul {
    <!--///////////////////////////////////////////////-->
   <!--Top Bar-->
   <!--///////////////////////////////////////////////-->
-  <div class="top-bar"> <!--update-->
-      <h4 class="head">Chapter 1</h4>
-      <div id="Title"> <h2 class="head"> A dangerous prayer </h2> </div>
+<div class="top-bar"> <!--update-->
+       <h4 id="chapter-number" class="head"></h4>
+
+      <div id="Title">
+        <h2 id="chapter-title" class="head"></h2>
+      </div>
   </div>
 
  <div class="container1">
@@ -485,13 +488,14 @@ ul {
    <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
   <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
    </svg>
-    <h4 class="row2 text-btn">Vorherige</h4>
+
+    <h4 id="prev-text" class="row2 text-btn"></h4>
   </a>
   
-  <a href="../../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
+  <a href="../index DE.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
   
   <a class="nav-btn next" >
-    <h4 class="row2 text-btn">Nächste</h4>
+   <h4 id="next-text" class="row2 text-btn"></h4>
     <svg
     class="arrow"
     viewBox="0 0 1000 1000"
@@ -508,33 +512,33 @@ ul {
 <div class="chapter-box" id="Arc-box">
 
   <div class="corner-top">
-    <img id="top-left" src="../../Img/corner top left.webp" width="40px" height="40px" alt=""/>    
-    <img id="top-right" src="../../Img/corner top right.webp" width="40px" height="40px" alt=""/>
+    <img id="top-left" src="../Img/corner top left.webp" width="40px" height="40px" alt=""/>    
+    <img id="top-right" src="../Img/corner top right.webp" width="40px" height="40px" alt=""/>
   </div>
 
-<h2 class="episode-headline">Choose Episode:</h2>
+<h2 class="episode-headline">Wähle Episode:</h2>
   <ul class="chapter1">
   
   </ul>
 
 <div class="Ep-vs-Ch">
-  <h4>Important!</h4>
-  <p> Chapters and episodes are not the same thing!
-      This whole page is one chapter, and each upload is an episode on this list.
+  <h4>Wichtig!</h4>
+  <p> Kapitel und Episoden sind nicht das gleiche!
+     Diese ganze Seite ist ein Kapitel. Und dieses besteht aus den Episoden hier im Inhaltsverzeichnis.
   </p>
 </div>
 
       <div class="corner-bottom">
-        <div id="bottom-left"> <img src="../../Img/corner bottom left.webp" width="40px" height="40px" alt=""/></div>
-        <div id="bottom-right"> <img src="../../Img/corner bottom right.webp" width="40px" height="40px" alt=""/></div>
+        <div id="bottom-left"> <img src="../Img/corner bottom left.webp" width="40px" height="40px" alt=""/></div>
+        <div id="bottom-right"> <img src="../Img/corner bottom right.webp" width="40px" height="40px" alt=""/></div>
       </div>
   </div>
 
-<p style="color:#fe5de9; text-align: center;"><br>If you are not jumping to your desired episode right away, 
-  it's a local loading issue. 
-  Go back to the top and try again. <br></p>
+<p style="color:#fe5de9; text-align: center;"><br>Falls du nicht sofort zur gewünschten Episode springst, ist das bloß ein 
+  lokales Ladeproblem.  
+  Springe einfach zurück an die Spitze und versuche es noch mal.<br></p>
 
-  <div id="map"> <img id="map-shadow" src="../../Img/Maps/Map1.webp" width="80%" alt="Map"/></div>
+  <div id="map"> <img id="map-shadow" src="../Img/Maps/Map1.webp" width="80%" alt="Map"/></div>
  
 <!-- Jump to top button -->
 <button id="scrollTopBtn" title="Nach oben" class="nav-btn">
@@ -563,7 +567,7 @@ ul {
     });
 
     scrollBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'auto' });
     });
   })();
 </script>
@@ -574,19 +578,18 @@ ul {
  <div class="comic" id="comic">
 
  </div>
- <h3 class="continue">To be continued</h3>
- <p class="continue-p"> but until then, maybe put your phone away and live a little. :)</p>
+ <h3 class="continue">Fortsetzung folgt</h3>
+ <p class="continue-p"> Aber bis dahin, leg vielleicht mal dein Handy beiseite und lebe ein wenig. :)</p>
   
 
   <div class="foot-box">
-    <p id="thank-you">Thank you so much for sticking around to the end. 
-      If you like what you're reading, feel free to:</p>
+    <p id="thank-you">Vielen Dank, dass du bis zum Ende gelesen hast. Wenn dir gefällt was du gelesen hast, kannst du mich gerne: </p>
     <div class="pay-and-subscribe">
-      <img src="../../Img\Eliot favicon fancy.webp" class="fancy-eliot"/>
+      <img src="../Img\Eliot favicon fancy.webp" class="fancy-eliot"/>
       <div class="dialouge-options">
-        <a href="../../Support me/Support Me.html">Support me</a>
-        <p>or</p>
-        <a href="../../subscribe.html">Subscribe</a>
+        <a href="../Support me/Support Me.html">Unterstützen</a>
+        <p>oder</p>
+        <a href="../subscribe.html">Abonieren</a>
       </div>
     </div>
   </div> 
@@ -596,13 +599,13 @@ ul {
    <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
   <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
    </svg>
-    <h4 class="row2 text-btn">Vorherige</h4>
+   <h4 id="prev-text" class="row2 text-btn"></h4>
   </a>
   
-  <a href="../../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
+  <a href="../index DE.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
   
   <a class="nav-btn next" >
-    <h4 class="row2 text-btn">Nächste</h4>
+    <h4 id="prev-text" class="row2 text-btn"></h4>
     <svg
     class="arrow"
     viewBox="0 0 1000 1000"
@@ -637,27 +640,36 @@ window.addEventListener("load", function() {
     if(location.hash){
         const target = document.querySelector(location.hash);
         if(target){
+
             // Alle Bilder in .comic fertig laden?
             const comicImgs = document.querySelectorAll(".comic img");
-            let loaded = 0;
-            comicImgs.forEach(img => {
-                if(img.complete) loaded++;
-                else img.addEventListener("load", () => {
-                    loaded++;
-                    if(loaded === comicImgs.length) scrollToTarget();
-                });
-            });
-            if(loaded === comicImgs.length) scrollToTarget();
+let loaded = 0;
+
+function checkDone() {
+    loaded++;
+    if (loaded === comicImgs.length) scrollToTarget();
+}
+
+comicImgs.forEach(img => {
+    if (img.decode) {
+        img.decode().then(checkDone).catch(checkDone);
+    } else if (img.complete) {
+        checkDone();
+    } else {
+        img.addEventListener("load", checkDone);
+        img.addEventListener("error", checkDone);
+    }
+});
 
             function scrollToTarget(){
                 const headerOffset = 0; // optional für Sticky Header
                 const elementPosition = target.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "auto"
+                             });
             }
         }
     }
@@ -666,7 +678,7 @@ window.addEventListener("load", function() {
 const pages = [
   "prolog.html",
   "Ch1.html",
-  "../../index.html" // Homepage
+  "../index.html" // Homepage
 ];
 const current = window.location.pathname.split("/").pop();
 const index = pages.indexOf(current);
@@ -691,7 +703,9 @@ document.querySelectorAll(".next").forEach(btn => {
 <script>
   const CURRENT_CHAPTER = 1; //bei Update! ändern
 </script>
-<script src="../../comic-data.js"></script>
-<script src="../../comic.js"></script>
+<script src="../comic-data.js"></script>
+<script src="../comic.js"></script>
+<script src="links.js"></script>
+
 </body>
 </html>
