@@ -1,6 +1,10 @@
 // =====================================
 // 📚 CHAPTER DATENBANK
 // =====================================
+
+console.log("comic-data.js loaded");
+
+
 const COMIC_INFO = {
 
   latestChapter: 1,
@@ -9,6 +13,8 @@ const COMIC_INFO = {
   latestArc: 1
 
 };
+
+window.COMIC_INFO = COMIC_INFO;
 
 const CHAPTERS = {
 
