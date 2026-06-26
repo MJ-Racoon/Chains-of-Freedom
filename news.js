@@ -141,7 +141,7 @@ const newsPosts = [
     highlightEN: "IMPORTANT!",
     date: "13/05/2026",
 
-    status: "active",
+    status: "archived",
 
     contentDE: `
       <div class="news-content">
@@ -176,11 +176,84 @@ const newsPosts = [
             Thank you for your understanding.  
           </p>
 
-          </a>
+          
 
         </div>
 
         <img src="Img/Warning.webp" height="200px" style="margin-bottom: "60px"/>
+
+      </div>
+    `
+  },
+
+  
+
+  // =====================================
+  // 🆕 POST 4
+  // =====================================
+
+  {
+    titleDE: "Die Artfight saison beginnt bald, der Comic wird kurz Pausiert!",
+   
+    titleEN: "Artfight season starts soon, the Comic will be put on a short Hiatus!",
+   
+    date: "28/06/2026",
+
+    status: "active",
+
+    contentDE: `
+      <div class="news-content">
+
+        <div class="button-content">
+
+          <p>
+           Ach ja, Artfight. Die inoffiziellen lieblings Feiertage der Künstler, 
+           die den gesamten Juli lang anhalten. Was Ist Artfight fragt ihr euch? Nun, es ist
+           ein jährliches Spiel, bei dem ale möglichen Künstler, egal ob jung oder alt, neu oder erfahren, 
+           auf einer Website zusammenkommen und sich gegenseitig Zeichnungen von ihren Charakteren schenken.
+           Für viele Künstler, ist das besser als Weihnachten, weil du deine Zeit und Leidenschaft dafür aufbringst 
+           um fremden Menschen im Internet eine Freude zu machen und dabei vielleicht auch etwas zurück zu bekommen. 
+           Deswegen wird der Comic über den Juli hinweg pausiert, damit ich ohne Druck und stress Artfight genießen kann. 
+           Aber keine Sorge, ich habe eine Episode extra vorbereitet, damit ihr bis August nicht verhungert. ;) 
+          </p>
+
+        </div>
+
+         <a class="newest-shiat-btn news-btn"
+             href="https://artfight.net/~MJ_Thundercat">
+
+             Falls du sehen willst, was ich im Juli alles so mache, hier ist mein Artfight profil!
+
+          </a>
+
+        <img src="Img/Warning.webp" height="200px" style="margin-bottom: "60px"/>
+
+      </div>
+    `,
+
+    contentEN: `
+      <div class="news-content">
+
+        <div class="button-content">
+
+          <p>
+           Aaah yes, Artfight. The annual inofficial holiday for all Artists during all of July. What is Artfight you ask? Well, 
+           it's an annual Art gifting game, where all sorts of Artists come together and draw each others characters as a gift.
+           For many Artists, this is often better than Christmas, because you are able to spend time and passion to make art for complete strangers on the inthernet, but also maybe get something back.
+           And because I will not miss out on that this year and because I don't wanna burn out as I'm drawing, the comic will be put on a short hiatus during July.
+           But don't worry, I made one Episode in advance, which will be posted in the middle of July, so you don't starve until August. ;)
+          </p>
+
+        <a class="newest-shiat-btn news-btn"
+             href="https://artfight.net/~MJ_Thundercat">
+
+            If you wanna see what I'm up to during July, here's my Artfight profile!
+
+          </a>
+
+        </div>
+
+        <img src="https://shop.artfight.net/cdn/shop/files/original_by_inuf-dbbkwd8.png?v=1705602132" height="200px" style="margin-bottom: "60px"/>
 
       </div>
     `
