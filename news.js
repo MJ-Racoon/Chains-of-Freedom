@@ -193,9 +193,9 @@ const newsPosts = [
   // =====================================
 
   {
-    titleDE: "Die Artfight saison beginnt bald, der Comic wird kurz Pausiert!",
+    titleDE: "Die Artfight saison beginnt bald, der Comic wird kurz pausiert!",
    
-    titleEN: "Artfight season starts soon, the Comic will be put on a short Hiatus!",
+    titleEN: "Artfight season starts soon, the comic will be put on a short hiatus!",
    
     date: "28/06/2026",
 
@@ -217,16 +217,20 @@ const newsPosts = [
            Aber keine Sorge, ich habe eine Episode extra vorbereitet, damit ihr bis August nicht verhungert. ;) 
           </p>
 
-        </div>
+        
+
+          <h4> <br> <br>  Falls du sehen willst, was ich im Juli alles so mache, hier ist: </h4>
 
          <a class="newest-shiat-btn news-btn"
              href="https://artfight.net/~MJ_Thundercat">
 
-             Falls du sehen willst, was ich im Juli alles so mache, hier ist mein Artfight profil!
+              mein Artfight profil!
 
           </a>
 
-        <img src="Img/Warning.webp" height="200px" style="margin-bottom: "60px"/>
+        </div>
+
+        <img src="https://shop.artfight.net/cdn/shop/files/original_by_inuf-dbbkwd8.png?v=1705602132" height="200px" style="margin-bottom: "60px"/>
 
       </div>
     `,
@@ -244,10 +248,13 @@ const newsPosts = [
            But don't worry, I made one Episode in advance, which will be posted in the middle of July, so you don't starve until August. ;)
           </p>
 
-        <a class="newest-shiat-btn news-btn"
+
+          <h4> <br> <br> If you wanna see what I'm up to during July, here's: </h4>
+
+          <a class="newest-shiat-btn news-btn"
              href="https://artfight.net/~MJ_Thundercat">
 
-            If you wanna see what I'm up to during July, here's my Artfight profile!
+             my Artfight profile!
 
           </a>
 
