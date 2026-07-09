@@ -105,12 +105,26 @@ if (prevButton) {
 
 if (nextButton) {
 
-  if (chapterData.next) {
+  // Letztes veröffentlichtes Kapitel?
+  if (Number(chapter) === COMIC_INFO.latestChapter) {
 
     nextButton.href =
-    `${BASE}Episode Pages/chapter.html?chapter=${chapterData.next}`;
+      isGerman
+        ? `${BASE}index DE.html#Arc-box`
+        : `${BASE}index.html#Arc-box`;
 
-  } else {
+  }
+
+  // Es gibt ein weiteres Kapitel
+  else if (chapterData.next) {
+
+    nextButton.href =
+      `${BASE}Episode Pages/chapter.html?chapter=${chapterData.next}`;
+
+  }
+
+  // Sicherheit (sollte praktisch nie eintreten)
+  else {
 
     nextButton.style.opacity = "0.3";
     nextButton.style.pointerEvents = "none";
