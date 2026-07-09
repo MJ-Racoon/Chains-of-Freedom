@@ -61,7 +61,7 @@ if (prevText && nextText) {
   if (isGerman) {
 
     prevText.textContent = "Vorherige";
-    nextText.textContent = "Nächste";
+    nextText.textContent = "Nächste"; 
 
   } else {
 
@@ -125,7 +125,7 @@ const fileFormat = "webp";
 
 
 
-
+ 
 // ==============================
 // ⚙️ NICHT MEHR ÄNDERN (LOGIK)
 // ==============================

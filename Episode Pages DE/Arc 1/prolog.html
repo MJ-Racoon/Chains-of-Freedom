@@ -661,29 +661,42 @@ window.addEventListener("load", function() {
         }
     }
 });
-
 const pages = [
   "prolog.html",
-  "Ch1.html",
-  "../../index DE.html" // Homepage
+  "../chapter.html?chapter=1",
+  "../../index.html"
 ];
+
 const current = window.location.pathname.split("/").pop();
-const index = pages.indexOf(current);
+
+let index = 0;
+
+if (current === "prolog.html") {
+  index = 0;
+} else if (current === "chapter.html") {
+  index = 1;
+} else {
+  index = 2;
+}
 
 document.querySelectorAll(".prev").forEach(btn => {
+
   if (index > 0) {
     btn.href = pages[index - 1];
   } else {
     btn.classList.add("disabled");
   }
+
 });
 
 document.querySelectorAll(".next").forEach(btn => {
+
   if (index < pages.length - 1) {
     btn.href = pages[index + 1];
   } else {
     btn.classList.add("disabled");
   }
+
 });
 </script>
 

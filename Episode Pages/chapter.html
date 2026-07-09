@@ -89,15 +89,35 @@ a {
 
 /* /////////////////Navigation container/////////////////////// */
 
-
 .container1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:10px;
+    padding: 10px;
     background: #000000;
     color: #E808CA;
-    position: relative; 
+
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Navigation klebt oben */
+.container1.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+
+/* Navigation verschwindet */
+.container1.hide {
+    transform: translateY(-100%);
 }
 
 
@@ -108,6 +128,11 @@ a {
     text-align: center;
     color: #E808CA;
 }
+
+#nav-placeholder {
+    height: 0;
+}
+
 .row2 {
     color:#E808CA
 }
@@ -484,7 +509,7 @@ ul {
       </div>
   </div>
 
- <div class="container1">
+ <div class="container1" id="main-nav">
   <a class="nav-btn prev">
    <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
   <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
@@ -507,6 +532,8 @@ ul {
     </svg>
   </a>
 </div> 
+
+<div id="nav-placeholder"></div>
 <!--///////////////////////////////////////////////-->
 <!--Contents-->
 <!--///////////////////////////////////////////////-->
@@ -549,28 +576,82 @@ ul {
 </button>
 
 <script>
-  (function(){
-    const scrollBtn = document.getElementById("scrollTopBtn");
-    let lastScrollTop = 0;
+(function(){
 
-    window.addEventListener("scroll", () => {
-      const st = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  const nav = document.getElementById("main-nav");
 
-      if (st < lastScrollTop && st > 100) {
-       
-        scrollBtn.classList.add("show");
+  let lastScrollTop = 0;
+  let navOffset = nav.offsetTop;
+
+
+  window.addEventListener("scroll", () => {
+
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+
+
+    // ------------------------------
+    // Navigation
+    // ------------------------------
+
+    if (st >= navOffset) {
+
+      nav.classList.add("sticky");
+
+
+      if (st > lastScrollTop) {
+        // runter scrollen
+        nav.classList.add("hide");
+
       } else {
-
-        scrollBtn.classList.remove("show");
+        // hoch scrollen
+        nav.classList.remove("hide");
       }
 
-      lastScrollTop = st <= 0 ? 0 : st; 
+
+    } else {
+
+      // wieder ganz oben
+      nav.classList.remove("sticky");
+      nav.classList.remove("hide");
+
+    }
+
+
+
+    // ------------------------------
+    // Jump-to-top Button
+    // ------------------------------
+
+    if (st < lastScrollTop && st > 100) {
+
+      scrollBtn.classList.add("show");
+
+    } else {
+
+      scrollBtn.classList.remove("show");
+
+    }
+
+
+    lastScrollTop = st <= 0 ? 0 : st;
+
+  });
+
+
+
+  // Button klicken
+  scrollBtn.addEventListener("click", () => {
+
+    window.scrollTo({ 
+      top: 0, 
+      behavior: 'auto' 
     });
 
-    scrollBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    });
-  })();
+  });
+
+
+})();
 </script>
 
 <!--///////////////////////////////////////////////-->
@@ -596,28 +677,7 @@ ul {
     </div>
   </div> 
 
-<div class="container1">
-  <a class="nav-btn prev">
-   <svg class="arrow prev" viewBox="0 0 1000 1000" height="25" aria-hidden="true">
-  <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
-   </svg>
-    <h4 id="prev-text" class="row2 text-btn"></h4>
-  </a>
-  
-  <a href="../index.html#Arc-box" class="home" > <h4 class="home-bottom text-btn nav-btn">Home </h4> </a>
-  
-  <a class="nav-btn next" >
-    <h4 id="prev-text" class="row2 text-btn"></h4>
-    <svg
-    class="arrow"
-    viewBox="0 0 1000 1000"
-    height="25"
-    aria-hidden="true"
-    >
-      <path d="M800 509 L143 126 L364 505 L145 882 Z"/>
-    </svg>
-  </a>
-</div> 
+
 
 <div class="footer">
   <div class="footer-content">
