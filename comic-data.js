@@ -7,8 +7,8 @@ console.log("comic-data.js loaded");
 
 const COMIC_INFO = {
 
-  latestChapter: 1,
-  latestEpisode: 7,
+  latestChapter: 2,
+  latestEpisode: 8,
 
   latestArc: 1
 
@@ -41,6 +41,27 @@ const CHAPTERS = {
       { number: 5, startPage: 21, endPage: 23 },
       { number: 6, startPage: 24, endPage: 25 },
       { number: 7, startPage: 26, endPage: 28 }
+    ]
+  },
+
+
+   "2": {
+  titleEN: "Irresistable Envalope",
+  titleDE: "Ein betörender Brief",
+
+  arc: 1,
+
+  folderEN: "Arc 1/Chapter 2",
+
+  folderDE: "Arc 1/Chapter 2",
+
+  previous: 1,
+  next: 2,
+
+  latestEpisode: 7,
+
+    episodes: [
+      { number: 8, startPage: 1, endPage: 2 }
     ]
   },
 
