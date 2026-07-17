@@ -178,6 +178,15 @@ box-shadow:#E9D899;
 
 }
 
+#thanks-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;          
+  box-sizing: border-box;
+  margin: 0px;
+}
 
 
 .chapter {
