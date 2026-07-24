@@ -76,6 +76,22 @@ const BASE = window.location.pathname.includes("Chains-of-Freedom")
   ? "/Chains-of-Freedom/"
   : "/";
 
+const PATHS = {
+
+  chapter: isGerman
+    ? "Episode Pages DE"
+    : "Episode Pages",
+
+  home: isGerman
+    ? "index DE.html"
+    : "index.html"
+
+};
+
+  const chapterFolder = isGerman
+  ? "Episode Pages DE"
+  : "Episode Pages";
+
 const prevButton =
   document.querySelector(".nav-btn.prev");
 
@@ -87,12 +103,12 @@ if (prevButton) {
   if (chapterData.previous === "prologue") {
 
     prevButton.href =
-  `${BASE}Episode Pages/Arc 1/prolog.html`;
+  `${BASE}${PATHS.chapter}/Arc 1/prolog.html`;
 
   } else if (chapterData.previous) {
 
     prevButton.href =
-  `${BASE}Episode Pages/chapter.html?chapter=${chapterData.previous}`;
+  `${BASE}${PATHS.chapter}/chapter.html?chapter=${chapterData.previous}`;
 
   } else {
 
@@ -109,9 +125,7 @@ if (nextButton) {
   if (Number(chapter) === COMIC_INFO.latestChapter) {
 
     nextButton.href =
-      isGerman
-        ? `${BASE}index DE.html#Arc-box`
-        : `${BASE}index.html#Arc-box`;
+  `${BASE}${PATHS.home}#Arc-box`;
 
   }
 
@@ -119,7 +133,7 @@ if (nextButton) {
   else if (chapterData.next) {
 
     nextButton.href =
-      `${BASE}Episode Pages/chapter.html?chapter=${chapterData.next}`;
+  `${BASE}${PATHS.chapter}/chapter.html?chapter=${chapterData.next}`;
 
   }
 
