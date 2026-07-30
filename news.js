@@ -199,7 +199,7 @@ const newsPosts = [
    
     date: "28/06/2026",
 
-    status: "active",
+    status: "archived",
 
     contentDE: `
       <div class="news-content">
