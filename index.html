@@ -240,6 +240,157 @@
     /* ======================== */
     /* Top Bar Ornaments */
     /* ======================== */
+
+/* =========================================
+   PAGE PRELOADER
+   ========================================= */
+
+#page-loader {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #51423D;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+}
+
+
+/* Preloader wird ausgeblendet */
+
+#page-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* Inhalt */
+
+.loader-content {
+    width: 350px;
+    max-width: 80vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Esel-Platzhalter */
+
+.loader-donkey {
+    font-size: 100px;
+
+    margin-bottom: 20px;
+
+    animation: donkey-bounce 0.8s ease-in-out infinite alternate;
+}
+
+
+/* Später für das echte WebP */
+
+.loader-donkey img {
+    width: 250px;
+    max-width: 60vw;
+}
+
+
+/* Ladebalken */
+
+.loader-bar {
+    width: 100%;
+    height: 14px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: #968170;
+}
+
+
+/* Fortschritt */
+
+#loader-progress {
+    width: 0%;
+    height: 100%;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #383B28,
+        #E9D899,
+        #E808CA
+    );
+
+    background-size: 200% 100%;
+
+    transition: width 0.25s ease;
+
+    animation: loading-gradient 2s linear infinite;
+}
+
+
+/* Text */
+
+.loader-text {
+    margin-top: 12px;
+
+    font-family: "Noto Serif", serif;
+
+    font-size: 14px;
+
+    color: #E9D899;
+
+    letter-spacing: 1px;
+}
+
+
+/* Kleine Bewegung des Platzhalter-Esel */
+
+@keyframes donkey-bounce {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* Bewegung des Farbverlaufs */
+
+@keyframes loading-gradient {
+
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 200% 50%;
+    }
+
+}
+
+
     .top-deco-left {
       position: absolute;
       top: 0;
@@ -1140,7 +1291,36 @@
   <!--////////////////////////////////////////////////////////////-->
                                <!-- Content -->
   <!--////////////////////////////////////////////////////////////-->
-<div class="contents">
+
+<!-- PRELOADER -->
+<div id="page-loader">
+
+    <div class="loader-content">
+
+        <!-- Platzhalter für die spätere Esel-Animation -->
+        <img
+    class="loader-donkey"
+    src="img/Eliot loader.webp"
+    width="150px"
+    alt="donkey-loader"
+>
+
+        <!-- Ladebalken -->
+        <div class="loader-bar">
+            <div id="loader-progress"></div>
+        </div>
+
+        <div class="loader-text">
+            Loading...
+        </div>
+
+    </div>
+
+</div>
+
+
+
+  <div class="contents">
 
   <!-- ////////////////// About ////////////////// -->
 <div class="button-deco">
@@ -1388,7 +1568,12 @@
   </div>
 
    <div id="thanks-page">
-    <img src="Img/Special thanks.webp" width="99%" alt="Special thanks" />
+    <img 
+    src="Img/Special thanks.webp" 
+    width="99%" 
+    loading="lazy"
+    decoding="async" 
+    alt="Special thanks" />
   </div>
 
  <div class="footer">
@@ -1403,6 +1588,114 @@
     </p>
   </div>
 </div>
+
+<script>
+(function () {
+
+    const loader = document.getElementById("page-loader");
+    const progress = document.getElementById("loader-progress");
+
+    if (!loader || !progress) return;
+
+    let currentProgress = 0;
+    let pageLoaded = false;
+    let finished = false;
+
+
+    /* -----------------------------------------
+       Simulierter Ladefortschritt
+       ----------------------------------------- */
+
+    const progressTimer = setInterval(function () {
+
+        if (finished) {
+            clearInterval(progressTimer);
+            return;
+        }
+
+        /*
+         * Der Balken wird immer langsamer,
+         * je näher er an 90 % kommt.
+         */
+
+        if (currentProgress < 70) {
+            currentProgress += Math.random() * 5;
+        }
+
+        else if (currentProgress < 90) {
+            currentProgress += Math.random() * 1.5;
+        }
+
+        if (currentProgress > 90) {
+            currentProgress = 90;
+        }
+
+        progress.style.width = currentProgress + "%";
+
+    }, 100);
+
+
+    /* -----------------------------------------
+       Seite vollständig geladen
+       ----------------------------------------- */
+
+    window.addEventListener("load", function () {
+
+        pageLoaded = true;
+
+        finishLoading();
+
+    });
+
+
+    /* -----------------------------------------
+       Sicherheitslimit: maximal 3 Sekunden
+       ----------------------------------------- */
+
+    setTimeout(function () {
+
+        finishLoading();
+
+    }, 3000);
+
+
+    /* -----------------------------------------
+       Preloader beenden
+       ----------------------------------------- */
+
+    function finishLoading() {
+
+        if (finished) return;
+
+        finished = true;
+
+        clearInterval(progressTimer);
+
+        /*
+         * Erst auf 100 % springen
+         */
+
+        progress.style.width = "100%";
+
+
+        /*
+         * Kurz warten, damit man
+         * den vollständigen Balken sieht.
+         */
+
+        setTimeout(function () {
+
+            loader.classList.add("hidden");
+
+        }, 250);
+
+    }
+
+
+})();
+</script>
+
+
 <script src="comic-data.js"></script>
 <script src="links.js"></script>
 <script src="news.js"></script>

@@ -23,6 +23,39 @@ const isGerman = window.location.pathname.includes("DE");
 const newsPosts = [
 
   // =====================================
+  // Defailt Post
+  // =====================================
+
+  {
+    titleDE: "Tja, grag gibt's nix zu sagen. ¯\_(ツ)_/¯",
+    
+    titleEN: "Welp, there's nothing to say at the moment. ¯\_(ツ)_/¯",
+    
+
+    status: "active",
+
+    contentDE: `
+      <div class="news-content">
+
+        <p>
+        </p>
+
+        
+      </div>
+    `,
+
+    contentEN: `
+      <div class="news-content">
+
+        <p>
+   
+        </p>
+
+      </div>
+    `
+  },
+
+  // =====================================
   // 🆕 POST 1
   // =====================================
 
