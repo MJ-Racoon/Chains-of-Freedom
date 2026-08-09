@@ -1300,7 +1300,7 @@
     class="loader-donkey"
     src="Img/donkey-loader.webp"
     width="150"
-    alt="donkey-loader"
+    alt=""
 >
 
         <!-- Ladebalken -->
@@ -1590,6 +1590,7 @@
 </div>
 
 <script>
+
 (function () {
 
     const loader = document.getElementById("page-loader");
@@ -1597,14 +1598,27 @@
 
     if (!loader || !progress) return;
 
+
+    /* =========================================
+       ESEL VORLADEN
+       ========================================= */
+
+    const donkey = new Image();
+
+    donkey.src = "Img/donkey-loader.webp";
+
+
+    /* =========================================
+       VARIABLEN
+       ========================================= */
+
     let currentProgress = 0;
-    let pageLoaded = false;
     let finished = false;
 
 
-    /* -----------------------------------------
-       Simulierter Ladefortschritt
-       ----------------------------------------- */
+    /* =========================================
+       SIMULIERTER LADEFORTSCHRITT
+       ========================================= */
 
     const progressTimer = setInterval(function () {
 
@@ -1613,17 +1627,14 @@
             return;
         }
 
-        /*
-         * Der Balken wird immer langsamer,
-         * je näher er an 90 % kommt.
-         */
-
         if (currentProgress < 70) {
-            currentProgress += Math.random() * 5;
-        }
 
-        else if (currentProgress < 90) {
+            currentProgress += Math.random() * 5;
+
+        } else if (currentProgress < 90) {
+
             currentProgress += Math.random() * 1.5;
+
         }
 
         if (currentProgress > 90) {
@@ -1635,22 +1646,20 @@
     }, 100);
 
 
-    /* -----------------------------------------
-       Seite vollständig geladen
-       ----------------------------------------- */
+    /* =========================================
+       WENN DIE SEITE GELADEN IST
+       ========================================= */
 
     window.addEventListener("load", function () {
-
-        pageLoaded = true;
 
         finishLoading();
 
     });
 
 
-    /* -----------------------------------------
-       Sicherheitslimit: maximal 3 Sekunden
-       ----------------------------------------- */
+    /* =========================================
+       MAXIMAL 3 SEKUNDEN
+       ========================================= */
 
     setTimeout(function () {
 
@@ -1659,9 +1668,9 @@
     }, 3000);
 
 
-    /* -----------------------------------------
-       Preloader beenden
-       ----------------------------------------- */
+    /* =========================================
+       LOADER BEENDEN
+       ========================================= */
 
     function finishLoading() {
 
@@ -1671,17 +1680,13 @@
 
         clearInterval(progressTimer);
 
-        /*
-         * Erst auf 100 % springen
-         */
+
+        /* Balken auf 100 % */
 
         progress.style.width = "100%";
 
 
-        /*
-         * Kurz warten, damit man
-         * den vollständigen Balken sieht.
-         */
+        /* Kurz 100 % anzeigen */
 
         setTimeout(function () {
 
@@ -1693,6 +1698,8 @@
 
 
 })();
+
+
 </script>
 <script src="comic-data.js"></script>
 <script src="links.js"></script>
