@@ -506,9 +506,9 @@ li {
 
 
 
-/* =========================================
-   📰 NEWS NOTIFICATION
-   ========================================= */
+/* =================================================
+   🩷 NEWS NOTIFICATION
+   ================================================= */
 
 .news-notification {
     position: fixed;
@@ -516,15 +516,15 @@ li {
     top: 15px;
     right: 25px;
 
-    z-index: 900;
+    z-index: 9999;
 
-    width: 250px;
+    width: 280px;
+    box-sizing: border-box;
 
     background: #E808CA;
     color: white;
 
-    /* Nur oben rechts abrunden */
-    border-radius: 0 0 0 14px;
+    border-radius: 12px 12px 12px 0;
 
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.22);
 
@@ -538,154 +538,184 @@ li {
 
     transition:
         opacity 0.4s ease,
-        transform 0.35s ease,
-        top 0.35s ease;
+        transform 0.25s ease,
+        top 0.35s ease,
+        box-shadow 0.25s ease;
 
     pointer-events: none;
+
+
+
+    --hover-x: 0px;
+    --hover-scale: 1;
+
+    transform:
+        translateX(calc(120% + var(--hover-x)))
+        scale(var(--hover-scale));
+
+    animation: news-float 4s ease-in-out infinite;
+
 }
 
 
-/* =========================================
+/* =================================================
    SICHTBAR
-   ========================================= */
+   ================================================= */
 
 .news-notification.show {
     opacity: 1;
-
-    transform: translateX(0);
 
     pointer-events: auto;
 }
 
 
-/* =========================================
-   🩷 INNERER INHALT
-   ========================================= */
-
-.news-notification-inner {
-
-    position: relative;
-
-    padding: 14px 18px;
-
-    transform-origin: top right;
-
-}
-
-
-/* =========================================
-   🎏 FÄHNCHEN-SPITZE
-   ========================================= */
+/* =================================================
+   🎏 SPITZE
+   ================================================= */
 
 .news-notification::after {
-
     content: "";
 
     position: absolute;
 
-    bottom: -18px;
     left: 0;
+    bottom: -13px;
 
     width: 0;
     height: 0;
 
-    border-top: 18px solid #E808CA;
-
-    border-right: 35px solid transparent;
-
+    border-top: 14px solid #E808CA;
+    border-right: 28px solid transparent;
 }
 
 
-/* =========================================
-   🌬️ LEICHTES FLATTERN
-   ========================================= */
+/* =================================================
+   🩷 INHALT
+   ================================================= */
+
+.news-notification-inner {
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 18px 24px;
+
+    text-align: center;
+
+    /*
+       WICHTIG:
+       Die Schwebeanimation sitzt NICHT
+       auf dem äußeren Fähnchen.
+    */
+}
+
+
+/* =================================================
+   🌬️ SCHWEBEN
+   ================================================= */
 
 .news-notification.show
 .news-notification-inner {
 
     animation:
-        news-flag-wiggle 5s ease-in-out infinite;
-
+        news-notification-float
+        4s
+        ease-in-out
+        infinite;
 }
 
 
-@keyframes news-flag-wiggle {
+@keyframes news-float {
 
     0%, 100% {
-        transform: rotate(0deg);
+        transform:
+            translateY(0)
+            translateX(var(--hover-x))
+            scale(var(--hover-scale));
     }
 
-    20% {
-        transform: rotate(0.6deg);
-    }
-
-    40% {
-        transform: rotate(-0.4deg);
-    }
-
-    60% {
-        transform: rotate(0.3deg);
-    }
-
-    80% {
-        transform: rotate(-0.2deg);
+    50% {
+        transform:
+            translateY(-4px)
+            translateX(var(--hover-x))
+            scale(var(--hover-scale));
     }
 
 }
 
 
-/* =========================================
-   TEXT
-   ========================================= */
+/* =================================================
+   ✦ TITEL
+   ================================================= */
 
 .news-notification-title {
 
-    margin: 0 0 4px 0;
+    display: block;
 
-    font-size: 16px;
+    width: 100%;
+
+    margin: 0 0 6px 0;
+
+    padding: 0;
+
+    text-align: center;
+
+    font-size: 17px;
 
     font-weight: bold;
-
 }
 
+
+/* =================================================
+   TEXT
+   ================================================= */
 
 .news-notification-text {
 
+    display: block;
+
+    width: 100%;
+
     margin: 0;
 
-    font-size: 12px;
+    padding: 0;
 
-    line-height: 1.4;
+    text-align: center;
 
+    font-size: 13px;
+
+    line-height: 1.45;
 }
 
 
-/* =========================================
+/* =================================================
    🖱️ HOVER
-   ========================================= */
+   ================================================= */
 
 .news-notification:hover {
+    --hover-x: -8px;
+    --hover-scale: 1.03;
 
-    transform: translateX(-5px);
-
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.30);
 }
 
 
-/* =========================================
+/* =================================================
    📱 MOBILE
-   ========================================= */
+   ================================================= */
 
 @media (max-width: 600px) {
 
     .news-notification {
 
-        /* Deutlich kleiner */
         width: 145px;
 
         right: 8px;
 
-        border-radius: 0 0 0 9px;
+        border-radius: 9px 9px 9px 0;
 
+        animation-duration: 4.5s;
     }
 
 
@@ -693,38 +723,37 @@ li {
 
         padding: 7px 10px;
 
+        text-align: center;
     }
 
 
     .news-notification-title {
 
-        font-size: 11px;
-
         margin: 0;
 
+        font-size: 11px;
+
+        text-align: center;
     }
 
 
-    /* Beschreibung auf Mobile ausblenden */
     .news-notification-text {
 
         display: none;
-
     }
 
 
-    /* Kleinere Fähnchen-Spitze */
     .news-notification::after {
 
-        bottom: -12px;
+        bottom: -10px;
 
-        border-top-width: 12px;
+        border-top-width: 10px;
 
-        border-right-width: 25px;
-
+        border-right-width: 20px;
     }
 
 }
+
 
 
 
