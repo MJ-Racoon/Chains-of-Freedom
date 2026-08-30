@@ -645,7 +645,210 @@ padding: 0;
 
 
 
+/* =========================================
+   SUPPORTER CAMEOS
+   ========================================= */
 
+#supporter-cameos {
+  background-color: #1E240F;
+
+  border-radius: 25px;
+
+  padding: 40px;
+  margin: 40px auto;
+
+  width: min(90%, 900px);
+
+  box-sizing: border-box;
+
+  /* weicher / verschwommener Rand */
+  border: 2px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.25),
+    inset 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Überschrift */
+
+#supporter-cameos h1 {
+  margin-top: 0;
+   color:antiquewhite;
+   text-align: center;
+}
+
+
+/* Beschreibung */
+
+#supporter-cameos > p {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  line-height: 1.6;
+  color:antiquewhite;
+  text-align: justify;
+}
+
+#supporter-cameos > h4 {
+  margin-bottom: 35px;
+
+  color:#E9D899;
+  text-align: center;
+}
+
+
+/* =========================================
+   SUPPORTER GRID
+   ========================================= */
+
+.supporters {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 25px;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   EINZELNE SUPPORTER BOX
+   ========================================= */
+
+.supporter-container {
+
+  /* Box-Größe */
+  width: 100%;
+  min-height: 220px;
+
+  box-sizing: border-box;
+
+  /* Inhalt */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px;
+
+  /* Hintergrund + Rand */
+  background-color: #241e1b;
+
+  border: 2px solid #968170;
+  border-radius: 18px;
+
+  /* leichter Schatten */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+
+  /* Animation */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Name */
+
+.supporter-container h3 {
+  margin: 0 0 15px 0;
+  text-align: center;
+  color:#E9D899;
+}
+
+
+/* =========================================
+   SUPPORTER BILD
+   ========================================= */
+
+.supporter-container img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 180px;
+  max-height: 180px;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+
+  filter: blur(3px);
+
+  transition: filter 0.25s ease;
+}
+
+.supporter-container:hover img {
+  filter: blur(0);
+}
+
+
+/* =========================================
+   HOVER
+   ========================================= */
+
+.supporter-container:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  #supporter-cameos {
+
+    width: 94%;
+
+    padding: 25px 15px;
+
+    border-radius: 20px;
+
+  }
+
+
+  .supporters {
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+  }
+
+
+  .supporter-container {
+
+    min-height: 170px;
+
+    padding: 12px;
+
+    border-radius: 14px;
+
+  }
+
+
+  .supporter-container h3 {
+
+    font-size: 1rem;
+
+  }
+
+
+  .supporter-container img {
+
+    max-width: 120px;
+    max-height: 120px;
+
+  }
+
+}
 
 
 

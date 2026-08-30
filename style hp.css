@@ -501,3 +501,269 @@ li {
 #to-top {
   font-size: larger;
 }
+
+
+
+/* =================================================
+   🩷 NEWS NOTIFICATION
+   ================================================= */
+
+.news-notification {
+    position: fixed;
+
+    top: 15px;
+    right: 25px;
+
+    z-index: 9999;
+
+    width: 280px;
+    box-sizing: border-box;
+
+    background: #E808CA;
+    color: white;
+
+    border-radius: 12px 12px 12px 0;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.22);
+
+    font-family: "Noto Serif", serif;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transform: translateX(120%);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.25s ease,
+        top 0.35s ease,
+        box-shadow 0.25s ease;
+
+    pointer-events: none;
+
+
+
+    --hover-x: 0px;
+    --hover-scale: 1;
+
+    transform:
+        translateX(calc(120% + var(--hover-x)))
+        scale(var(--hover-scale));
+
+    animation: news-float 4s ease-in-out infinite;
+
+}
+
+
+/* =================================================
+   SICHTBAR
+   ================================================= */
+
+.news-notification.show {
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+/* =================================================
+   🎏 SPITZE
+   ================================================= */
+
+.news-notification::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -13px;
+
+    width: 0;
+    height: 0;
+
+    border-top: 14px solid #E808CA;
+    border-right: 28px solid transparent;
+}
+
+
+/* =================================================
+   🩷 INHALT
+   ================================================= */
+
+.news-notification-inner {
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 18px 24px;
+
+    text-align: center;
+
+    /*
+       WICHTIG:
+       Die Schwebeanimation sitzt NICHT
+       auf dem äußeren Fähnchen.
+    */
+}
+
+
+/* =================================================
+   🌬️ SCHWEBEN
+   ================================================= */
+
+.news-notification.show
+.news-notification-inner {
+
+    animation:
+        news-notification-float
+        4s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes news-float {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            translateX(var(--hover-x))
+            scale(var(--hover-scale));
+    }
+
+    50% {
+        transform:
+            translateY(-4px)
+            translateX(var(--hover-x))
+            scale(var(--hover-scale));
+    }
+
+}
+
+
+/* =================================================
+   ✦ TITEL
+   ================================================= */
+
+.news-notification-title {
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0 0 6px 0;
+
+    padding: 0;
+
+    text-align: center;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+/* =================================================
+   TEXT
+   ================================================= */
+
+.news-notification-text {
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+}
+
+
+/* =================================================
+   🖱️ HOVER
+   ================================================= */
+
+.news-notification:hover {
+    --hover-x: -8px;
+    --hover-scale: 1.03;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =================================================
+   📱 MOBILE
+   ================================================= */
+
+@media (max-width: 600px) {
+
+    .news-notification {
+
+        width: 145px;
+
+        right: 8px;
+
+        border-radius: 9px 9px 9px 0;
+
+        animation-duration: 4.5s;
+    }
+
+
+    .news-notification-inner {
+
+        padding: 7px 10px;
+
+        text-align: center;
+    }
+
+
+    .news-notification-title {
+
+        margin: 0;
+
+        font-size: 11px;
+
+        text-align: center;
+    }
+
+
+    .news-notification-text {
+
+        display: none;
+    }
+
+
+    .news-notification::after {
+
+        bottom: -10px;
+
+        border-top-width: 10px;
+
+        border-right-width: 20px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
