@@ -65,8 +65,8 @@ const CHAPTERS = {
       { number: 9, startPage: 3, endPage: 5 },
       { number: 10, startPage: 6, endPage: 7 },
       { number: 11, startPage: 8, endPage: 10 },
-      { number: 12, startPage: 11, endPage: 15 },
-      { number: 13, startPage: 16, endPage: 19 },
+      { number: 12, startPage: 11, endPage: 14 },
+      { number: 13, startPage: 15, endPage: 19 },
     ]
   },
 
