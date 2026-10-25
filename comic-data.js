@@ -7,7 +7,7 @@ console.log("comic-data.js loaded");
 
 const COMIC_INFO = {
 
-  latestChapter: 2,
+  latestChapter: 3,
   latestEpisode: 14,
 
   latestArc: 1
@@ -68,6 +68,28 @@ const CHAPTERS = {
       { number: 12, startPage: 11, endPage: 14 },
       { number: 13, startPage: 15, endPage: 19 },
       { number: 14, startPage: 20, endPage: 23 },
+    ]
+  },
+
+
+  
+   "3": {
+  titleEN: "Friday family dinner",
+  titleDE: "Das Freitags Familienessen",
+
+  arc: 1,
+
+  folderEN: "Arc 1/Chapter 3",
+
+  folderDE: "Arc 1/Chapter 3",
+
+  previous: 1,
+  next: 2,
+
+  latestEpisode: 14,
+
+    episodes: [
+      { number: 15, startPage: 1, endPage: 6 },
     ]
   },
 
