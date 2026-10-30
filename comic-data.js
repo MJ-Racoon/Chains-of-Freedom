@@ -56,7 +56,7 @@ const CHAPTERS = {
   folderDE: "Arc 1/Chapter 2",
 
   previous: 1,
-  next: 2,
+  next: 3,
 
 
     episodes: [
