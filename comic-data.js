@@ -58,7 +58,6 @@ const CHAPTERS = {
   previous: 1,
   next: 2,
 
-  latestEpisode: 14,
 
     episodes: [
       { number: 8, startPage: 1, endPage: 2 },
@@ -83,10 +82,10 @@ const CHAPTERS = {
 
   folderDE: "Arc 1/Chapter 3",
 
-  previous: 1,
-  next: 2,
+  previous: 2,
+  next: 3,
 
-  latestEpisode: 14,
+  latestEpisode: 15,
 
     episodes: [
       { number: 15, startPage: 1, endPage: 6 },
