@@ -73,8 +73,8 @@ const CHAPTERS = {
 
   
    "3": {
-  titleEN: "Friday family dinner",
-  titleDE: "Das Freitags Familienessen",
+  titleEN: "Black sheep at family dinner",
+  titleDE: "Das schwarze Schaf beim Familienessen",
 
   arc: 1,
 
