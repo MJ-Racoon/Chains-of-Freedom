@@ -179,8 +179,7 @@ const newsPosts = [
     `
   },
 
-
-    // =====================================
+  // =====================================
   // 🆕 Website Fixes
   // =====================================
 
@@ -240,6 +239,95 @@ const newsPosts = [
   },
 
   
+          // =====================================
+  // 🆕 Hiatus
+  // =====================================
+
+  {
+    id: "hiatus",
+    titleDE: "Ich nehme mir eine kurze Auszeit",
+    titleEN: "I'm going on a brief Hiatus",
+    date: "08/11/2026",
+
+    status: "active",
+
+    notify: true,
+
+    contentDE: `
+      <div class="news-content">
+
+        <div class="button-content">
+
+          <p>
+            "Trachtet zuerst nach dem Reich Gottes und nach seiner Gerechtigkeit, so wird euch das alles zufallen." 
+            <br> (Mt 6, 33)
+            <br>
+            Liebe Leser, <br>
+             Ich kann gar nicht wirklich in Worte fassen, wie dankbar ich dafür bin, 
+             dass ihr jede zweite Woche für eine neue Episode einschaltet. 
+             Aber während ich neben meiner Vollzeit Ausbildung an diesem Comic Arbeite, die Geschichte weiterschreibe und überarbeite, 
+             mich ums Marketing kümmere, mich auf Events vorbereite und so weiter, habe ich realisiert, dass ich das wichtigste aus den Augen verloren habe. 
+             Und das ist das Vertrauen und der Glaube an die Versprechen, die mein Herr, Freund und Retter Jesus Christus uns in seinem Wort gegeben hat...
+             Ich versuche so vieles allein zu tragen, Episoden länger zu machen und währenddessen nur das absolut notwendige Minimum in meinen zwischenmenschlichen
+             Beziehungen zu geben. Und das alles im Namen der Arbeit, die ich für Gott mache... Ich glaube man muss nur seine Augen
+             aufmachen um zu sehen, dass da irgendetwas nicht stimmt. Eine Alte Angst von mir hat sich auch wieder hoch gemogelt. 
+             Nämlich die Angst, dass mir nicht mehr viel Zeit bleibt um diesen Comic tatsächlich je fertig zu bekommen. Und die Wahrheit ist,
+             der Mangel an Zeit ist tatsächlich der größte Feind in meinem Leben. Mir fehlt einfach die Zeit um ein ausgeglichenes und gesundes Leben zu leben.
+             Aber ich möchte nicht, dass mein jetziger geistlicher Zustand einen schlechten Einfluss auf meine Comic Arbeit hat
+             <br> deswegen habe ich entschieden mein Vertrauen wieder auf den Herrn zu setzen und mich in die Metaphorische Wüste zurückzuziehen. 
+             Ich möchte mir Zeit fürs Gebet nehmen und von den sozialen Medien fasten, die meinen Verstand ständig einnehmen, damit ich wieder Fuß in Christus
+             fassen kann, der mich ja überhaupt erst so weit gebracht hatte. Ich weiß, dass es nicht einfach wird, weil ich wie so viele süchtig nach den Medien bin. 
+             Aber ich glaube und vertraue, dass der heilige Geist mich frei machen wird. Ich berufe mich hiermit auf das Versprechen in Mt 6, 33
+             und danke Gott dafür, dass er seine Versprechen hält. Ich kann es wirklich nicht erwarten zu sehen, wohin diese Auszeit mich führen wird. 
+      
+            
+          </p>
+          
+        </div>
+        <img src="Img/Emotes/tired.webp" height="300px"  style="margin-bottom: "60px"/>
+       
+
+      </div>
+    `,
+
+    contentEN: `
+      <div class="news-content">
+
+        <div class="button-content">
+
+          <p>
+          "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you." 
+          <br> (Mt 6, 33)
+          <br>
+          Dear readers, <br>
+          I can't express how much I appreciate everyone who tunes in every second week to catch up with the story. 
+          But I realized, as I'm making this comic on top of work and I also have to think of so many other things (Writing and editing, Promotion, future events, etc... )
+         that I have lost the most important thing of them all. And that is the trust and faith in the Promises of my Lord, friend and Saviour Jesus Christ... 
+          I've started to try to carry so much on my own... Trying to make episodes longer and only doing the bare minimum in the relationships with my loved ones, in favour of
+          my work for christ. Well, I think you don't have to think too hard about it to realize that I am probably doing something wrong. 
+          An old fear of mine started to creep up. The fear that I don't have much time left to actually make this comic... And the truth is... Time and the lack thereof
+          actually is the biggest enemy in my life. I really don't have the time for all the aspects that make up a healthy and fulfilling existence. 
+          In my current state I am not really reflecting the character of Christ and I don't want this to have a bad influence on my Comic work. 
+          <br> So I have decided to put my trust into the Lord again and take a little walk into the metaphorical desert. 
+          I want to pray and fast from the media that consumes my attention to find the footing in christ again 
+          that made me come so far in the first place. I know that it won't be easy because I'm addicted... 
+          but I have faith and I believe in the power of the holy spirit to make me free. 
+          I wanna call upon the Promise of Mt 6, 33 and I thank the Lord, who is love himself, that he actually keeps his promises.
+          I can't wait to see, where this two week hiatus is going to take me in the end. 
+
+          </p>
+
+          
+
+        </div>
+
+         <img src="Img/Emotes/tired.webp" height="300px" style="margin-bottom: "60px"/>
+
+      </div>
+    `
+  },
+
+  
 
   // =====================================
   // 🆕 Artfight
@@ -256,7 +344,7 @@ const newsPosts = [
 
     status: "archived",
 
-    notify: true,
+    notify: false,
 
     contentDE: `
       <div class="news-content">
@@ -686,6 +774,56 @@ notification.innerHTML = `
 })();
 
 
+
+// =====================================
+// ⏸️ COMIC HIATUS / PAUSE
+// =====================================
+
+// Hier kannst du die Pause einstellen:
+const HIATUS_INFO = {
+  enabled: true,          // true = anzeigen | false = verstecken
+  endDate: "2026-12-06"    // Format: YYYY-MM-DD
+};
+
+
+// =====================================
+// HIATUS BANNER ANZEIGEN
+// =====================================
+
+(function showHiatusBanner() {
+
+  function createBanner() {
+    const banner = document.getElementById("hiatus-banner");
+
+    if (!banner || !HIATUS_INFO.enabled) return;
+
+    const isGermanHiatus = window.location.pathname.includes("DE");
+
+    const date = new Date(HIATUS_INFO.endDate + "T00:00:00");
+
+    const formattedDate = date.toLocaleDateString(
+      isGermanHiatus ? "de-DE" : "en-GB",
+      {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+      }
+    );
+
+    banner.textContent = isGermanHiatus
+      ? `Der Comic macht derzeit eine Pause bis zum ${formattedDate}.`
+      : `The comic is currently on hiatus until ${formattedDate}.`;
+
+    banner.style.display = "block";
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", createBanner);
+  } else {
+    createBanner();
+  }
+
+})();
 
 
 

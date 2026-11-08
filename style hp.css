@@ -45,7 +45,62 @@
 
 
 
+/* =========================================
+   ⏸️ HIATUS BANNER
+   ========================================= */
 
+#hiatus-banner {
+
+  width: min(90%, 1000px);
+  box-sizing: border-box;
+
+  margin: 15px auto 25px;
+  padding: 10px 20px;
+
+  background: rgba(56, 59, 40, 0.92);
+
+  border: 1px solid rgba(233, 216, 153, 0.4);
+  border-radius: 12px;
+
+  color: #E9D899;
+
+  font-family: 'Noto Serif', serif;
+  font-size: 0.95rem;
+
+  text-align: center;
+  line-height: 1.5;
+
+  /* Leichter Blur-Effekt */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  /* Dezenter Schatten */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  #hiatus-banner {
+
+    width: 94%;
+
+    padding: 9px 12px;
+
+    margin: 10px auto 18px;
+
+    font-size: 0.8rem;
+
+    border-radius: 9px;
+
+  }
+
+}
 
 /* Button */
 .newest-shiat-btn {
@@ -312,7 +367,7 @@ li {
 
 .news-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -335,9 +390,7 @@ li {
   color:#E9D899;
 }
 
-.news {
-  
-}
+
 
 
 .news:hover {
@@ -357,8 +410,8 @@ li {
 }
 
 .news-blob {
-  padding: 30px 10px !important;
-  margin: 0px 10px;
+  padding: 30px 5px !important;
+  margin: 0px 0px;
   margin-bottom: 30px;
   max-width: 700px;
 }

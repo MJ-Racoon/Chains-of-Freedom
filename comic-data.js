@@ -8,13 +8,15 @@ console.log("comic-data.js loaded");
 const COMIC_INFO = {
 
   latestChapter: 3,
-  latestEpisode: 14,
+  latestEpisode: 16,
 
   latestArc: 1
 
 };
 
 window.COMIC_INFO = COMIC_INFO;
+
+
 
 const CHAPTERS = {
 
@@ -85,10 +87,11 @@ const CHAPTERS = {
   previous: 2,
   next: 3,
 
-  latestEpisode: 15,
+  latestEpisode: 16,
 
     episodes: [
       { number: 15, startPage: 1, endPage: 6 },
+      { number: 16, startPage: 7, endPage: 13 },
     ]
   },
 

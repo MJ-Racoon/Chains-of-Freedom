@@ -160,6 +160,8 @@ const fileFormat = "webp";
 
 const container = document.getElementById("comic");
 
+
+
 episodes.forEach(ep => {
   for (let i = ep.startPage; i <= ep.endPage; i++) {
     const img = document.createElement("img");
